@@ -1,0 +1,240 @@
+/* ============================================================
+   responsive.css — Johannes Quintanar Portfolio
+   All responsive / mobile-specific rules live here.
+   Loaded AFTER style.css, so rules here override base styles.
+
+   Breakpoints:
+     ≤ 1024px — small laptops / tablet landscape
+     ≤ 900px  — tablet portrait (navbar collapses to hamburger)
+     ≤ 640px  — phones
+     ≤ 420px  — small phones
+   ============================================================ */
+
+/* ── ≤ 1024px — tablet landscape / small laptop ─────────────── */
+@media (max-width: 1024px) {
+  .hero { gap: 40px; }
+  .photo-wrapper { width: 280px; height: 330px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── ≤ 1100px — navbar collapses (raised from 900px because
+   the 5 nav links + lang/theme/cv buttons overflow the pill
+   before that, cutting off the Resume button) ──────────────── */
+@media (max-width: 1100px) {
+
+  /* ---- NAVBAR ----
+     With .nav-links removed from the flex flow (display:none),
+     only .logo and .navbar-right remain. Without this, they pack
+     to the left leaving empty space on the right of the pill. */
+  .navbar { gap: 10px; padding: 0 14px; justify-content: space-between; }
+  .navbar-right { gap: 8px; }
+
+  .hamburger { display: flex; }
+  .resume-btn { padding: 8px 12px; font-size: .8rem; }
+  .resume-btn:not(.resume-btn-mobile) { display: none; }
+
+  /* Desktop inline nav links hidden; mobile dropdown menu used instead */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 84px; left: 16px; right: 16px;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 0;
+    padding: 14px;
+    border-radius: 20px;
+    z-index: 999;
+    list-style: none;
+
+    /* Solid, opaque background so text stays readable
+       (previously this matched the translucent navbar glass
+       and the menu items were unreadable) */
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+  }
+  [data-theme="dark"] .nav-links,
+  [data-theme="colorful"] .nav-links {
+    background: rgba(13,16,26,.97);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+  [data-theme="light"] .nav-links {
+    background: rgba(255,255,255,.97);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+
+  .nav-links.open { display: flex; }
+
+  #header.scrolled .nav-links { top: 78px; }
+
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  /* Language toggle row inside the mobile menu */
+  .nav-links-lang {
+    display: block;
+    padding: 8px 8px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 6px;
+  }
+  .lang-toggle-mobile {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  /* Resume/CV button inside the mobile menu
+     (desktop .resume-btn is hidden via display:none below) */
+  .nav-links-cv { display: block; padding: 8px 8px 0; }
+  .resume-btn-mobile {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding-top: 132px;
+    padding-bottom: 60px;
+    min-height: auto;
+    text-align: center;
+  }
+  .hero-left { display: flex; flex-direction: column; align-items: center; }
+  .hero-badge { margin-left: auto; margin-right: auto; }
+  .hero-desc { max-width: 100%; }
+  .hero-ctas { justify-content: center; }
+  .hero-right { width: 100%; justify-content: center; min-height: 320px; }
+  .photo-wrapper { width: 240px; height: 280px; }
+  .stat-1 { right: 10px; top: 10px; }
+  .stat-2 { right: 10px; bottom: 10px; }
+  .stat-3 { display: none; }
+
+  /* ---- ABOUT ---- */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-cards { grid-template-columns: 1fr 1fr; }
+  .about-metrics { justify-content: space-around; }
+
+  /* ---- SKILLS ---- */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* ---- PROJECTS ---- */
+  .case-body { grid-template-columns: 1fr; }
+  .case-details { border-left: none; border-top: 1px solid var(--border); }
+  .case-title-row { flex-direction: column; gap: 12px; }
+
+  /* ---- CERTIFICATIONS ---- */
+  .certs-grid { grid-template-columns: 1fr; }
+
+  /* ---- JOURNEY ---- */
+  .timeline { padding-left: 32px; }
+  .tl-dot { left: -29px; }
+}
+
+/* ── ≤ 640px — phones ────────────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* ---- NAVBAR ---- */
+  .navbar { padding: 0 10px; gap: 6px; height: 56px; border-radius: 999px; }
+  .logo { font-size: 1rem; }
+
+  /* Theme switcher: keep visible, but compact */
+  .theme-switcher { padding: 2px; gap: 0; }
+  .theme-btn { width: 26px; height: 26px; font-size: .72rem; }
+
+  /* Desktop lang toggle moves into the hamburger menu only */
+  .lang-toggle:not(.lang-toggle-mobile) { display: none; }
+  .hamburger { margin-left: 0; }
+
+  .nav-links { top: 76px; left: 12px; right: 12px; }
+  #header.scrolled .nav-links { top: 70px; }
+
+  /* ---- SECTIONS ---- */
+  section { padding: 64px 16px; scroll-margin-top: 76px; }
+  .hero { padding-top: 110px; }
+  .section-title { margin-bottom: 36px; font-size: clamp(1.6rem, 6vw, 2.2rem); }
+
+  /* ---- HERO ---- */
+  .hero-name { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+  .hero-ctas { flex-direction: column; width: 100%; gap: 10px; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary { justify-content: center; width: 100%; }
+  .photo-wrapper { width: 220px; height: 260px; }
+  .stat-card { padding: 10px 16px; }
+
+  /* ---- ABOUT ---- */
+  .about-cards { grid-template-columns: 1fr; }
+  .about-metrics { flex-direction: column; gap: 16px; text-align: center; }
+
+  /* ---- PROJECTS ---- */
+  .case-header { padding: 20px 20px 0; }
+  .case-mockup { padding: 16px 20px 20px; }
+  .case-details { padding: 20px; }
+  .case-name { font-size: 1.3rem; }
+
+  /* ---- PHILOSOPHY ---- */
+  blockquote { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+
+  /* ---- CONTACT ---- */
+  .contact-headline { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .contact-cards { gap: 10px; }
+
+  /* ---- MODAL ---- */
+  .modal-header { padding: 18px 20px; gap: 12px; }
+  .modal-header h2 { font-size: 1.05rem; }
+  .modal-footer { flex-direction: column; padding: 14px 16px; }
+  .modal-download-btn, .modal-open-btn { width: 100%; justify-content: center; }
+
+  /* ---- FOOTER ---- */
+  .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
+  .footer-nav { justify-content: center; flex-wrap: wrap; }
+}
+
+/* ── ≤ 420px — small phones ──────────────────────────────────── */
+@media (max-width: 420px) {
+
+  .navbar { padding: 0 8px; gap: 4px; }
+  .logo { font-size: .9rem; }
+
+  /* On very small phones, hide theme switcher to give room
+     to the logo + hamburger; keep accessible via hamburger menu space */
+  .theme-switcher { display: none; }
+
+  .nav-links { left: 8px; right: 8px; padding: 10px; }
+
+  .hero { padding-top: 100px; }
+  .hero-name { font-size: clamp(2.1rem, 13vw, 2.8rem); }
+  .photo-wrapper { width: 190px; height: 230px; }
+  .stat-card { padding: 8px 12px; }
+  .stat-card .stat-num { font-size: 1.2rem; }
+  .stat-card .stat-label { font-size: .65rem; }
+
+  .case-name { font-size: 1.15rem; }
+  .tech-tags span { font-size: .7rem; padding: 3px 10px; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .section-hidden { transition: none; }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
