@@ -1038,3 +1038,44 @@ iframe {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   Mundo Fifas — corrección definitiva de la miniatura
+   La captura original es vertical; se fuerza una ventana
+   horizontal para evitar que la tarjeta crezca demasiado.
+   ============================================================ */
+
+.small-project-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.small-project-card > img {
+  display: block;
+  width: 100%;
+  height: clamp(210px, 58vw, 260px);
+  max-height: 260px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: 50% 47%;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .small-project-card > img {
+    height: clamp(260px, 34vw, 330px);
+    max-height: 330px;
+    object-position: 50% 46%;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  .small-project-card > img {
+    height: 340px;
+    max-height: 340px;
+    object-position: 50% 45%;
+  }
+}
+
