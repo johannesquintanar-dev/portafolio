@@ -1,247 +1,311 @@
-/* =============================================
-   JOHANNES.DEV — main script.js
-   Features:
-   - Theme switcher (dark / light / colorful)
-   - CV Modal with language-based CV detection
-   - Language toggle (EN / ES)
-   - Scroll progress bar
-   - Scroll reveal animations
-   - Skill bars animation
-   - Back to top button
-   - Mobile hamburger menu
-   - Navbar sticky on scroll
-   ============================================= */
+(() => {
+  "use strict";
 
-document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const body = document.body;
+  const header = document.getElementById("site-header");
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileBackdrop = document.getElementById("mobile-menu-backdrop");
+  const scrollProgress = document.getElementById("scroll-progress");
+  const backToTop = document.getElementById("back-to-top");
+  const currentYear = document.getElementById("current-year");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  /* ===== THEME ===== */
-  const themeButtons = document.querySelectorAll('.theme-btn');
-  const savedTheme = localStorage.getItem('jq-theme') || 'colorful';
-  applyTheme(savedTheme);
+  let currentLanguage = window.portfolioI18n.getStoredLanguage();
+  let lastFocusedElement = null;
+  let modalFallbackTimer = null;
 
-  themeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const theme = btn.dataset.theme;
-      applyTheme(theme);
-      localStorage.setItem('jq-theme', theme);
+  const setBodyLock = () => {
+    const shouldLock = mobileMenu.classList.contains("is-open") ||
+      document.getElementById("cv-modal").classList.contains("is-open");
+    body.classList.toggle("is-locked", shouldLock);
+  };
+
+  /* Language */
+  const updateLanguage = (language) => {
+    currentLanguage = window.portfolioI18n.applyLanguage(language);
+    updateCvLinks();
+    if (menuButton.getAttribute("aria-expanded") === "true") {
+      menuButton.setAttribute(
+        "aria-label",
+        window.portfolioI18n.translate(currentLanguage, "a11y.closeMenu")
+      );
+    }
+  };
+
+  document.querySelectorAll(".language-button").forEach((button) => {
+    button.addEventListener("click", () => updateLanguage(button.dataset.lang));
+  });
+
+  /* Theme */
+  const themeColorMeta = document.getElementById("theme-color-meta");
+ const themeColors = {
+  light: "#f8f5ef",
+  dark: "#07141a",
+  colorful: "#161220"
+};
+  const getInitialTheme = () => {
+    const stored = window.portfolioI18n.storage.get("jonas-theme");
+    if (["light", "dark", "colorful"].includes(stored)) return stored;
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  };
+
+  const applyTheme = (theme) => {
+    const safeTheme = ["light", "dark", "colorful"].includes(theme) ? theme : "dark";
+    root.dataset.theme = safeTheme;
+    window.portfolioI18n.storage.set("jonas-theme", safeTheme);
+    themeColorMeta?.setAttribute("content", themeColors[safeTheme]);
+
+    document.querySelectorAll(".theme-button").forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.themeValue === safeTheme));
     });
+  };
+
+  document.querySelectorAll(".theme-button").forEach((button) => {
+    button.addEventListener("click", () => applyTheme(button.dataset.themeValue));
   });
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    themeButtons.forEach(b => b.classList.toggle('active', b.dataset.theme === theme));
-  }
+  /* Mobile navigation */
+  const focusableSelector = [
+    "a[href]",
+    "button:not([disabled])",
+    "[tabindex]:not([tabindex='-1'])"
+  ].join(",");
 
-  /* ===== LANGUAGE ===== */
-  const langToggle = document.getElementById('lang-toggle');
-  const langToggleMobile = document.getElementById('lang-toggle-mobile');
-  const langOptions = document.querySelectorAll('.lang-option');
-  let currentLang = localStorage.getItem('jq-lang') || 'en';
+  const openMenu = () => {
+    mobileMenu.classList.add("is-open");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    mobileBackdrop.hidden = false;
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute(
+      "aria-label",
+      window.portfolioI18n.translate(currentLanguage, "a11y.closeMenu")
+    );
+    setBodyLock();
+    requestAnimationFrame(() => mobileMenu.querySelector(focusableSelector)?.focus());
+  };
 
-  setLanguage(currentLang);
+  const closeMenu = ({ restoreFocus = false } = {}) => {
+    mobileMenu.classList.remove("is-open");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    mobileBackdrop.hidden = true;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute(
+      "aria-label",
+      window.portfolioI18n.translate(currentLanguage, "a11y.openMenu")
+    );
+    setBodyLock();
+    if (restoreFocus) menuButton.focus();
+  };
 
-  function toggleLang() {
-    currentLang = currentLang === 'en' ? 'es' : 'en';
-    setLanguage(currentLang);
-    localStorage.setItem('jq-lang', currentLang);
-  }
-
-  langToggle.addEventListener('click', toggleLang);
-  if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLang);
-
-  function setLanguage(lang) {
-    currentLang = lang;
-    i18n.setLang(lang);
-    langOptions.forEach(opt => {
-      opt.classList.toggle('active', opt.dataset.lang === lang);
-    });
-    // Update CV modal texts if open
-    updateModalTexts();
-  }
-
-  /* ===== CV MODAL ===== */
-  const cvModal = document.getElementById('cv-modal');
-  const cvIframe = document.getElementById('cv-iframe');
-  const modalClose = document.getElementById('modal-close');
-  const modalLoading = document.getElementById('modal-loading');
-  const cvDownloadBtn = document.getElementById('cv-download-btn');
-  const cvOpenBtn = document.getElementById('cv-open-btn');
-
-  // All CV trigger buttons
-  const cvButtons = [
-    document.getElementById('cv-btn'),
-    document.getElementById('hero-cv-btn'),
-    document.getElementById('contact-cv-btn')
-  ].filter(Boolean);
-
-  cvButtons.forEach(btn => {
-    btn.addEventListener('click', openCVModal);
+  menuButton.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("is-open")) closeMenu();
+    else openMenu();
   });
 
-  modalClose.addEventListener('click', closeCVModal);
-  cvModal.addEventListener('click', (e) => {
-    if (e.target === cvModal) closeCVModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeCVModal();
+  mobileBackdrop.addEventListener("click", () => closeMenu({ restoreFocus: true }));
+
+  mobileMenu.querySelectorAll("a[href^='#'], .cv-trigger").forEach((element) => {
+    element.addEventListener("click", () => closeMenu());
   });
 
-  function openCVModal() {
-    const cvPath = i18n.getCVPath();
-    cvModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  mobileMenu.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab" || !mobileMenu.classList.contains("is-open")) return;
+    const focusable = [...mobileMenu.querySelectorAll(focusableSelector)].filter(
+      (element) => !element.hasAttribute("hidden") && element.offsetParent !== null
+    );
+    if (!focusable.length) return;
 
-    // Show loading, hide iframe
-    modalLoading.classList.remove('hidden');
-    cvIframe.style.opacity = '0';
-
-    // Set CV source based on current language
-    cvIframe.src = cvPath;
-    cvDownloadBtn.href = cvPath;
-    cvOpenBtn.href = cvPath;
-
-    cvIframe.onload = () => {
-      modalLoading.classList.add('hidden');
-      cvIframe.style.opacity = '1';
-      cvIframe.style.transition = 'opacity .3s ease';
-    };
-
-    // Fallback in case iframe fails
-    setTimeout(() => {
-      if (modalLoading && !modalLoading.classList.contains('hidden')) {
-        modalLoading.classList.add('hidden');
-        cvIframe.style.opacity = '1';
-      }
-    }, 3000);
-
-    updateModalTexts();
-  }
-
-  function closeCVModal() {
-    cvModal.classList.remove('open');
-    document.body.style.overflow = '';
-    setTimeout(() => {
-      cvIframe.src = '';
-    }, 300);
-  }
-
-  function updateModalTexts() {
-    const titleEl = document.getElementById('modal-title');
-    const subtitleEl = document.getElementById('modal-subtitle');
-    const loadingText = document.getElementById('modal-loading-text');
-    const downloadText = document.getElementById('modal-download-text');
-    const openText = document.getElementById('modal-open-text');
-
-    if (titleEl) titleEl.textContent = i18n.t('modal-title');
-    if (subtitleEl) subtitleEl.textContent = i18n.t('modal-subtitle');
-    if (loadingText) loadingText.textContent = i18n.t('modal-loading');
-    if (downloadText) downloadText.textContent = i18n.t('modal-download');
-    if (openText) openText.textContent = i18n.t('modal-open');
-  }
-
-  /* ===== SCROLL PROGRESS ===== */
-  const scrollBar = document.getElementById('scroll-progress');
-  window.addEventListener('scroll', () => {
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / total) * 100;
-    scrollBar.style.width = progress + '%';
-  }, { passive: true });
-
-  /* ===== BACK TO TOP ===== */
-  const backToTop = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('visible', window.scrollY > 500);
-  }, { passive: true });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
-  /* ===== NAVBAR SCROLL ===== */
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-
-  /* ===== HAMBURGER ===== */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024 && mobileMenu.classList.contains("is-open")) closeMenu();
   });
 
-  // Close menu on nav link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  /* CV modal */
+  const modalBackdrop = document.getElementById("cv-modal");
+  const modal = modalBackdrop.querySelector(".cv-modal");
+  const modalClose = document.getElementById("modal-close");
+  const cvIframe = document.getElementById("cv-iframe");
+  const cvLoading = document.getElementById("cv-loading");
+  const cvOpenLink = document.getElementById("cv-open-link");
+  const cvDownloadLink = document.getElementById("cv-download-link");
+
+  const updateCvLinks = () => {
+    const path = window.portfolioI18n.getCvPath(currentLanguage);
+    cvOpenLink.href = path;
+    cvDownloadLink.href = path;
+    cvDownloadLink.setAttribute(
+      "download",
+      currentLanguage === "es" ? "Jonas_Castillo_CV_Spanish.pdf" : "Jonas_Castillo_CV_English.pdf"
+    );
+
+    if (modalBackdrop.classList.contains("is-open") && cvIframe.src) {
+      loadIframe(path);
+    }
+  };
+
+  const loadIframe = (path) => {
+    clearTimeout(modalFallbackTimer);
+    cvIframe.classList.remove("is-loaded");
+    cvLoading.classList.add("is-visible");
+    cvIframe.src = path;
+
+    modalFallbackTimer = window.setTimeout(() => {
+      cvLoading.classList.remove("is-visible");
+      cvIframe.classList.add("is-loaded");
+    }, 3500);
+  };
+
+  cvIframe.addEventListener("load", () => {
+    clearTimeout(modalFallbackTimer);
+    cvLoading.classList.remove("is-visible");
+    cvIframe.classList.add("is-loaded");
   });
 
-  /* ===== SCROLL REVEAL ===== */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // Trigger skill bars when skills section is visible
-        if (entry.target.classList.contains('skills')) {
-          animateSkillBars();
-        }
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  const openModal = (trigger) => {
+    closeMenu();
+    lastFocusedElement = trigger || document.activeElement;
+    const path = window.portfolioI18n.getCvPath(currentLanguage);
+    cvOpenLink.href = path;
+    cvDownloadLink.href = path;
+    loadIframe(path);
+    modalBackdrop.classList.add("is-open");
+    modalBackdrop.setAttribute("aria-hidden", "false");
+    setBodyLock();
+    requestAnimationFrame(() => modalClose.focus());
+  };
 
-  document.querySelectorAll('.section-hidden').forEach(el => {
-    revealObserver.observe(el);
+  const closeModal = () => {
+    if (!modalBackdrop.classList.contains("is-open")) return;
+    clearTimeout(modalFallbackTimer);
+    modalBackdrop.classList.remove("is-open");
+    modalBackdrop.setAttribute("aria-hidden", "true");
+    cvLoading.classList.remove("is-visible");
+    cvIframe.classList.remove("is-loaded");
+    window.setTimeout(() => {
+      cvIframe.src = "about:blank";
+    }, 180);
+    setBodyLock();
+    lastFocusedElement?.focus?.();
+  };
+
+  document.querySelectorAll(".cv-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => openModal(trigger));
   });
 
-  /* ===== SKILL BARS ===== */
-  function animateSkillBars() {
-    document.querySelectorAll('.skill-fill').forEach(bar => {
-      const target = bar.style.getPropertyValue('--w');
-      bar.style.width = target;
-    });
-  }
+  modalClose.addEventListener("click", closeModal);
+  modalBackdrop.addEventListener("mousedown", (event) => {
+    if (event.target === modalBackdrop) closeModal();
+  });
 
-  /* ===== ACTIVE NAV LINK ===== */
-  const sections = document.querySelectorAll('section[id]');
-  const navAnchors = document.querySelectorAll('.nav-links a');
+  modal.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const focusable = [...modal.querySelectorAll(focusableSelector)].filter(
+      (element) => element.offsetParent !== null
+    );
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
 
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navAnchors.forEach(a => {
-          a.style.color = '';
-          if (a.getAttribute('href') === '#' + entry.target.id) {
-            a.style.color = 'var(--accent)';
-          }
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    if (modalBackdrop.classList.contains("is-open")) closeModal();
+    else if (mobileMenu.classList.contains("is-open")) closeMenu({ restoreFocus: true });
+  });
+
+  /* Scroll behavior */
+  const updateScrollUi = () => {
+    const scrollTop = window.scrollY;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const percentage = scrollable > 0 ? Math.min(100, (scrollTop / scrollable) * 100) : 0;
+    scrollProgress.style.width = `${percentage}%`;
+    header.classList.toggle("is-scrolled", scrollTop > 20);
+    backToTop.classList.toggle("is-visible", scrollTop > 650);
+  };
+
+  window.addEventListener("scroll", updateScrollUi, { passive: true });
+  updateScrollUi();
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? "auto" : "smooth" });
+  });
+
+  /* Active section */
+  const navLinks = [...document.querySelectorAll(".desktop-navigation a, .mobile-menu a[href^='#']")];
+  const sections = [...document.querySelectorAll("main section[id]")];
+
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+
+        navLinks.forEach((link) => {
+          const active = link.getAttribute("href") === `#${visible.target.id}`;
+          if (active) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
         });
-      }
-    });
-  }, { threshold: 0.4 });
+      },
+      { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.15, 0.35] }
+    );
 
-  sections.forEach(s => navObserver.observe(s));
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
 
-  /* ===== SMOOTH SCROLL FIX ===== */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+  /* Reveal animation */
+  const revealElements = document.querySelectorAll(".reveal");
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+  } else {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealElements.forEach((element) => revealObserver.observe(element));
+  }
+
+  /* Smooth internal links, while preserving accessibility and reduced motion */
+  document.querySelectorAll("a[href^='#']").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+      const target = document.querySelector(targetId);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" });
+      history.replaceState(null, "", targetId);
     });
   });
 
-  /* ===== INIT ===== */
-  updateModalTexts();
-  // Initial hero animation
-  document.querySelector('.hero-left')?.classList.add('visible');
-  document.querySelector('.hero-right')?.classList.add('visible');
-
-});
+  currentYear.textContent = String(new Date().getFullYear());
+  applyTheme(getInitialTheme());
+  updateLanguage(currentLanguage);
+})();

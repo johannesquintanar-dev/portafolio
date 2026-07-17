@@ -1,95 +1,89 @@
-# Johannes Quintanar — Portfolio v2.0
+# Portafolio de Jonas Castillo — actualización profesional
 
-## 🚀 New Features
+Versión estática construida con HTML, CSS y JavaScript vanilla. La actualización mantiene el proyecto ligero y compatible con Vercel, pero cambia la narrativa para presentar a Jonas Castillo como Java Full Stack Developer con experiencia práctica en backend, automatización y operaciones reales.
 
-### 🎨 3 Themes
-- **Dark** — High contrast dark with violet accent (default)
-- **Light** — Clean professional light mode
-- **Colorful** — Deep navy with coral/yellow gradient accents
+## Cambios incluidos
 
-Theme preference is saved in `localStorage`.
+- Nombre profesional actualizado a **Jonas Castillo**.
+- Hero orientado a Java Backend / Full Stack y orden correcto en móvil.
+- Calculadora de Servicios Aeroportuarios como proyecto principal.
+- Syntax Logistics presentado como participación Full Stack.
+- Mundo Fifas movido a proyectos secundarios.
+- Experiencia profesional, stack y certificaciones reorganizados.
+- Inglés corregido a **B2 Intermedio**.
+- Selector automático de idioma ES/EN.
+- Tres temas visuales: claro, oscuro y colorido.
+- Menú móvil con scroll interno, control de foco y cierre con Escape.
+- Modal de CV accesible y adaptable a pantallas de poca altura.
+- SEO, Open Graph, Twitter Card y JSON-LD.
+- Imágenes optimizadas en WebP.
+- Responsive mobile-first sin breakpoints contradictorios.
 
-### 📄 CV Modal with Language Detection
-- Clicking **Resume/Currículum** opens an in-page modal with an iframe preview
-- **EN** → loads `assets/cv/Jonas Johannes Castillo Quintanar CV.pdf`  
-- **ES** → loads the Spanish version of the CV (configure in `js/i18n.js` under `cv-path` for `es`)
-- Download and "open in new tab" buttons included
-- Press `Esc` or click outside to close
+## Archivos que debes conservar
 
-### 📱 Mobile Fixes
-- Resume button now shows **icon-only on mobile** (saves space)
-- Hamburger menu fully functional with overlay
-- Nav links open as full-width mobile menu
-- All sections properly responsive at 600px and 900px
+El código espera encontrar estos PDF dentro de `assets/cv/`:
 
-### ✨ New Sections Added
-1. **Skills with progress bars** — animated on scroll
-2. **Certifications** grid with status badges
-3. **Soft skills / Professional badges**
-4. **Improved Journey timeline** with pulse animation on current item
-5. **Contact cards** — clickable email/GitHub/LinkedIn cards
-6. **Scroll progress bar** at top of page
-7. **Active nav link highlighting** on scroll
+- `Jonas_Castillo_CV_Spanish.pdf`
+- `Jonas_Castillo_CV_English.pdf`
 
----
+Esos archivos ya existen en tu repositorio actual. **No borres la carpeta `assets/cv` al copiar esta actualización.**
 
-## 📁 File Structure
+## Cómo agregarlo en VS Code
 
-```
-portafolio/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── i18n.js        ← translations + CV path per language
-│   └── script.js      ← all interactivity
-└── assets/
-    ├── images/        ← your existing screenshots
-    └── cv/
-        ├── Jonas Johannes Castillo Quintanar CV.pdf        ← EN version
-        └── Jonas Johannes Castillo Quintanar CV-ES.pdf     ← add ES version here
+1. Crea una copia de seguridad de tu proyecto actual.
+2. Copia el contenido de esta carpeta sobre la raíz de tu repositorio.
+3. Acepta reemplazar `index.html`, `css/`, `js/`, `README.md`, `robots.txt`, `sitemap.xml` y `vercel.json`.
+4. Conserva tus PDF dentro de `assets/cv/`.
+5. Abre la carpeta en VS Code.
+6. Ejecuta el proyecto con Live Server o con:
+
+```bash
+python -m http.server 5500
 ```
 
----
+7. Abre `http://localhost:5500`.
 
-## 🌐 Spanish CV Setup
+## Pruebas recomendadas
 
-In `js/i18n.js`, find the `es` object and update `"cv-path"`:
+Revisa al menos estas resoluciones desde las herramientas de desarrollo del navegador:
 
-```js
-es: {
-  // ...
-  "cv-path": "assets/cv/Jonas Johannes Castillo Quintanar CV-ES.pdf"
-}
+- 320 × 568
+- 360 × 640
+- 390 × 844
+- 430 × 932
+- 667 × 375, horizontal
+- 768 × 1024
+- 1024 × 768
+- 1366 × 768
+- 1920 × 1080
+
+También prueba:
+
+- Menú con teclado y tecla Escape.
+- Selector de idioma.
+- Los tres temas visuales.
+- Modal del CV en móvil y escritorio.
+- Zoom del navegador al 200 %.
+- Enlaces de GitHub, LinkedIn, correo y teléfono.
+
+## Deploy en Vercel
+
+```bash
+git add .
+git commit -m "Actualiza portafolio profesional y responsive"
+git push origin main
 ```
 
-If you only have one CV file, both languages will point to the same file (current default).
+Vercel desplegará automáticamente el nuevo commit si el repositorio ya está conectado.
 
----
+## Datos que debes verificar antes de publicar
 
-## 💡 More Pro Suggestions
+- Que el Bootcamp de Generation ya pueda mostrarse oficialmente como completado.
+- Que el certificado AIFYC indique exactamente `480 horas` y el nombre institucional mostrado.
+- Que tus PDF sean las versiones más recientes del CV.
+- Que el número de colaboradores que deseas publicar sea `23` y no `27`.
+- Que quieras mantener públicamente el teléfono en la sección de contacto.
 
-To make this portfolio even more impressive, consider adding:
+## Próximo proyecto recomendado
 
-1. **Testimonials section** — A quote from your team lead at Generation México
-2. **GitHub contribution graph** — Embed via GitHub API or a badge
-3. **Blog/Articles** — Even 2-3 short posts shows thought leadership
-4. **Live demo links** — Deploy projects to Vercel/Netlify and add live buttons
-5. **Open to work banner** — Can be toggled on/off via JS
-6. **Contact form** — Use Formspree or EmailJS (no backend needed)
-7. **Google Analytics** — Track portfolio visits
-8. **meta OG tags** — Already have description, add og:image for LinkedIn shares
-9. **Favicon** — Add a custom favicon with your initials
-10. **Achievement counters** — Animated numbers (years, projects, etc.)
-
----
-
-## 🔧 Deployment (GitHub Pages)
-
-1. Replace files in your repo with these updated versions
-2. Go to **Settings → Pages → Source: main / root**
-3. Your portfolio will be live at `https://johannesquintanar-dev.github.io/portafolio/`
-
----
-
-Built with ❤️ — Johannes Quintanar 2026
+El HTML incluye una plantilla comentada para un futuro sistema backend de operaciones aeroportuarias. Actívala solamente cuando exista un repositorio o una demostración verificable.

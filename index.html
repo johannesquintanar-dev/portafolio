@@ -1,561 +1,829 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="colorful">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johannes Quintanar | Java Full Stack Developer</title>
-  <meta name="description" content="Junior Java Full Stack Developer with an aviation background. Learning and building software with discipline and focus.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
-  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/favicon/favicon-180.png">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#07141a" id="theme-color-meta" />
 
-<!-- Scroll progress -->
-<div id="scroll-progress"></div>
+    <title>Jonas Castillo | Java Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Java Full Stack Developer en Monterrey con experiencia en Java 21, Spring Boot, APIs REST, SQL, JavaScript y Python. Proyectos aplicados a logística y operaciones aeroportuarias."
+      id="meta-description"
+    />
+    <meta name="author" content="Jonas Johannes Castillo Quintanar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://portafolio-topaz-five.vercel.app/" />
 
-<!-- Back to top -->
-<button id="back-to-top" aria-label="Back to top">
-  <i class="ri-arrow-up-line"></i>
-</button>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portafolio-topaz-five.vercel.app/" />
+    <meta property="og:title" content="Jonas Castillo | Java Full Stack Developer" id="og-title" />
+    <meta
+      property="og:description"
+      content="Java Full Stack Developer con experiencia en backend, APIs REST, bases de datos y automatización de procesos reales."
+      id="og-description"
+    />
+    <meta
+      property="og:image"
+      content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_MX" id="og-locale" />
 
-<!-- Background blobs -->
-<div class="bg-blob blob-1"></div>
-<div class="bg-blob blob-2"></div>
-<div class="bg-blob blob-3"></div>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jonas Castillo | Java Full Stack Developer" id="twitter-title" />
+    <meta
+      name="twitter:description"
+      content="Java Full Stack Developer con experiencia en soluciones reales de negocio, backend, APIs, bases de datos y automatización."
+      id="twitter-description"
+    />
+    <meta
+      name="twitter:image"
+      content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png"
+    />
 
-<!-- ===== NAVBAR ===== -->
-<header id="header">
-  <nav class="navbar">
-    <a class="logo" href="#">Johannes<span>.</span>Dev</a>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png" />
+    <link rel="preload" as="image" href="assets/images/jonas-castillo.webp" fetchpriority="high" />
 
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about" data-i18n="nav-about">About</a></li>
-      <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
-      <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
-      <li><a href="#journey" data-i18n="nav-journey">Journey</a></li>
-      <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
-      <li class="nav-links-lang">
-        <button class="lang-toggle lang-toggle-mobile" id="lang-toggle-mobile" aria-label="Toggle language">
-          <span class="lang-option active" data-lang="en">EN</span>
-          <span class="lang-divider">/</span>
-          <span class="lang-option" data-lang="es">ES</span>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jonas Johannes Castillo Quintanar",
+        "alternateName": "Jonas Castillo",
+        "url": "https://portafolio-topaz-five.vercel.app/",
+        "image": "https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png",
+        "jobTitle": "Java Full Stack Developer",
+        "email": "mailto:johannesq.dev@gmail.com",
+        "telephone": "+52 8119594304",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Monterrey",
+          "addressRegion": "Nuevo León",
+          "addressCountry": "MX"
+        },
+        "sameAs": [
+          "https://github.com/johannesquintanar-dev",
+          "https://www.linkedin.com/in/jonascastillo/"
+        ],
+        "knowsAbout": [
+          "Java 21",
+          "Spring Boot",
+          "REST APIs",
+          "MySQL",
+          "PostgreSQL",
+          "JavaScript",
+          "Python",
+          "Pandas",
+          "Scrum"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido principal</a>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <nav class="navbar container" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a class="brand" href="#home" aria-label="Jonas Castillo, inicio">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span>Jonas<span class="brand-accent">.Dev</span></span>
+        </a>
+
+        <div class="desktop-navigation" id="desktop-navigation">
+          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="#about" data-i18n="nav.about">Sobre mí</a>
+          <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+          <a href="#skills" data-i18n="nav.skills">Tecnologías</a>
+          <a href="#certifications" data-i18n="nav.certifications">Certificaciones</a>
+          <a href="#contact" data-i18n="nav.contact">Contacto</a>
+        </div>
+
+        <div class="desktop-actions">
+          <div class="language-control" role="group" aria-label="Idioma" data-i18n-aria="a11y.language">
+            <button class="language-button" type="button" data-lang="es" aria-pressed="true">ES</button>
+            <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
+            <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light" title="Tema claro">
+              <span aria-hidden="true">☀</span>
+            </button>
+            <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark" title="Tema oscuro">
+              <span aria-hidden="true">◐</span>
+            </button>
+            <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful" title="Tema colorido">
+              <span aria-hidden="true">✦</span>
+            </button>
+          </div>
+
+          <button class="button button-small button-outline cv-trigger" type="button">
+            <span aria-hidden="true">↓</span>
+            <span data-i18n="nav.cv">CV</span>
+          </button>
+        </div>
+
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú"
+          data-i18n-aria="a11y.openMenu"
+        >
+          <span></span><span></span><span></span>
         </button>
-      </li>
-      <li class="nav-links-cv">
-        <button class="resume-btn resume-btn-mobile" id="cv-btn-mobile" data-i18n="nav-resume">
-          <i class="ri-file-text-line"></i>
-          <span data-i18n="nav-resume">Resume</span>
-        </button>
-      </li>
-    </ul>
+      </nav>
 
-    <div class="navbar-right">
-      <!-- Theme switcher -->
-      <div class="theme-switcher" id="theme-switcher" title="Switch theme">
-        <button class="theme-btn" data-theme="dark" title="Dark">
-          <i class="ri-moon-line"></i>
-        </button>
-        <button class="theme-btn" data-theme="light" title="Light">
-          <i class="ri-sun-line"></i>
-        </button>
-        <button class="theme-btn active" data-theme="colorful" title="Colorful">
-          <i class="ri-palette-line"></i>
-        </button>
+      <div class="mobile-menu-backdrop" id="mobile-menu-backdrop" hidden></div>
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="#about" data-i18n="nav.about">Sobre mí</a>
+          <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+          <a href="#skills" data-i18n="nav.skills">Tecnologías</a>
+          <a href="#certifications" data-i18n="nav.certifications">Certificaciones</a>
+          <a href="#contact" data-i18n="nav.contact">Contacto</a>
+
+          <div class="mobile-controls">
+            <div class="mobile-control-row">
+              <span data-i18n="controls.language">Idioma</span>
+              <div class="language-control" role="group" aria-label="Idioma" data-i18n-aria="a11y.language">
+                <button class="language-button" type="button" data-lang="es" aria-pressed="true">ES</button>
+                <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+              </div>
+            </div>
+
+            <div class="mobile-control-row">
+              <span data-i18n="controls.theme">Tema</span>
+              <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
+                <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light"><span aria-hidden="true">☀</span></button>
+                <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark"><span aria-hidden="true">◐</span></button>
+                <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful"><span aria-hidden="true">✦</span></button>
+              </div>
+            </div>
+
+            <button class="button button-primary cv-trigger mobile-cv-button" type="button">
+              <span aria-hidden="true">↓</span>
+              <span data-i18n="mobile.cv">Ver currículum</span>
+            </button>
+          </div>
+        </div>
       </div>
+    </header>
 
-      <!-- Language toggle -->
-      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
-        <span class="lang-option active" data-lang="en">EN</span>
-        <span class="lang-divider">/</span>
-        <span class="lang-option" data-lang="es">ES</span>
-      </button>
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <div class="availability-badge">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.available">Disponible para posiciones Java Backend / Full Stack Jr.</span>
+            </div>
 
-      <!-- CV Button -->
-      <button class="resume-btn" id="cv-btn" data-i18n="nav-resume">
-        <i class="ri-file-text-line"></i>
-        <span>Resume</span>
-      </button>
+            <p class="hero-name">Jonas Castillo</p>
+            <h1 data-i18n="hero.headline">Java Full Stack Developer enfocado en soluciones reales de negocio</h1>
+            <p class="hero-description" data-i18n="hero.description">
+              Desarrollo aplicaciones web y automatizaciones que convierten procesos manuales en soluciones digitales confiables. Trabajo con Java 21, Spring Boot, APIs REST, SQL, JavaScript y Python, combinando desarrollo técnico con más de siete años de experiencia en operaciones críticas.
+            </p>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-</header>
+            <div class="hero-location">
+              <span aria-hidden="true">⌖</span>
+              <span data-i18n="hero.location">Monterrey, Nuevo León · Disponible para trabajo remoto y reubicación</span>
+            </div>
 
-<!-- ===== CV MODAL ===== -->
-<div class="modal-overlay" id="cv-modal">
-  <div class="modal-box">
-    <button class="modal-close" id="modal-close" aria-label="Close">
-      <i class="ri-close-line"></i>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">
+                <span data-i18n="hero.projectsButton">Ver proyectos</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <button class="button button-outline cv-trigger" type="button">
+                <span aria-hidden="true">↓</span>
+                <span data-i18n="hero.cvButton">Descargar CV</span>
+              </button>
+              <a class="button button-ghost" href="#contact" data-i18n="hero.contactButton">Contactarme</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="portrait-frame">
+              <img
+                src="assets/images/jonas-castillo.webp"
+                alt="Jonas Castillo con traje negro"
+                data-i18n-alt="hero.photoAlt"
+                width="760"
+                height="1040"
+                fetchpriority="high"
+                decoding="async"
+              />
+              <div class="portrait-label">
+                <span class="portrait-label-title">Java · Spring Boot · SQL</span>
+                <span data-i18n="hero.photoCaption">Desarrollo técnico con criterio operativo</span>
+              </div>
+            </div>
+
+            <div class="metrics-grid" aria-label="Resultados profesionales" data-i18n-aria="hero.metricsLabel">
+              <article class="metric-card">
+                <strong>7+</strong>
+                <span data-i18n="metrics.operationsYears">años en operaciones críticas</span>
+              </article>
+              <article class="metric-card">
+                <strong>2</strong>
+                <span data-i18n="metrics.realSolutions">soluciones para usuarios reales</span>
+              </article>
+              <article class="metric-card">
+                <strong>23</strong>
+                <span data-i18n="metrics.peopleLed">colaboradores liderados</span>
+              </article>
+              <article class="metric-card">
+                <strong>50</strong>
+                <span data-i18n="metrics.dailyOperations">operaciones coordinadas en días de alta demanda</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="projects.eyebrow">SOLUCIONES Y PROYECTOS</p>
+            <h2 data-i18n="projects.title">Software creado para resolver problemas reales</h2>
+            <p data-i18n="projects.intro">
+              No presento solamente tecnologías: explico el problema, mi responsabilidad y el resultado de cada solución.
+            </p>
+          </div>
+
+          <article class="case-study case-study-featured reveal" aria-labelledby="calculator-title">
+            <div class="case-study-content">
+              <div class="case-study-header">
+                <div>
+                  <span class="project-label" data-i18n="calculator.label">PROYECTO PRINCIPAL · USO INTERNO</span>
+                  <h3 id="calculator-title" data-i18n="calculator.title">Calculadora de Servicios Aeroportuarios</h3>
+                </div>
+                <span class="status-badge" data-i18n="calculator.status">Solución utilizada en operación</span>
+              </div>
+
+              <p class="case-study-summary" data-i18n="calculator.summary">
+                Aplicación desarrollada para reemplazar cálculos manuales en Excel, centralizar reglas de negocio y automatizar reportes utilizados en la administración de servicios aeroportuarios.
+              </p>
+
+              <div class="case-study-sections">
+                <div>
+                  <h4 data-i18n="case.problem">Problema</h4>
+                  <p data-i18n="calculator.problem">
+                    El cálculo de servicios requería consultas separadas y registros manuales, aumentando el tiempo de operación y el riesgo de errores.
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="case.solution">Solución</h4>
+                  <p data-i18n="calculator.solution">
+                    Diseñé una aplicación que procesa información de vuelos, consulta parámetros almacenados en SQL, aplica reglas de cobro y genera reportes estructurados en Excel.
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="case.role">Mi responsabilidad</h4>
+                  <p data-i18n="calculator.role">
+                    Analicé el proceso, diseñé la base de datos, programé la lógica, integré fuentes de información, validé resultados con usuarios y preparé la solución para su uso interno.
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="case.result">Resultado</h4>
+                  <p data-i18n="calculator.result">
+                    La solución fue desarrollada en aproximadamente tres meses, continúa utilizándose y apoya el trabajo de dos personas por turno con reportes para seguimiento de KPIs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
+                <span>Python</span><span>Pandas</span><span>MySQL</span><span>SQL</span><span>REST API</span><span>Excel</span>
+              </div>
+
+              <div class="project-note">
+                <span aria-hidden="true">ⓘ</span>
+                <p data-i18n="calculator.confidentiality">
+                  El código y los datos no son públicos por confidencialidad. La representación visual utiliza información ficticia.
+                </p>
+              </div>
+            </div>
+
+            <div class="calculator-demo" aria-label="Representación visual de la calculadora" data-i18n-aria="calculator.demoLabel">
+              <div class="demo-window">
+                <div class="demo-toolbar">
+                  <span></span><span></span><span></span>
+                  <strong data-i18n="calculator.demoTitle">Cálculo de operación</strong>
+                </div>
+                <div class="demo-body">
+                  <div class="demo-flight-row">
+                    <div>
+                      <small data-i18n="calculator.demoFlight">Vuelo</small>
+                      <strong>XA-JQC</strong>
+                    </div>
+                    <div>
+                      <small data-i18n="calculator.demoArrival">Llegada</small>
+                      <strong>14:35</strong>
+                    </div>
+                    <div>
+                      <small data-i18n="calculator.demoType">Tipo</small>
+                      <strong>Ejecutivo</strong>
+                    </div>
+                  </div>
+                  <div class="demo-services">
+                    <div><span data-i18n="calculator.demoService1">Aterrizaje</span><strong>$2,450</strong></div>
+                    <div><span data-i18n="calculator.demoService2">Plataforma</span><strong>$1,820</strong></div>
+                    <div><span data-i18n="calculator.demoService3">Servicios adicionales</span><strong>$980</strong></div>
+                  </div>
+                  <div class="demo-total">
+                    <span data-i18n="calculator.demoTotal">Total estimado</span>
+                    <strong>$5,250 MXN</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="architecture-flow" aria-label="Flujo técnico de la solución" data-i18n-aria="calculator.architectureLabel">
+                <div><span aria-hidden="true">✈</span><strong data-i18n="architecture.flightData">Datos de vuelo</strong></div>
+                <span aria-hidden="true">→</span>
+                <div><span aria-hidden="true">Py</span><strong>Python + Pandas</strong></div>
+                <span aria-hidden="true">→</span>
+                <div><span aria-hidden="true">DB</span><strong>MySQL</strong></div>
+                <span aria-hidden="true">→</span>
+                <div><span aria-hidden="true">XLS</span><strong data-i18n="architecture.report">Reporte y KPIs</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study reveal" aria-labelledby="syntax-title">
+            <div class="project-media">
+              <img
+                src="assets/images/syntax-logistics.webp"
+                alt="Vista responsiva de la plataforma Syntax Logistics"
+                data-i18n-alt="syntax.imageAlt"
+                width="1280"
+                height="853"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="case-study-content">
+              <div class="case-study-header">
+                <div>
+                  <span class="project-label" data-i18n="syntax.label">PROYECTO COLABORATIVO · 2026</span>
+                  <h3 id="syntax-title" data-i18n="syntax.title">Syntax Logistics</h3>
+                  <p class="project-role" data-i18n="syntax.roleTitle">Full Stack Developer · UI · Integración · Pruebas funcionales</p>
+                </div>
+              </div>
+
+              <p class="case-study-summary" data-i18n="syntax.summary">
+                Plataforma web para administrar cotizaciones, usuarios, envíos y seguimiento de paquetes. Participé en funcionalidades backend, operaciones CRUD, integración con MySQL, construcción de interfaz y validación de flujos funcionales.
+              </p>
+
+              <div class="case-study-sections compact">
+                <div>
+                  <h4 data-i18n="case.contribution">Contribución</h4>
+                  <p data-i18n="syntax.contribution">
+                    Trabajé en formularios, diseño responsivo, integración frontend-backend, estructura de datos y pruebas de los flujos principales del proyecto.
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="case.functions">Funcionalidades</h4>
+                  <p data-i18n="syntax.functions">
+                    Registro de usuarios, cotización, gestión de destinos y direcciones, seguimiento mediante guía y consumo de servicios REST.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
+                <span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span><span>Postman</span><span>Git</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="button button-primary"
+                  href="https://github.com/enriqueperezdevmx-coder/Equipo_Syntax_Error"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.repository">Ver repositorio</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <div class="other-projects reveal">
+            <div class="section-subheading">
+              <h3 data-i18n="otherProjects.title">Otros proyectos</h3>
+              <p data-i18n="otherProjects.intro">Proyectos que complementan mi experiencia en frontend y trabajo colaborativo.</p>
+            </div>
+
+            <article class="small-project-card">
+              <img
+                src="assets/images/mundo-fifas.webp"
+                alt="Modal de producto del proyecto Mundo Fifas"
+                data-i18n-alt="mundo.imageAlt"
+                width="1280"
+                height="618"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="small-project-content">
+                <span class="project-label" data-i18n="mundo.label">PROYECTO FRONTEND</span>
+                <h4>Mundo Fifas</h4>
+                <p data-i18n="mundo.summary">
+                  Sitio temático de fútbol con catálogo, artículos retro, modales interactivos y adaptación responsive desarrollada con HTML, CSS y JavaScript.
+                </p>
+                <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                <a
+                  class="text-link"
+                  href="https://github.com/Rock2612/Mundo-Fifas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.repository">Ver repositorio</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!--
+            PLANTILLA PREPARADA PARA EL FUTURO PROYECTO BACKEND PERSONAL.
+            Actívala únicamente cuando el proyecto exista y tenga repositorio o evidencia verificable.
+
+            <article class="small-project-card">
+              <div class="small-project-content">
+                <span class="project-label">PROYECTO BACKEND PERSONAL</span>
+                <h4>Sistema de Administración de Operaciones Aeroportuarias</h4>
+                <p>API REST con Java 21, Spring Boot, JPA, validaciones, Swagger, pruebas y Docker.</p>
+              </div>
+            </article>
+          -->
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
+            <h2 data-i18n="about.title">Desarrollo técnico con entendimiento del negocio</h2>
+          </div>
+
+          <div class="about-content reveal">
+            <p class="about-lead" data-i18n="about.lead">
+              Soy desarrollador Java Full Stack con experiencia práctica construyendo backend, interfaces web, bases de datos y automatizaciones orientadas a resolver necesidades reales.
+            </p>
+            <p data-i18n="about.body">
+              Antes de dedicarme al desarrollo trabajé durante más de siete años en operaciones aeroportuarias, coordinando procesos críticos, equipos de trabajo, información financiera, KPIs y reglas de negocio. Esa experiencia me permite comprender no solamente cómo programar una solución, sino también cómo debe funcionar dentro de una operación real.
+            </p>
+
+            <div class="value-grid">
+              <article>
+                <span aria-hidden="true">01</span>
+                <h3 data-i18n="about.value1Title">Análisis de procesos</h3>
+                <p data-i18n="about.value1Text">Identifico cuellos de botella, reglas de negocio y oportunidades de automatización.</p>
+              </article>
+              <article>
+                <span aria-hidden="true">02</span>
+                <h3 data-i18n="about.value2Title">Ejecución bajo presión</h3>
+                <p data-i18n="about.value2Text">Estoy acostumbrado a priorizar, comunicar y resolver incidencias en operaciones críticas.</p>
+              </article>
+              <article>
+                <span aria-hidden="true">03</span>
+                <h3 data-i18n="about.value3Title">Visión de usuario</h3>
+                <p data-i18n="about.value3Text">Construyo pensando en la persona que utilizará la solución y en el proceso que debe mejorar.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="experience.eyebrow">EXPERIENCIA PROFESIONAL</p>
+            <h2 data-i18n="experience.title">Más de siete años resolviendo operaciones complejas</h2>
+            <p data-i18n="experience.intro">
+              Esta experiencia fortalece mis habilidades para entender requerimientos, priorizar riesgos y entregar soluciones útiles.
+            </p>
+          </div>
+
+          <div class="experience-timeline">
+            <article class="experience-item reveal">
+              <div class="experience-date" data-i18n="experience.job1Date">Ene 2025 — Abr 2026</div>
+              <div class="experience-card">
+                <div class="experience-title-row">
+                  <div>
+                    <h3 data-i18n="experience.job1Title">Administrador de Servicios Aeroportuarios</h3>
+                    <p>GAFSACOMM</p>
+                  </div>
+                  <span data-i18n="experience.job1Focus">Procesos · KPIs · Automatización</span>
+                </div>
+                <p data-i18n="experience.job1Text">
+                  Administré cobros, facturación, ingresos y reportes de servicios aeroportuarios. Analicé procesos administrativos y financieros y desarrollé una herramienta en Python y SQL para automatizar cálculos y reportes operativos.
+                </p>
+              </div>
+            </article>
+
+            <article class="experience-item reveal">
+              <div class="experience-date" data-i18n="experience.job2Date">May 2024 — Ene 2025</div>
+              <div class="experience-card">
+                <div class="experience-title-row">
+                  <div>
+                    <h3 data-i18n="experience.job2Title">Oficial de Operaciones</h3>
+                    <p>GAFSACOMM</p>
+                  </div>
+                  <span data-i18n="experience.job2Focus">Monitoreo · Seguridad · Coordinación</span>
+                </div>
+                <p data-i18n="experience.job2Text">
+                  Monitoreé operaciones aeroportuarias, elaboré reportes operativos, coordiné áreas de plataforma, mantenimiento, fauna y proveedores, y participé en capacitaciones de seguridad operacional.
+                </p>
+              </div>
+            </article>
+
+            <article class="experience-item reveal">
+              <div class="experience-date" data-i18n="experience.job3Date">Jul 2018 — Ene 2024</div>
+              <div class="experience-card">
+                <div class="experience-title-row">
+                  <div>
+                    <h3 data-i18n="experience.job3Title">Encargado de Operaciones</h3>
+                    <p>Aerolíneas Ejecutivas</p>
+                  </div>
+                  <span data-i18n="experience.job3Focus">Liderazgo · Continuidad · Clientes</span>
+                </div>
+                <p data-i18n="experience.job3Text">
+                  Coordiné operaciones de vuelo, atención a clientes, combustible, rampa, mantenimiento y planes de vuelo. Supervisé hasta 23 colaboradores, gestioné KPIs y tomé decisiones en escenarios de alta presión.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="skills.eyebrow">STACK TÉCNICO</p>
+            <h2 data-i18n="skills.title">Tecnologías respaldadas por proyectos</h2>
+            <p data-i18n="skills.intro">Las habilidades se presentan por área, sin porcentajes arbitrarios.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-category reveal">
+              <div class="skill-icon" aria-hidden="true">{ }</div>
+              <h3 data-i18n="skills.backend">Backend</h3>
+              <div class="skill-chips">
+                <span>Java 21</span><span>Spring Boot</span><span>Spring Web</span><span>JPA</span><span>Hibernate</span><span>JDBC</span><span>Maven</span><span>REST APIs</span><span>POO</span>
+              </div>
+            </article>
+
+            <article class="skill-category reveal">
+              <div class="skill-icon" aria-hidden="true">DB</div>
+              <h3 data-i18n="skills.databases">Bases de datos</h3>
+              <div class="skill-chips">
+                <span>MySQL</span><span>PostgreSQL</span><span>SQL</span><span>Modelado relacional</span><span>JOIN</span><span>GROUP BY</span><span>Índices</span><span>Transacciones</span>
+              </div>
+            </article>
+
+            <article class="skill-category reveal">
+              <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+              <h3>Frontend</h3>
+              <div class="skill-chips">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>Responsive Design</span><span>Vite</span><span>Integración de APIs</span>
+              </div>
+            </article>
+
+            <article class="skill-category reveal">
+              <div class="skill-icon" aria-hidden="true">Py</div>
+              <h3 data-i18n="skills.automation">Datos y automatización</h3>
+              <div class="skill-chips">
+                <span>Python</span><span>Pandas</span><span>Excel</span><span>Consumo de APIs</span><span>Procesamiento de datos</span><span>Reportes automatizados</span>
+              </div>
+            </article>
+
+            <article class="skill-category reveal">
+              <div class="skill-icon" aria-hidden="true">⚙</div>
+              <h3 data-i18n="skills.tools">Herramientas y metodología</h3>
+              <div class="skill-chips">
+                <span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span><span>IntelliJ IDEA</span><span>VS Code</span><span>Ubuntu</span><span>Jira</span><span>Figma</span><span>Scrum</span><span>JUnit básico</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="certifications">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="certifications.eyebrow">FORMACIÓN Y CERTIFICACIONES</p>
+            <h2 data-i18n="certifications.title">Preparación técnica y conocimiento operativo</h2>
+          </div>
+
+          <div class="certifications-grid">
+            <article class="certification-card reveal">
+              <div class="certification-mark" aria-hidden="true">Java</div>
+              <div>
+                <span class="certification-meta">480 h · 2026</span>
+                <h3>Java Full Stack Developer</h3>
+                <p>AIFYC Institute Texas</p>
+              </div>
+              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
+            </article>
+
+            <article class="certification-card reveal">
+              <div class="certification-mark" aria-hidden="true">G</div>
+              <div>
+                <span class="certification-meta">2026</span>
+                <h3 data-i18n="certifications.generationTitle">Bootcamp Desarrollador Java Full Stack Jr.</h3>
+                <p>Generation México</p>
+              </div>
+              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
+            </article>
+
+            <article class="certification-card reveal">
+              <div class="certification-mark" aria-hidden="true">KPI</div>
+              <div>
+                <span class="certification-meta">2025</span>
+                <h3 data-i18n="certifications.kpiTitle">Análisis y seguimiento de KPIs operativos</h3>
+                <p data-i18n="certifications.corporateTraining">Capacitación corporativa</p>
+              </div>
+              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
+            </article>
+
+            <article class="certification-card reveal">
+              <div class="certification-mark" aria-hidden="true">OPS</div>
+              <div>
+                <span class="certification-meta">2025</span>
+                <h3 data-i18n="certifications.operationsTitle">Gestión de Operaciones Aeroportuarias</h3>
+                <p>GAFSACOMM</p>
+              </div>
+              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
+            </article>
+
+            <article class="certification-card language-card reveal">
+              <div class="certification-mark" aria-hidden="true">EN</div>
+              <div>
+                <span class="certification-meta" data-i18n="certifications.language">Idioma</span>
+                <h3 data-i18n="certifications.englishTitle">Inglés — B2 Intermedio</h3>
+                <p data-i18n="certifications.englishText">Comunicación profesional intermedia</p>
+              </div>
+              <span class="status-badge">B2</span>
+            </article>
+          </div>
+
+          <!-- Cuando confirmes la institución exacta del certificado de introducción a Java, agrega aquí una tarjeta adicional. -->
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow" data-i18n="contact.eyebrow">ABIERTO A OPORTUNIDADES</p>
+            <h2 data-i18n="contact.title">Llevemos una necesidad real a una solución funcional</h2>
+            <p data-i18n="contact.text">
+              Busco mi primera posición dedicada completamente al desarrollo de software como Java Backend o Full Stack Developer. Aporto experiencia desarrollando soluciones aplicadas a procesos reales, conocimiento de negocio y más de siete años trabajando en operaciones críticas.
+            </p>
+            <div class="availability-list">
+              <span><i aria-hidden="true">✓</i><span data-i18n="contact.remote">Disponible para trabajo remoto en México</span></span>
+              <span><i aria-hidden="true">✓</i><span data-i18n="contact.relocation">Disponible para cambio de residencia</span></span>
+              <span><i aria-hidden="true">✓</i><span data-i18n="contact.roles">Java Backend · Full Stack Jr. · Automatización</span></span>
+            </div>
+          </div>
+
+          <div class="contact-panel reveal">
+            <a href="mailto:johannesq.dev@gmail.com" class="contact-link-card">
+              <span class="contact-icon" aria-hidden="true">@</span>
+              <span>
+                <small data-i18n="contact.email">Correo</small>
+                <strong>johannesq.dev@gmail.com</strong>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="tel:+528119594304" class="contact-link-card">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <span>
+                <small data-i18n="contact.phone">Teléfono</small>
+                <strong>+52 811 959 4304</strong>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jonascastillo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-card"
+            >
+              <span class="contact-icon" aria-hidden="true">in</span>
+              <span><small>LinkedIn</small><strong>jonascastillo</strong></span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="https://github.com/johannesquintanar-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-card"
+            >
+              <span class="contact-icon" aria-hidden="true">GH</span>
+              <span><small>GitHub</small><strong>johannesquintanar-dev</strong></span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <button class="button button-primary cv-trigger contact-cv-button" type="button">
+              <span aria-hidden="true">↓</span>
+              <span data-i18n="contact.cv">Ver CV completo</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span>Jonas<span class="brand-accent">.Dev</span></span>
+        </a>
+        <p>© <span id="current-year">2026</span> Jonas Castillo. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+        <div class="footer-links">
+          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="#contact" data-i18n="nav.contact">Contacto</a>
+          <a href="https://github.com/johannesquintanar-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      type="button"
+      aria-label="Volver al inicio"
+      data-i18n-aria="a11y.backToTop"
+    >
+      ↑
     </button>
-    <div class="modal-header">
-      <div class="modal-icon"><i class="ri-file-user-line"></i></div>
-      <div>
-        <h2 id="modal-title">My Resume</h2>
-        <p id="modal-subtitle">Johannes Quintanar — Java Full Stack Developer</p>
-      </div>
-    </div>
-    <div class="modal-body">
-      <iframe id="cv-iframe" src="" title="CV Preview"></iframe>
-      <div class="modal-loading" id="modal-loading">
-        <div class="spinner"></div>
-        <p id="modal-loading-text">Loading CV...</p>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <a id="cv-download-btn" href="#" download class="modal-download-btn">
-        <i class="ri-download-line"></i>
-        <span id="modal-download-text">Download PDF</span>
-      </a>
-      <a id="cv-open-btn" href="#" target="_blank" class="modal-open-btn">
-        <i class="ri-external-link-line"></i>
-        <span id="modal-open-text">Open in new tab</span>
-      </a>
-    </div>
-  </div>
-</div>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-badge">
-      <span class="status-dot"></span>
-      <span data-i18n="hero-available">Available for new opportunities</span>
-    </div>
-    <h1 class="hero-name">
-      <span class="line1">Johannes</span>
-      <span class="line2">Quintanar</span>
-    </h1>
-    <h2 class="hero-title" data-i18n="hero-title">Java Full Stack Developer</h2>
-    <p class="hero-desc" data-i18n="hero-desc">
-      I worked for years in aviation operations. Now I bring that same
-      discipline and focus to building software.
-    </p>
-    <div class="hero-location">
-      <i class="ri-map-pin-line"></i>
-      <span>Monterrey, Mexico</span>
-    </div>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn-primary" data-i18n="hero-cta1">View Projects</a>
-      <button class="btn-secondary" id="hero-cv-btn" data-i18n="hero-cta2">
-        <i class="ri-file-text-line"></i> Resume
-      </button>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="photo-wrapper">
-      <div class="photo-ring"></div>
-      <div class="photo-card">
-        <img src="assets/images/jonas foto pro.png" alt="Johannes Quintanar" onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
-      </div>
-    </div>
-    <div class="stat-card stat-1">
-      <span class="stat-num">6+</span>
-      <span class="stat-label" data-i18n="stat-years">Years Exp.</span>
-    </div>
-    <div class="stat-card stat-2">
-      <span class="stat-num">2</span>
-      <span class="stat-label" data-i18n="stat-projects">Projects</span>
-    </div>
-    <div class="stat-card stat-3">
-      <span class="stat-num">✈</span>
-      <span class="stat-label" data-i18n="stat-aviation">Aviation</span>
-    </div>
-  </div>
-</section>
+    <div class="modal-backdrop" id="cv-modal" aria-hidden="true">
+      <section
+        class="cv-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="resume-modal-title"
+        aria-describedby="resume-modal-description"
+      >
+        <header class="cv-modal-header">
+          <div>
+            <p class="eyebrow" data-i18n="modal.eyebrow">CURRÍCULUM</p>
+            <h2 id="resume-modal-title" data-i18n="modal.title">Jonas Castillo — Java Full Stack Developer</h2>
+            <p id="resume-modal-description" data-i18n="modal.description">Selecciona ver o descargar la versión correspondiente al idioma del sitio.</p>
+          </div>
+          <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Cerrar currículum"
+            data-i18n-aria="a11y.closeModal"
+          >
+            ×
+          </button>
+        </header>
 
-<!-- ===== ABOUT ===== -->
-<section class="about section-hidden" id="about">
-  <div class="section-eyebrow" data-i18n="about-eyebrow">ABOUT ME</div>
-  <h2 class="section-title" data-i18n="about-title">Precision. Discipline. Software.</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p data-i18n="about-p1">
-        Before software, I worked for several years in airport operations.
-        I learned to stay calm and make fast decisions under pressure.
-      </p>
-      <p data-i18n="about-p2">
-        Now I use that same mindset to build web apps with Java, Spring Boot
-        and modern web tools. I focus on clean code and good user experience.
-      </p>
-      <div class="about-metrics">
-        <div class="metric">
-          <span class="metric-val">6+</span>
-          <span class="metric-lab" data-i18n="metric-aviation">Years in Aviation</span>
+        <div class="cv-modal-body">
+          <div class="cv-loading" id="cv-loading" role="status">
+            <span class="loading-spinner" aria-hidden="true"></span>
+            <span data-i18n="modal.loading">Cargando currículum…</span>
+          </div>
+          <iframe id="cv-iframe" title="Currículum de Jonas Castillo" data-i18n-title="modal.iframeTitle"></iframe>
+          <div class="cv-mobile-fallback">
+            <span aria-hidden="true">PDF</span>
+            <p data-i18n="modal.mobileText">En pantallas pequeñas es más cómodo abrir el PDF en una pestaña nueva.</p>
+          </div>
         </div>
-        <div class="metric">
-          <span class="metric-val">2024</span>
-          <span class="metric-lab" data-i18n="metric-transition">Career Transition</span>
-        </div>
-        <div class="metric">
-          <span class="metric-val">100%</span>
-          <span class="metric-lab" data-i18n="metric-driven">Self-Driven</span>
-        </div>
-      </div>
-    </div>
-    <div class="about-cards">
-      <div class="info-card">
-        <div class="info-icon">✈</div>
-        <h3 data-i18n="card-aviation-title">Aviation</h3>
-        <p data-i18n="card-aviation-desc">6+ years coordinating airport operations and leading multidisciplinary teams.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">☕</div>
-        <h3 data-i18n="card-java-title">Java</h3>
-        <p data-i18n="card-java-desc">Focused on backend development with Spring Boot, REST APIs and SQL databases.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">⚡</div>
-        <h3 data-i18n="card-auto-title">Automation</h3>
-        <p data-i18n="card-auto-desc">Built internal Python tools to optimize airport administrative processes.</p>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🚀</div>
-        <h3 data-i18n="card-goal-title">Goal</h3>
-        <p data-i18n="card-goal-desc">Become a world-class Full Stack Developer creating impactful software solutions.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== SKILLS ===== -->
-<section class="skills section-hidden" id="skills">
-  <div class="section-eyebrow" data-i18n="skills-eyebrow">TECH STACK</div>
-  <h2 class="section-title" data-i18n="skills-title">Technologies I work with</h2>
-  <div class="skills-grid">
-    <div class="skill-category">
-      <h3><span class="cat-icon">☕</span> Backend</h3>
-      <div class="skill-items">
-        <div class="skill-item"><span>Java 21</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div></div>
-        <div class="skill-item"><span>Spring Boot</span><div class="skill-bar"><div class="skill-fill" style="--w:45%"></div></div></div>
-        <div class="skill-item"><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" style="--w:45%"></div></div></div>
-        <div class="skill-item"><span>Maven</span><div class="skill-bar"><div class="skill-fill" style="--w:35%"></div></div></div>
-        <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" style="--w:20%"></div></div></div>
-      </div>
-    </div>
-    <div class="skill-category">
-      <h3><span class="cat-icon">🌐</span> Frontend</h3>
-      <div class="skill-items">
-        <div class="skill-item"><span>HTML5</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div></div>
-        <div class="skill-item"><span>CSS3</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div></div>
-        <div class="skill-item"><span>JavaScript ES6</span><div class="skill-bar"><div class="skill-fill" style="--w:40%"></div></div></div>
-        <div class="skill-item"><span>Bootstrap</span><div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div></div>
-        <div class="skill-item"><span>Responsive Design</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div></div>
-      </div>
-    </div>
-    <div class="skill-category">
-      <h3><span class="cat-icon">🗄</span> Databases</h3>
-      <div class="skill-items">
-        <div class="skill-item"><span>MySQL</span><div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div></div>
-        <div class="skill-item"><span>PostgreSQL</span><div class="skill-bar"><div class="skill-fill" style="--w:35%"></div></div></div>
-        <div class="skill-item"><span>SQL</span><div class="skill-bar"><div class="skill-fill" style="--w:45%"></div></div></div>
-        <div class="skill-item"><span>JDBC</span><div class="skill-bar"><div class="skill-fill" style="--w:30%"></div></div></div>
-      </div>
-    </div>
-    <div class="skill-category">
-      <h3><span class="cat-icon">⚙</span> Tools & Methods</h3>
-      <div class="skill-items">
-        <div class="skill-item"><span>Git / GitHub</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div></div>
-        <div class="skill-item"><span>SCRUM</span><div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div></div>
-        <div class="skill-item"><span>Figma</span><div class="skill-bar"><div class="skill-fill" style="--w:30%"></div></div></div>
-        <div class="skill-item"><span>VS Code</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div></div>
-        <div class="skill-item"><span>IntelliJ IDEA</span><div class="skill-bar"><div class="skill-fill" style="--w:45%"></div></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Soft skills / badges -->
-  <div class="soft-skills">
-    <h3 data-i18n="soft-title">Professional Skills</h3>
-    <div class="badge-grid">
-      <span class="badge" data-i18n="soft-1">✓ Teamwork</span>
-      <span class="badge" data-i18n="soft-2">✓ Critical Thinking</span>
-      <span class="badge" data-i18n="soft-3">✓ Pressure Management</span>
-      <span class="badge" data-i18n="soft-4">✓ Fast Learner</span>
-      <span class="badge" data-i18n="soft-5">✓ Problem Solving</span>
-      <span class="badge" data-i18n="soft-6">✓ Communication</span>
-      <span class="badge" data-i18n="soft-7">✓ Leadership</span>
-      <span class="badge" data-i18n="soft-8">✓ Attention to Detail</span>
-      <span class="badge" data-i18n="soft-9">✓ Agile Mindset</span>
-      <span class="badge" data-i18n="soft-10">✓ Scrum Collaboration</span>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
-<section class="projects section-hidden" id="projects">
-  <div class="section-eyebrow" data-i18n="proj-eyebrow">FEATURED PROJECTS</div>
-  <h2 class="section-title" data-i18n="proj-title">Selected Work</h2>
-
-  <!-- Project 1 -->
-  <article class="case-study">
-    <div class="case-header">
-      <div class="case-tags">
-        <span class="case-tag" data-i18n="tag-team">Team Project</span>
-        <span class="case-tag" data-i18n="tag-frontend">Frontend Developer</span>
-        <span class="case-tag">2026</span>
-      </div>
-      <div class="case-title-row">
-        <div>
-          <h3 class="case-name">Syntax Logistics</h3>
-          <p class="case-subtitle" data-i18n="proj1-subtitle">Express Delivery Platform</p>
-        </div>
-        <div class="case-actions">
-          <a href="https://github.com/enriqueperezdevmx-coder/Equipo_Syntax_Error" target="_blank" class="case-btn" aria-label="GitHub">
-            <i class="ri-github-line"></i> GitHub
+        <footer class="cv-modal-footer">
+          <a class="button button-primary" id="cv-open-link" href="#" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="modal.open">Abrir PDF</span>
+            <span aria-hidden="true">↗</span>
           </a>
-        </div>
-      </div>
-    </div>
-    <div class="case-body">
-      <div class="case-mockup">
-        <div class="macbook">
-          <div class="macbook-screen">
-            <img src="assets/images/home.png" alt="Syntax Logistics screenshot" onerror="this.src='https://placehold.co/800x500/1a1a2e/7c3aed?text=Syntax+Logistics'">
-          </div>
-          <div class="macbook-base"><div class="macbook-notch"></div></div>
-        </div>
-      </div>
-      <div class="case-details">
-        <div class="case-block">
-          <h4 data-i18n="case-overview">Overview</h4>
-          <p data-i18n="proj1-overview">Syntax Logistics is a collaborative e-commerce platform focused on express delivery services across Mexico City and the State of Mexico. Developed under SCRUM methodology, the project emphasizes user experience, responsive design and efficient logistics management.</p>
-        </div>
-        <div class="case-block">
-          <h4 data-i18n="case-role">My Role</h4>
-          <p data-i18n="proj1-role">Frontend Developer — responsible for UI components, responsive layout and integrating design mockups into functional HTML/CSS/JS code.</p>
-        </div>
-        <div class="case-block">
-          <h4 data-i18n="case-stack">Stack</h4>
-          <div class="tech-tags">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-            <span>Bootstrap</span><span>GitHub</span><span>SCRUM</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- Project 2 -->
-  <article class="case-study">
-    <div class="case-header">
-      <div class="case-tags">
-        <span class="case-tag" data-i18n="tag-team">Team Project</span>
-        <span class="case-tag" data-i18n="tag-frontend">Frontend Developer</span>
-        <span class="case-tag">2026</span>
-      </div>
-      <div class="case-title-row">
-        <div>
-          <h3 class="case-name">Mundo Fifas</h3>
-          <p class="case-subtitle" data-i18n="proj2-subtitle">Football Community Website</p>
-        </div>
-        <div class="case-actions">
-          <a href="https://github.com/Rock2612/Mundo-Fifas" target="_blank" class="case-btn" aria-label="GitHub">
-            <i class="ri-github-line"></i> GitHub
+          <a class="button button-outline" id="cv-download-link" href="#" download>
+            <span aria-hidden="true">↓</span>
+            <span data-i18n="modal.download">Descargar PDF</span>
           </a>
-        </div>
-      </div>
+        </footer>
+      </section>
     </div>
-    <div class="case-body">
-      <div class="case-mockup">
-        <div class="macbook">
-          <div class="macbook-screen">
-            <img src="assets/images/mundo_fifas.png" alt="Mundo Fifas screenshot" onerror="this.src='https://placehold.co/800x500/1a1a2e/7c3aed?text=Mundo+Fifas'">
-          </div>
-          <div class="macbook-base"><div class="macbook-notch"></div></div>
-        </div>
-      </div>
-      <div class="case-details">
-        <div class="case-block">
-          <h4 data-i18n="case-overview">Overview</h4>
-          <p data-i18n="proj2-overview">Mundo Fifas is a football community website built to practice modern frontend development. The project focuses on clean structure, responsive layouts and a smooth user experience aligned with contemporary web standards.</p>
-        </div>
-        <div class="case-block">
-          <h4 data-i18n="case-role">My Role</h4>
-          <p data-i18n="proj2-role">Frontend Developer — designed and implemented the page structure, visual components and responsive behavior across all device sizes.</p>
-        </div>
-        <div class="case-block">
-          <h4 data-i18n="case-stack">Stack</h4>
-          <div class="tech-tags">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-</section>
 
-<!-- ===== JOURNEY ===== -->
-<section class="journey section-hidden" id="journey">
-  <div class="section-eyebrow" data-i18n="journey-eyebrow">MY JOURNEY</div>
-  <h2 class="section-title" data-i18n="journey-title">From Aviation to Software Engineering</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <span class="tl-year">2018</span>
-        <h3 data-i18n="tl1-title">Aviation Operations</h3>
-        <p data-i18n="tl1-desc">Started coordinating airport operations, learning precision, teamwork and decision making under pressure.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <span class="tl-year">2024</span>
-        <h3 data-i18n="tl2-title">Process Optimization</h3>
-        <p data-i18n="tl2-desc">Built internal automation tools with Python to improve airport administrative workflows.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="tl-dot"></div>
-      <div class="tl-content">
-        <span class="tl-year">2025</span>
-        <h3 data-i18n="tl3-title">Java Full Stack</h3>
-        <p data-i18n="tl3-desc">Transitioned into software development with Generation México and modern Java technologies.</p>
-      </div>
-    </div>
-    <div class="timeline-item active">
-      <div class="tl-dot pulse"></div>
-      <div class="tl-content">
-        <span class="tl-year" data-i18n="tl4-year">Today</span>
-        <h3 data-i18n="tl4-title">Looking Forward</h3>
-        <p data-i18n="tl4-desc">Seeking opportunities to build scalable, impactful software while continuously growing as a Full Stack Developer.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CERTIFICATIONS ===== -->
-<section class="certs section-hidden" id="certs">
-  <div class="section-eyebrow" data-i18n="certs-eyebrow">EDUCATION & CERTIFICATIONS</div>
-  <h2 class="section-title" data-i18n="certs-title">Learning Never Stops</h2>
-  <div class="certs-grid">
-    <div class="cert-card">
-      <div class="cert-icon"><i class="ri-graduation-cap-line"></i></div>
-      <div class="cert-info">
-        <h4 data-i18n="cert1-title">Java Full Stack Development</h4>
-        <span class="cert-issuer">Generation México</span>
-        <span class="cert-year">2025–2026</span>
-      </div>
-      <span class="cert-badge" data-i18n="cert-current">In Progress</span>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon"><i class="ri-plane-line"></i></div>
-      <div class="cert-info">
-        <h4 data-i18n="cert2-title">Airport Operations Specialist</h4>
-        <span class="cert-issuer">Aviation Industry</span>
-        <span class="cert-year">2018–2024</span>
-      </div>
-      <span class="cert-badge completed" data-i18n="cert-completed">Completed</span>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon"><i class="ri-code-s-slash-line"></i></div>
-      <div class="cert-info">
-        <h4 data-i18n="cert3-title">Python for Automation</h4>
-        <span class="cert-issuer">Self-Directed</span>
-        <span class="cert-year">2024</span>
-      </div>
-      <span class="cert-badge completed" data-i18n="cert-completed">Completed</span>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon"><i class="ri-global-line"></i></div>
-      <div class="cert-info">
-        <h4 data-i18n="cert4-title">English — Professional Level</h4>
-        <span class="cert-issuer">Bilingual</span>
-        <span class="cert-year">EN / ES</span>
-      </div>
-      <span class="cert-badge completed" data-i18n="cert-fluent">Fluent</span>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PHILOSOPHY ===== -->
-<section class="philosophy section-hidden" id="philosophy">
-  <div class="quote-wrapper">
-    <div class="quote-mark">"</div>
-    <blockquote data-i18n="quote">
-      Great software is built with discipline,<br>precision and continuous learning.
-    </blockquote>
-    <p class="quote-context" data-i18n="quote-context">
-      Years coordinating airport operations taught me that every decision matters.
-      Today I apply that same mindset to software engineering — building reliable
-      solutions with clean code, logical thinking and attention to detail.
-    </p>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section class="contact section-hidden" id="contact">
-  <div class="contact-inner">
-    <div class="contact-eyebrow" data-i18n="contact-eyebrow">OPEN TO OPPORTUNITIES</div>
-    <h2 class="contact-headline" data-i18n="contact-headline">
-      Let's build something<br>together.
-    </h2>
-    <p class="contact-sub" data-i18n="contact-sub">
-      I'm actively looking for my first professional role as a Full Stack Developer.
-      If you have a project or an open position, I'd love to hear from you.
-    </p>
-    <div class="contact-cards">
-      <a href="mailto:johannesq.dev@gmail.com" class="contact-card">
-        <i class="ri-mail-line"></i>
-        <div>
-          <span class="contact-label" data-i18n="contact-email">Email</span>
-          <span class="contact-val">johannesq.dev@gmail.com</span>
-        </div>
-      </a>
-      <a href="https://github.com/johannesquintanar-dev" target="_blank" class="contact-card">
-        <i class="ri-github-line"></i>
-        <div>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-val">johannesquintanar-dev</span>
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/jonascastillo/" target="_blank" class="contact-card">
-        <i class="ri-linkedin-line"></i>
-        <div>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-val">jonascastillo</span>
-        </div>
-      </a>
-    </div>
-    <div class="contact-cta">
-      <button class="btn-primary" id="contact-cv-btn" data-i18n="contact-resume">
-        <i class="ri-file-text-line"></i> View Resume
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">Johannes<span>.</span>Dev</div>
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#about" data-i18n="nav-about">About</a>
-      <a href="#skills" data-i18n="nav-skills">Skills</a>
-      <a href="#projects" data-i18n="nav-projects">Projects</a>
-      <a href="#contact" data-i18n="nav-contact">Contact</a>
-    </nav>
-    <div class="footer-social">
-      <a href="https://github.com/johannesquintanar-dev" target="_blank" aria-label="GitHub"><i class="ri-github-line"></i></a>
-      <a href="https://www.linkedin.com/in/jonascastillo/" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
-      <a href="mailto:johannesq.dev@gmail.com" aria-label="Email"><i class="ri-mail-line"></i></a>
-    </div>
-    <p class="footer-copy">
-      © 2026 Johannes Quintanar. <span data-i18n="footer-rights">All rights reserved.</span>
-    </p>
-  </div>
-</footer>
-
-<script src="js/i18n.js"></script>
-<script src="js/script.js"></script>
-</body>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </body>
 </html>
