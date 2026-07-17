@@ -628,10 +628,11 @@ p:last-child {
 }
 
 .portrait-frame img {
+  display: block;
   width: 100%;
   aspect-ratio: 5 / 6;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
 }
 
 .portrait-label {
