@@ -25,6 +25,7 @@ Sitio personal hecho a mano, sin frameworks ni proceso de build: HTML, CSS y Jav
 ## Características
 
 - **Diseño minimalista** con tres temas (oscuro por omisión, claro y colorido); la preferencia se recuerda.
+- **Caso técnico del cotizador comercial** (motor de precios en PL/pgSQL homologado al centavo, volumetría, flete por matriz de distancias, listas con herencia, viáticos automáticos).
 - **Caso técnico del puente con CONTPAQi** (servicio de Windows en .NET que factura por SDK) y detalle técnico de Groundsight (Rockie, asistente, comparador, generador estático).
 - **Escaparate del proyecto destacado** con pestañas: cada una enseña una pantalla real del sistema y explica qué resuelve.
 - **Bilingüe (ES / EN)** con detección automática del idioma del navegador; también traduce las pestañas y leyendas del escaparate.

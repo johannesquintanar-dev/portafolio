@@ -212,6 +212,7 @@
 
             <div class="showcase-tabs" role="tablist" aria-label="Pantallas del sistema">
               <button class="showcase-tab" role="tab" aria-selected="true" data-captura="menu" data-url="sistema.thelsa / inicio" data-i18n="thelsa.tab.menu">Menú de módulos</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="cotizador" data-url="sistema.thelsa / comercial / cotizador" data-i18n="thelsa.tab.cotizador">Cotizador</button>
               <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="agenda" data-url="sistema.thelsa / operaciones / agenda" data-i18n="thelsa.tab.agenda">Agenda del mes</button>
               <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="capacidad" data-url="sistema.thelsa / comercial / capacidad" data-i18n="thelsa.tab.capacidad">Capacidad operativa</button>
               <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="plan-viajes" data-url="sistema.thelsa / logística / plan de viajes" data-i18n="thelsa.tab.plan-viajes">Plan de Viajes</button>
@@ -223,6 +224,7 @@
               <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">sistema.thelsa / inicio</span></div>
               <div class="browser-body">
                 <img class="is-active" data-captura="menu" src="assets/images/thelsa/menu-900.webp" srcset="assets/images/thelsa/menu-900.webp 900w, assets/images/thelsa/menu-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="876" alt="Menú de módulos del sistema interno de Thelsa" loading="lazy" decoding="async" />
+                <img data-captura="cotizador" data-src="assets/images/thelsa/cotizador-900.webp" data-srcset="assets/images/thelsa/cotizador-900.webp 900w, assets/images/thelsa/cotizador-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="800" alt="Cotizador: levantamiento de inventario con el catálogo de artículos" decoding="async" />
                 <img data-captura="agenda" data-src="assets/images/thelsa/agenda-900.webp" data-srcset="assets/images/thelsa/agenda-900.webp 900w, assets/images/thelsa/agenda-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="876" alt="Agenda del mes de Operaciones con la capacidad por día" decoding="async" />
                 <img data-captura="capacidad" data-src="assets/images/thelsa/capacidad-900.webp" data-srcset="assets/images/thelsa/capacidad-900.webp 900w, assets/images/thelsa/capacidad-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="680" alt="Cuadrícula de capacidad operativa por sucursal y día" decoding="async" />
                 <img class="is-contain" data-captura="plan-viajes" data-src="assets/images/thelsa/plan-viajes-900.webp" width="783" height="630" alt="Mapa del Plan de Viajes con las rutas de la flota" decoding="async" />
@@ -255,6 +257,34 @@
                   <p data-i18n="thelsa.confidentiality">El sistema es privado y de uso interno. La representación visual es conceptual y utiliza únicamente datos ficticios.</p>
                 </div>
               </div>
+            </div>
+          </article>
+
+          <!-- Cotizador comercial: el módulo con más horas de trabajo -->
+          <article class="case-study reveal" aria-labelledby="cotizador-title">
+            <div class="case-media">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">sistema.thelsa / comercial / cotizador</span></div>
+                <div class="browser-body" style="aspect-ratio: 1440 / 800">
+                  <img src="assets/images/thelsa/cotizador-900.webp" srcset="assets/images/thelsa/cotizador-900.webp 900w, assets/images/thelsa/cotizador-1440.webp 1440w" sizes="(min-width: 1024px) 520px, 92vw" alt="Cotizador: levantamiento de inventario con el catálogo de artículos" width="1440" height="800" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <span class="project-label" data-i18n="cotizador.label">EL MÓDULO MÁS TRABAJADO · 2026 · DENTRO DEL SISTEMA DE THELSA</span>
+              <h3 id="cotizador-title" data-i18n="cotizador.title">Cotizador comercial con motor de precios en la base de datos</h3>
+              <p class="project-role" data-i18n="cotizador.roleTitle">Motor en PL/pgSQL · pantalla en JavaScript · homologado contra el sistema anterior</p>
+              <p class="case-summary" data-i18n="cotizador.summary">La pieza que más horas llevó: sustituye al cotizador del sistema anterior sin cambiar ni un centavo de lo que la empresa cobra. El ejecutivo levanta el inventario del cliente, el sistema calcula volumen, flete, maniobras, empaques, seguro y viáticos, y entrega el PDF, la liga para el cliente y el servicio listo para operaciones.</p>
+              <ul class="tech-bullets">
+                <li data-i18n-html="cotizador.b1"><b>Motor de precios en PL/pgSQL, homologado al centavo:</b> reconstruí las reglas del sistema anterior (transporte por kilómetro con mínimos, maniobras por unidad, empaques por m³, pisos y elevadores, piano, vehículos y motos, desvíos, descuentos, IVA y retención) y las comparé contra decenas de folios reales hasta cuadrar centavo por centavo. La pantalla solo muestra lo que la base calcula.</li>
+                <li data-i18n-html="cotizador.b2"><b>Volumetría y flete:</b> catálogo de más de cien artículos con medidas ajustables (m³ = largo × ancho × alto, redondeado antes de multiplicar), marcas por artículo (empaque, desempaque, almacenaje, huacal, volado), unidades calculadas por volumen, y flete sobre una matriz de distancias de decenas de miles de pares de ciudades con cálculo automático por carretera para los pares que faltan.</li>
+                <li data-i18n-html="cotizador.b3"><b>Listas de precios con herencia y viáticos automáticos:</b> una lista base y una por empresa con convenio que solo guarda lo que difiere; los viáticos se calculan solos a partir de las cuadrillas que exige el volumen, la distancia y los días de trabajo, y se recalculan en vivo mientras la cotización sigue abierta.</li>
+                <li data-i18n-html="cotizador.b4"><b>Alrededor del cotizador:</b> PDF de cuatro páginas generado en el navegador, liga pública para que el cliente valorice su inventario (con póliza y pieza por pieza), catálogo de colonias con historial de traspaleo, sugerencias de colonia y calle, firma de documentos en línea, y el paso directo de Cotizada a Aceptada y a servicio programado en Operaciones.</li>
+              </ul>
+              <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
+                <span>PL/pgSQL</span><span>PostgreSQL</span><span>Supabase</span><span>JavaScript</span><span>Matriz de distancias</span><span>OpenStreetMap</span><span>PDF en el navegador</span><span>Excel (ZIP quirúrgico)</span><span>Playwright</span>
+              </div>
+              <div class="project-note" style="margin-top: 1rem"><span aria-hidden="true">ⓘ</span><p data-i18n="cotizador.note">La captura es una cotización nueva en una copia de prueba, sin cliente ni importes; las tarifas y reglas de precio no se muestran.</p></div>
             </div>
           </article>
 
