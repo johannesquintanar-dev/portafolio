@@ -1,89 +1,58 @@
-# Portafolio de Jonas Castillo — actualización profesional
+<div align="center">
 
-Versión estática construida con HTML, CSS y JavaScript vanilla. La actualización mantiene el proyecto ligero y compatible con Vercel, pero cambia la narrativa para presentar a Jonas Castillo como Java Full Stack Developer con experiencia práctica en backend, automatización y operaciones reales.
+# Jonas Castillo · Portafolio
 
-## Cambios incluidos
+**Java Full Stack Developer** enfocado en soluciones reales de negocio
 
-- Nombre profesional actualizado a **Jonas Castillo**.
-- Hero orientado a Java Backend / Full Stack y orden correcto en móvil.
-- Calculadora de Servicios Aeroportuarios como proyecto principal.
-- Syntax Logistics presentado como participación Full Stack.
-- Mundo Fifas movido a proyectos secundarios.
-- Experiencia profesional, stack y certificaciones reorganizados.
-- Inglés corregido a **B2 Intermedio**.
-- Selector automático de idioma ES/EN.
-- Tres temas visuales: claro, oscuro y colorido.
-- Menú móvil con scroll interno, control de foco y cierre con Escape.
-- Modal de CV accesible y adaptable a pantallas de poca altura.
-- SEO, Open Graph, Twitter Card y JSON-LD.
-- Imágenes optimizadas en WebP.
-- Responsive mobile-first sin breakpoints contradictorios.
+[![Sitio](https://img.shields.io/badge/Ver_sitio-portafolio--topaz--five.vercel.app-0f766e?style=for-the-badge&logo=vercel&logoColor=white)](https://portafolio-topaz-five.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jonascastillo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jonascastillo/)
 
-## Archivos que debes conservar
+<img src=".github/preview.jpg" alt="Vista del portafolio de Jonas Castillo" width="900" />
 
-El código espera encontrar estos PDF dentro de `assets/cv/`:
+</div>
 
-- `Jonas_Castillo_CV_Spanish.pdf`
-- `Jonas_Castillo_CV_English.pdf`
+## Sobre el proyecto
 
-Esos archivos ya existen en tu repositorio actual. **No borres la carpeta `assets/cv` al copiar esta actualización.**
+Sitio personal hecho a mano, sin frameworks ni proceso de build: HTML, CSS y JavaScript puro, publicado en Vercel. Presenta cada proyecto explicando el problema, mi responsabilidad y el resultado, no solo la lista de tecnologías.
 
-## Cómo agregarlo en VS Code
+## Características
 
-1. Crea una copia de seguridad de tu proyecto actual.
-2. Copia el contenido de esta carpeta sobre la raíz de tu repositorio.
-3. Acepta reemplazar `index.html`, `css/`, `js/`, `README.md`, `robots.txt`, `sitemap.xml` y `vercel.json`.
-4. Conserva tus PDF dentro de `assets/cv/`.
-5. Abre la carpeta en VS Code.
-6. Ejecuta el proyecto con Live Server o con:
+- **Bilingüe (ES / EN)** con detección automática del idioma del navegador.
+- **Tres temas visuales:** claro, oscuro y colorido; la preferencia se recuerda.
+- **Diseño mobile-first**, probado de 320 px a 1920 px, incluida la orientación horizontal.
+- **Accesible:** menú móvil con control de foco y cierre con Escape, modal del CV adaptable a pantallas bajas y textos alternativos en todas las imágenes.
+- **SEO completo:** Open Graph, Twitter Card, datos estructurados JSON-LD, `sitemap.xml` y `robots.txt`.
+- **Rápido:** imágenes en WebP con dimensiones declaradas, carga diferida y caché inmutable de recursos.
+- **CV descargable** en español e inglés.
+
+## Tecnologías
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+
+## Estructura
+
+```
+index.html            Página única con todas las secciones
+css/style.css         Sistema visual, temas y componentes
+css/responsive.css    Ajustes por tamaño de pantalla
+js/i18n.js            Textos en español e inglés
+js/script.js          Menú, temas, idioma, modal del CV y animaciones
+assets/               CV, imágenes WebP y favicons
+vercel.json           URLs limpias y encabezados de seguridad y caché
+```
+
+## Correr en local
 
 ```bash
 python -m http.server 5500
 ```
 
-7. Abre `http://localhost:5500`.
+Después abre `http://localhost:5500`. También funciona con Live Server de VS Code.
 
-## Pruebas recomendadas
+## Contacto
 
-Revisa al menos estas resoluciones desde las herramientas de desarrollo del navegador:
-
-- 320 × 568
-- 360 × 640
-- 390 × 844
-- 430 × 932
-- 667 × 375, horizontal
-- 768 × 1024
-- 1024 × 768
-- 1366 × 768
-- 1920 × 1080
-
-También prueba:
-
-- Menú con teclado y tecla Escape.
-- Selector de idioma.
-- Los tres temas visuales.
-- Modal del CV en móvil y escritorio.
-- Zoom del navegador al 200 %.
-- Enlaces de GitHub, LinkedIn, correo y teléfono.
-
-## Deploy en Vercel
-
-```bash
-git add .
-git commit -m "Actualiza portafolio profesional y responsive"
-git push origin main
-```
-
-Vercel desplegará automáticamente el nuevo commit si el repositorio ya está conectado.
-
-## Datos que debes verificar antes de publicar
-
-- Que el Bootcamp de Generation ya pueda mostrarse oficialmente como completado.
-- Que el certificado AIFYC indique exactamente `480 horas` y el nombre institucional mostrado.
-- Que tus PDF sean las versiones más recientes del CV.
-- Que el número de colaboradores que deseas publicar sea `23` y no `27`.
-- Que quieras mantener públicamente el teléfono en la sección de contacto.
-
-## Próximo proyecto recomendado
-
-El HTML incluye una plantilla comentada para un futuro sistema backend de operaciones aeroportuarias. Actívala solamente cuando exista un repositorio o una demostración verificable.
+- Correo: [johannesq.dev@gmail.com](mailto:johannesq.dev@gmail.com)
+- LinkedIn: [jonascastillo](https://www.linkedin.com/in/jonascastillo/)

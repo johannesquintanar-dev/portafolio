@@ -1,0 +1,9 @@
+# Editor y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*Zone.Identifier
+
+# Vercel
+.vercel/

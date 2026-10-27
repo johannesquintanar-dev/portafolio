@@ -1,7 +1,0 @@
-Conserva en esta carpeta los dos PDF que ya existen en tu repositorio:
-
-- Jonas_Castillo_CV_Spanish.pdf
-- Jonas_Castillo_CV_English.pdf
-
-El código actualizado ya está configurado para usar exactamente esos nombres.
-Al copiar esta actualización sobre tu proyecto actual, no borres los PDF existentes.
