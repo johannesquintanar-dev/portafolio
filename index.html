@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#070c14" id="theme-color-meta" />
 
     <title>Jonas Castillo | Full Stack Developer</title>
     <meta
       name="description"
-      content="Full Stack Developer en Monterrey. Construyo sistemas internos que convierten procesos en Excel y papel en software que una empresa usa todos los días: PostgreSQL, JavaScript, Java y Python."
+      content="Full Stack Developer en Monterrey. Sistemas internos sobre PostgreSQL y Supabase, integraciones con SDK (.NET y CONTPAQi), JavaScript sin framework, Java y Python. Responsable de Sistemas en una empresa con 13 sucursales."
       id="meta-description"
     />
     <meta name="author" content="Jonas Johannes Castillo Quintanar" />
@@ -19,14 +19,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portafolio-topaz-five.vercel.app/" />
     <meta property="og:title" content="Jonas Castillo | Full Stack Developer" id="og-title" />
-    <meta property="og:description" content="Sistemas internos que una empresa usa todos los días: del Excel al sistema. PostgreSQL, JavaScript, Java y Python." id="og-description" />
+    <meta property="og:description" content="Sistemas internos que una empresa usa todos los días: PostgreSQL, Supabase, JavaScript, .NET y Java." id="og-description" />
     <meta property="og:image" content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_MX" id="og-locale" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jonas Castillo | Full Stack Developer" id="twitter-title" />
-    <meta name="twitter:description" content="Sistemas internos que una empresa usa todos los días: del Excel al sistema." id="twitter-description" />
+    <meta name="twitter:description" content="Sistemas internos que una empresa usa todos los días: PostgreSQL, Supabase, JavaScript, .NET y Java." id="twitter-description" />
     <meta name="twitter:image" content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png" />
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
@@ -35,9 +35,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="assets/images/retrato-800.webp" fetchpriority="high" />
-    <link rel="stylesheet" href="css/portafolio.css?v=20261027b" />
+    <link rel="stylesheet" href="css/portafolio.css?v=20261027c" />
 
     <script type="application/ld+json">
       {
@@ -53,7 +53,7 @@
         "telephone": "+52 8119594304",
         "address": { "@type": "PostalAddress", "addressLocality": "Monterrey", "addressRegion": "Nuevo León", "addressCountry": "MX" },
         "sameAs": ["https://github.com/johannesquintanar-dev", "https://www.linkedin.com/in/jonascastillo/"],
-        "knowsAbout": ["PostgreSQL", "PL/pgSQL", "Supabase", "JavaScript", "Java 21", "Spring Boot", "REST APIs", "Python", "Playwright", "Scrum"]
+        "knowsAbout": ["PostgreSQL", "PL/pgSQL", "Supabase", "JavaScript", ".NET Framework", "C#", "Java 21", "Spring Boot", "Python", "Playwright"]
       }
     </script>
   </head>
@@ -83,6 +83,11 @@
             <button class="language-button" type="button" data-lang="es" aria-pressed="true">ES</button>
             <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>
+          <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
+            <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light" title="Tema claro"><span aria-hidden="true">☀</span></button>
+            <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark" title="Tema oscuro"><span aria-hidden="true">◐</span></button>
+            <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful" title="Tema colorido"><span aria-hidden="true">✦</span></button>
+          </div>
           <button class="button button-small button-outline cv-trigger" type="button">
             <span aria-hidden="true">↓</span>
             <span data-i18n="nav.cv">CV</span>
@@ -109,6 +114,14 @@
               <div class="language-control" role="group" aria-label="Idioma" data-i18n-aria="a11y.language">
                 <button class="language-button" type="button" data-lang="es" aria-pressed="true">ES</button>
                 <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+              </div>
+            </div>
+            <div class="mobile-control-row">
+              <span data-i18n="controls.theme">Tema</span>
+              <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
+                <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light"><span aria-hidden="true">☀</span></button>
+                <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark"><span aria-hidden="true">◐</span></button>
+                <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful"><span aria-hidden="true">✦</span></button>
               </div>
             </div>
             <button class="button button-primary cv-trigger mobile-cv-button" type="button">
@@ -144,7 +157,7 @@
               <span data-i18n="hero.location">Monterrey, Nuevo León · Disponible para trabajo remoto y reubicación</span>
             </div>
             <div class="hero-stack" aria-label="Tecnologías principales">
-              <span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">JavaScript</span><span class="chip">Java · Spring Boot</span><span class="chip">Python</span><span class="chip">Playwright</span>
+              <span>PostgreSQL</span><span>Supabase</span><span>JavaScript</span><span>.NET</span><span>Java · Spring Boot</span><span>Python</span><span>Playwright</span>
             </div>
           </div>
 
@@ -153,13 +166,13 @@
               <img
                 src="assets/images/retrato-800.webp"
                 srcset="assets/images/retrato-800.webp 800w, assets/images/retrato-1200.webp 1200w"
-                sizes="(min-width: 1024px) 440px, 90vw"
+                sizes="(min-width: 1024px) 420px, 90vw"
                 alt="Jonas Castillo con traje negro"
                 data-i18n-alt="hero.photoAlt"
                 width="800" height="1000" fetchpriority="high" decoding="async"
               />
               <div class="portrait-label">
-                <span class="portrait-label-title">PostgreSQL · JavaScript · Java</span>
+                <span class="portrait-label-title">PostgreSQL · JavaScript · .NET · Java</span>
                 <span data-i18n="hero.photoCaption">Desarrollo técnico con criterio operativo</span>
               </div>
             </div>
@@ -177,7 +190,7 @@
       <section class="section section-surface" id="projects">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="projects.eyebrow">SOLUCIONES Y PROYECTOS</p>
+            <span class="eyebrow" data-i18n="projects.eyebrow">SOLUCIONES Y PROYECTOS</span>
             <h2 data-i18n="projects.title">Software creado para resolver problemas reales</h2>
             <p data-i18n="projects.intro">No presento solamente tecnologías: explico el problema, mi responsabilidad y el resultado de cada solución.</p>
           </div>
@@ -209,12 +222,12 @@
             <div class="browser">
               <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">sistema.thelsa / inicio</span></div>
               <div class="browser-body">
-                <img class="is-active" data-captura="menu" src="assets/images/thelsa/menu-900.webp" srcset="assets/images/thelsa/menu-900.webp 900w, assets/images/thelsa/menu-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Menú de módulos del sistema interno de Thelsa" loading="lazy" decoding="async" />
-                <img data-captura="agenda" data-src="assets/images/thelsa/agenda-900.webp" data-srcset="assets/images/thelsa/agenda-900.webp 900w, assets/images/thelsa/agenda-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Agenda del mes de Operaciones con la capacidad por día" decoding="async" />
-                <img data-captura="capacidad" data-src="assets/images/thelsa/capacidad-900.webp" data-srcset="assets/images/thelsa/capacidad-900.webp 900w, assets/images/thelsa/capacidad-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="680" alt="Cuadrícula de capacidad operativa por sucursal y día" decoding="async" />
+                <img class="is-active" data-captura="menu" src="assets/images/thelsa/menu-900.webp" srcset="assets/images/thelsa/menu-900.webp 900w, assets/images/thelsa/menu-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="876" alt="Menú de módulos del sistema interno de Thelsa" loading="lazy" decoding="async" />
+                <img data-captura="agenda" data-src="assets/images/thelsa/agenda-900.webp" data-srcset="assets/images/thelsa/agenda-900.webp 900w, assets/images/thelsa/agenda-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="876" alt="Agenda del mes de Operaciones con la capacidad por día" decoding="async" />
+                <img data-captura="capacidad" data-src="assets/images/thelsa/capacidad-900.webp" data-srcset="assets/images/thelsa/capacidad-900.webp 900w, assets/images/thelsa/capacidad-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="680" alt="Cuadrícula de capacidad operativa por sucursal y día" decoding="async" />
                 <img class="is-contain" data-captura="plan-viajes" data-src="assets/images/thelsa/plan-viajes-900.webp" width="783" height="630" alt="Mapa del Plan de Viajes con las rutas de la flota" decoding="async" />
-                <img data-captura="seguridad" data-src="assets/images/thelsa/seguridad-900.webp" data-srcset="assets/images/thelsa/seguridad-900.webp 900w, assets/images/thelsa/seguridad-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Formatos de seguridad por sucursal en Capital Humano" decoding="async" />
-                <img data-captura="guia" data-src="assets/images/thelsa/guia-900.webp" data-srcset="assets/images/thelsa/guia-900.webp 900w, assets/images/thelsa/guia-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="836" alt="Guía del ejecutivo comercial con los procesos paso a paso" decoding="async" />
+                <img data-captura="seguridad" data-src="assets/images/thelsa/seguridad-900.webp" data-srcset="assets/images/thelsa/seguridad-900.webp 900w, assets/images/thelsa/seguridad-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="876" alt="Formatos de seguridad por sucursal en Capital Humano" decoding="async" />
+                <img data-captura="guia" data-src="assets/images/thelsa/guia-900.webp" data-srcset="assets/images/thelsa/guia-900.webp 900w, assets/images/thelsa/guia-1440.webp 1440w" sizes="(min-width: 1024px) 1050px, 92vw" width="1440" height="836" alt="Guía del ejecutivo comercial con los procesos paso a paso" decoding="async" />
               </div>
             </div>
             <p class="showcase-caption"><span data-i18n="thelsa.cap.menu">Un solo acceso para todos los módulos: cada persona entra únicamente a lo que le corresponde según su rol.</span></p>
@@ -222,22 +235,10 @@
 
             <div class="showcase-grid">
               <div class="case-cards">
-                <div class="case-card">
-                  <h4><i>01</i><span data-i18n="case.problem">Problema</span></h4>
-                  <p data-i18n="thelsa.problem">La información de cada área vivía en herramientas distintas que no se hablaban entre sí. Programar un servicio, cotizarlo o saber cuánta gente y cuántas unidades quedaban libres un día dependía de capturas manuales y de la memoria de cada plaza.</p>
-                </div>
-                <div class="case-card">
-                  <h4><i>02</i><span data-i18n="case.solution">Solución</span></h4>
-                  <p data-i18n="thelsa.solution">Un sistema por módulos sobre una sola base de datos: programación de servicios contra la capacidad real, cotizaciones y expediente del cliente, plan de viajes y rutas, plantilla de personal e incidencias, facturación conectada al sistema contable, garantías y una guía de uso para cada pantalla.</p>
-                </div>
-                <div class="case-card">
-                  <h4><i>03</i><span data-i18n="case.role">Mi responsabilidad</span></h4>
-                  <p data-i18n="thelsa.role">Construí la mayoría de los módulos de negocio y la integración con el sistema contable; participé en operaciones y logística; y llevo la calidad y la puesta en producción: cada cambio se ensaya en una copia de la base real, con pruebas automatizadas de navegador, antes de publicarse.</p>
-                </div>
-                <div class="case-card">
-                  <h4><i>04</i><span data-i18n="case.result">Resultado</span></h4>
-                  <p data-i18n="thelsa.result">Las 13 sucursales operan sobre el sistema. La lógica de negocio vive en la base de datos, cada módulo tiene su propio espacio y los permisos se aplican por rol desde la base, no desde la pantalla.</p>
-                </div>
+                <div class="case-card"><h4 data-i18n="case.problem">Problema</h4><p data-i18n="thelsa.problem">La información de cada área vivía en herramientas distintas que no se hablaban entre sí. Programar un servicio, cotizarlo o saber cuánta gente y cuántas unidades quedaban libres un día dependía de capturas manuales y de la memoria de cada plaza.</p></div>
+                <div class="case-card"><h4 data-i18n="case.solution">Solución</h4><p data-i18n="thelsa.solution">Un sistema por módulos sobre una sola base de datos: programación de servicios contra la capacidad real, cotizaciones y expediente del cliente, plan de viajes y rutas, plantilla de personal e incidencias, facturación conectada al sistema contable, garantías y una guía de uso para cada pantalla.</p></div>
+                <div class="case-card"><h4 data-i18n="case.role">Mi responsabilidad</h4><p data-i18n="thelsa.role">Construí la mayoría de los módulos de negocio y la integración con el sistema contable; participé en operaciones y logística; y llevo la calidad y la puesta en producción: cada cambio se ensaya en una copia de la base real, con pruebas automatizadas de navegador, antes de publicarse.</p></div>
+                <div class="case-card"><h4 data-i18n="case.result">Resultado</h4><p data-i18n="thelsa.result">Las 13 sucursales operan sobre el sistema. La lógica de negocio vive en la base de datos, cada módulo tiene su propio espacio y los permisos se aplican por rol desde la base, no desde la pantalla.</p></div>
               </div>
               <div>
                 <div class="stats-strip">
@@ -247,7 +248,7 @@
                   <div class="stat"><strong>2026</strong><span data-i18n="stats.year">en producción desde</span></div>
                 </div>
                 <div class="tech-list" style="margin-top: 1rem" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
-                  <span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>JavaScript</span><span>HTML / CSS</span><span>PWA</span><span>.NET</span><span>Playwright</span><span>Cloudflare Pages</span><span>GitHub Actions</span>
+                  <span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>RLS</span><span>pg_cron</span><span>JavaScript</span><span>PWA</span><span>.NET Framework</span><span>Playwright</span><span>Cloudflare Pages</span><span>GitHub Actions</span>
                 </div>
                 <div class="project-note" style="margin-top: 1rem">
                   <span aria-hidden="true">ⓘ</span>
@@ -257,13 +258,49 @@
             </div>
           </article>
 
+          <!-- Integración: puente con CONTPAQi (SDK) -->
+          <article class="case-study case-study--flow reveal" aria-labelledby="puente-title">
+            <div class="case-media">
+              <h4 class="project-label" data-i18n="puente.flowTitle">Cómo viaja una factura</h4>
+              <ol class="flow">
+                <li class="flow-step"><i>01</i><div><strong data-i18n="puente.f1t">El sistema crea la tarea</strong><span data-i18n="puente.f1">Comercial pide la factura desde el expediente; Facturación la revisa y la base la encola con su folio.</span></div></li>
+                <li class="flow-step"><i>02</i><div><strong data-i18n="puente.f2t">El puente la toma</strong><span data-i18n="puente.f2">El servicio de Windows reclama la tarea, carga la empresa en CONTPAQi y busca el documento por referencia.</span></div></li>
+                <li class="flow-step"><i>03</i><div><strong data-i18n="puente.f3t">Cliente, documento y movimientos</strong><span data-i18n="puente.f3">Alta del cliente por RFC si hace falta, documento con sus renglones, forma de pago y observaciones por SDK.</span></div></li>
+                <li class="flow-step"><i>04</i><div><strong data-i18n="puente.f4t">Validación y timbrado</strong><span data-i18n="puente.f4">Total comparado contra la solicitud; si cuadra, se emite el CFDI 4.0 (con complemento Carta Porte 3.1 cuando aplica).</span></div></li>
+                <li class="flow-step"><i>05</i><div><strong data-i18n="puente.f5t">XML y PDF de regreso</strong><span data-i18n="puente.f5">El UUID, el XML y el PDF suben al almacenamiento privado y aparecen en el expediente; el ejecutivo recibe el aviso.</span></div></li>
+              </ol>
+            </div>
+            <div class="case-content">
+              <span class="project-label" data-i18n="puente.label">INTEGRACIÓN · 2026 · DENTRO DEL SISTEMA DE THELSA</span>
+              <h3 id="puente-title" data-i18n="puente.title">Puente de facturación con CONTPAQi Comercial (SDK)</h3>
+              <p class="project-role" data-i18n="puente.roleTitle">Diseño, desarrollo y pruebas · C# / .NET Framework 4.8 · SDK de CONTPAQi</p>
+              <p class="case-summary" data-i18n="puente.summary">El sistema deja cada factura y cada carta porte como una tarea en la base de datos; un servicio de Windows escrito en C# la toma y la ejecuta dentro de CONTPAQi Comercial con su SDK oficial, sin capturas manuales ni archivos de importación. Es la pieza que conecta la operación con la contabilidad y el timbrado ante el SAT.</p>
+              <ul class="tech-bullets">
+                <li data-i18n-html="puente.b1"><b>Servicio de Windows en .NET Framework 4.8 (x86)</b>, porque el SDK de CONTPAQi es de 32 bits. Entra a Supabase con un usuario técnico propio (nunca la llave de servicio), con latido cada minuto y cola de tareas con reintentos y espera exponencial.</li>
+                <li data-i18n-html="puente.b2"><b>Idempotencia por referencia:</b> si ya existe un documento con el folio de la solicitud, el puente continúa con ese; un reintento nunca crea dos facturas. El cliente se busca por RFC y, si no existe, se da de alta por SDK.</li>
+                <li data-i18n-html="puente.b3"><b>Validación antes de timbrar:</b> compara el total calculado por CONTPAQi contra el de la solicitud y se detiene si no cuadra. Emite CFDI 4.0 y cartas porte con el complemento Carta Porte 3.1 (incluido dentro de la factura o como documento de traslado).</li>
+                <li data-i18n-html="puente.b4"><b>Resultado de vuelta al sistema:</b> UUID, XML y PDF suben a un almacenamiento privado y quedan en el expediente del cliente; el ejecutivo recibe el aviso en el sistema. Los catálogos (clientes, productos, series) se leen con un usuario de SQL de solo lectura.</li>
+              </ul>
+              <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
+                <span>C#</span><span>.NET Framework 4.8</span><span>SDK CONTPAQi Comercial</span><span>CFDI 4.0</span><span>Carta Porte 3.1</span><span>PostgreSQL</span><span>Supabase Storage</span><span>SQL Server (lectura)</span><span>Servicio de Windows</span>
+              </div>
+              <div class="project-note" style="margin-top: 1rem"><span aria-hidden="true">ⓘ</span><p data-i18n="puente.note">Toda la integración se desarrolló y probó contra una empresa de prueba de CONTPAQi; aquí no se muestran datos fiscales.</p></div>
+            </div>
+          </article>
+
           <!-- Groundsight: sitio para un cliente (público) -->
           <article class="case-study reveal" aria-labelledby="groundsight-title">
             <div class="case-media">
               <div class="browser">
                 <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">groundsight.pages.dev</span></div>
                 <div class="browser-body">
-                  <img src="assets/images/proyectos/gs-inicio-900.webp" srcset="assets/images/proyectos/gs-inicio-900.webp 900w, assets/images/proyectos/gs-inicio-1440.webp 1440w" sizes="(min-width: 1024px) 560px, 92vw" alt="Página de inicio del sitio de Groundsight Geoservicios" data-i18n-alt="groundsight.imageAlt" width="1440" height="900" loading="lazy" decoding="async" />
+                  <img src="assets/images/proyectos/gs-inicio-900.webp" srcset="assets/images/proyectos/gs-inicio-900.webp 900w, assets/images/proyectos/gs-inicio-1440.webp 1440w" sizes="(min-width: 1024px) 520px, 92vw" alt="Página de inicio del sitio de Groundsight Geoservicios" data-i18n-alt="groundsight.imageAlt" width="1440" height="900" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="browser" style="margin-top: 1rem; max-width: 300px">
+                <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">Rockie</span></div>
+                <div class="browser-body" style="aspect-ratio: 392 / 630">
+                  <img src="assets/images/proyectos/gs-rockie.webp" alt="Rockie, el asistente conversacional del sitio, contestando una pregunta" data-i18n-alt="groundsight.imageAlt2" width="392" height="630" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -271,19 +308,15 @@
               <span class="project-label" data-i18n="groundsight.label">SITIO PARA UN CLIENTE · 2026</span>
               <h3 id="groundsight-title">Groundsight Geoservicios</h3>
               <p class="project-role" data-i18n="groundsight.roleTitle">Diseño · Contenido técnico · Desarrollo · Publicación</p>
-              <p class="case-summary" data-i18n="groundsight.summary">Sitio para la empresa de estudios geofísicos de Brenda Pamela, una geofísica que empieza por su cuenta: sin oficina, sin equipo de ventas y con presupuesto cero para el sitio. El objetivo era que un cliente entienda cuál de los 18 estudios necesita y pida cotización sin que exista un servidor que mantener.</p>
-              <div class="case-sections">
-                <div>
-                  <h4 data-i18n="case.contribution">Contribución</h4>
-                  <p data-i18n="groundsight.contribution">Hice el sitio completo: 26 páginas generadas desde un catálogo, el asistente "¿Qué estudio necesito?", un comparador interactivo de profundidades, un asistente guiado por botones, cotización por correo y WhatsApp, SEO e imágenes optimizadas.</p>
-                </div>
-                <div>
-                  <h4 data-i18n="case.functions">Funcionalidades</h4>
-                  <p data-i18n="groundsight.functions">Catálogo de 18 estudios en 5 categorías con ficha propia, preguntas frecuentes, reseñas, aviso de privacidad, formulario sin servidor y publicación gratuita. Todo lo que cambia se edita en dos archivos, sin programador.</p>
-                </div>
-              </div>
+              <p class="case-summary" data-i18n="groundsight.summary">Sitio para la empresa de estudios geofísicos de Brenda Pamela, una geofísica que empieza por su cuenta. El reto técnico: que un cliente sin formación geofísica entienda cuál de los 18 estudios necesita y pida cotización, sin servidor, sin base de datos y con costo cero de operación.</p>
+              <ul class="tech-bullets">
+                <li data-i18n-html="groundsight.b1"><b>Rockie, asistente conversacional sin IA:</b> conversa con botones y texto libre; normaliza el texto (NFD, sin acentos), detecta palabras clave por objetivo y responde con las preguntas frecuentes de la especialista. Lo que no sabe lo deriva a WhatsApp con el mensaje del cliente ya escrito; nunca inventa datos.</li>
+                <li data-i18n-html="groundsight.b2"><b>Asistente "¿Qué estudio necesito?" y comparador de profundidades:</b> a partir del objetivo y la profundidad propone el método, su alcance, los días de campo y el entregable; el comparador dibuja los 18 estudios en escala logarítmica, de centímetros a kilómetros.</li>
+                <li data-i18n-html="groundsight.b3"><b>Generación estática desde un catálogo:</b> un script en Node.js lee el mismo archivo de datos que usa el navegador y produce las 18 fichas, las tarjetas, el sitemap y el robots; cambiar un estudio es editar un objeto.</li>
+                <li data-i18n-html="groundsight.b4"><b>Rendimiento y entrega:</b> fotografías en WebP en cinco anchos con srcset (pipeline con sharp), animaciones que respetan prefers-reduced-motion, formulario sin servidor (FormSubmit por AJAX con honeypot), SEO con Open Graph y datos estructurados, y publicación en Cloudflare Pages.</li>
+              </ul>
               <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>FormSubmit</span><span>Cloudflare Pages</span><span>SEO</span><span>WebP</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>sharp</span><span>FormSubmit</span><span>Cloudflare Pages</span><span>SEO</span>
               </div>
               <div class="project-actions">
                 <a class="button button-primary" href="https://groundsight.pages.dev/" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.visit">Ver sitio en línea</span><span aria-hidden="true">↗</span></a>
@@ -316,7 +349,7 @@
                 <h3 id="calculator-title" data-i18n="calculator.title">Calculadora de Servicios Aeroportuarios</h3>
                 <p data-i18n="calculator.summary">Aplicación desarrollada para reemplazar cálculos manuales en Excel, centralizar reglas de cobro y automatizar los reportes de la administración de servicios aeroportuarios.</p>
                 <p data-i18n="calculator.result">Construida en tres meses, continúa utilizándose sin mí y apoya el trabajo de dos personas por turno. El código y los datos no son públicos por confidencialidad.</p>
-                <div class="tech-list"><span>Python</span><span>Pandas</span><span>MySQL</span><span>Excel</span></div>
+                <div class="tech-list"><span>Python</span><span>Pandas</span><span>MySQL</span><span>REST API</span><span>Excel</span></div>
               </div>
             </article>
 
@@ -353,7 +386,7 @@
       <section class="section" id="about">
         <div class="container about-grid">
           <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
+            <span class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</span>
             <h2 data-i18n="about.title">Desarrollo técnico con entendimiento del negocio</h2>
           </div>
           <div class="about-content reveal reveal-delay-1">
@@ -372,47 +405,15 @@
       <section class="section section-surface" id="experience">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="experience.eyebrow">EXPERIENCIA PROFESIONAL</p>
+            <span class="eyebrow" data-i18n="experience.eyebrow">EXPERIENCIA PROFESIONAL</span>
             <h2 data-i18n="experience.title">De coordinar operaciones a construir los sistemas que las sostienen</h2>
             <p data-i18n="experience.intro">Siete años en operaciones críticas y, desde 2026, el desarrollo de un sistema interno completo para una empresa con presencia nacional.</p>
           </div>
           <div class="timeline">
-            <article class="timeline-item reveal">
-              <div class="timeline-card">
-                <span class="timeline-date" data-i18n="experience.job0Date">2026 — Actualidad</span>
-                <h3 data-i18n="experience.job0Title">Responsable de Sistemas · Full Stack Developer</h3>
-                <p class="timeline-company">Thelsa Mobility Solutions</p>
-                <span class="timeline-focus" data-i18n="experience.job0Focus">PostgreSQL · JavaScript · Integraciones · QA</span>
-                <p data-i18n="experience.job0Text">Construyo y mantengo el sistema interno de la empresa: módulos de operaciones, comercial, logística, personal, administración y garantías sobre una sola base de datos. Integración con el sistema contable, pruebas automatizadas de navegador, publicación continua y soporte a las 13 sucursales.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal">
-              <div class="timeline-card">
-                <span class="timeline-date" data-i18n="experience.job1Date">Ene 2025 — Abr 2026</span>
-                <h3 data-i18n="experience.job1Title">Administrador de Servicios Aeroportuarios</h3>
-                <p class="timeline-company">GAFSACOMM</p>
-                <span class="timeline-focus" data-i18n="experience.job1Focus">Procesos · KPIs · Automatización</span>
-                <p data-i18n="experience.job1Text">Administré cobros, facturación, ingresos y reportes de servicios aeroportuarios. Analicé procesos administrativos y financieros y desarrollé una herramienta en Python y SQL para automatizar cálculos y reportes operativos.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal">
-              <div class="timeline-card">
-                <span class="timeline-date" data-i18n="experience.job2Date">May 2024 — Ene 2025</span>
-                <h3 data-i18n="experience.job2Title">Oficial de Operaciones</h3>
-                <p class="timeline-company">GAFSACOMM</p>
-                <span class="timeline-focus" data-i18n="experience.job2Focus">Monitoreo · Seguridad · Coordinación</span>
-                <p data-i18n="experience.job2Text">Monitoreé operaciones aeroportuarias, elaboré reportes operativos, coordiné áreas de plataforma, mantenimiento, fauna y proveedores, y participé en capacitaciones de seguridad operacional.</p>
-              </div>
-            </article>
-            <article class="timeline-item reveal">
-              <div class="timeline-card">
-                <span class="timeline-date" data-i18n="experience.job3Date">Jul 2018 — Ene 2024</span>
-                <h3 data-i18n="experience.job3Title">Encargado de Operaciones</h3>
-                <p class="timeline-company">Aerolíneas Ejecutivas</p>
-                <span class="timeline-focus" data-i18n="experience.job3Focus">Liderazgo · Continuidad · Clientes</span>
-                <p data-i18n="experience.job3Text">Coordiné operaciones de vuelo, atención a clientes, combustible, rampa, mantenimiento y planes de vuelo. Supervisé hasta 23 colaboradores, gestioné KPIs y tomé decisiones en escenarios de alta presión.</p>
-              </div>
-            </article>
+            <article class="timeline-item reveal"><div class="timeline-card"><span class="timeline-date" data-i18n="experience.job0Date">2026 — Actualidad</span><h3 data-i18n="experience.job0Title">Responsable de Sistemas · Full Stack Developer</h3><p class="timeline-company">Thelsa Mobility Solutions</p><span class="timeline-focus" data-i18n="experience.job0Focus">PostgreSQL · JavaScript · Integraciones · QA</span><p data-i18n="experience.job0Text">Construyo y mantengo el sistema interno de la empresa: módulos de operaciones, comercial, logística, personal, administración y garantías sobre una sola base de datos. Integración con el sistema contable, pruebas automatizadas de navegador, publicación continua y soporte a las 13 sucursales.</p></div></article>
+            <article class="timeline-item reveal"><div class="timeline-card"><span class="timeline-date" data-i18n="experience.job1Date">Ene 2025 — Abr 2026</span><h3 data-i18n="experience.job1Title">Administrador de Servicios Aeroportuarios</h3><p class="timeline-company">GAFSACOMM</p><span class="timeline-focus" data-i18n="experience.job1Focus">Procesos · KPIs · Automatización</span><p data-i18n="experience.job1Text">Administré cobros, facturación, ingresos y reportes de servicios aeroportuarios. Analicé procesos administrativos y financieros y desarrollé una herramienta en Python y SQL para automatizar cálculos y reportes operativos.</p></div></article>
+            <article class="timeline-item reveal"><div class="timeline-card"><span class="timeline-date" data-i18n="experience.job2Date">May 2024 — Ene 2025</span><h3 data-i18n="experience.job2Title">Oficial de Operaciones</h3><p class="timeline-company">GAFSACOMM</p><span class="timeline-focus" data-i18n="experience.job2Focus">Monitoreo · Seguridad · Coordinación</span><p data-i18n="experience.job2Text">Monitoreé operaciones aeroportuarias, elaboré reportes operativos, coordiné áreas de plataforma, mantenimiento, fauna y proveedores, y participé en capacitaciones de seguridad operacional.</p></div></article>
+            <article class="timeline-item reveal"><div class="timeline-card"><span class="timeline-date" data-i18n="experience.job3Date">Jul 2018 — Ene 2024</span><h3 data-i18n="experience.job3Title">Encargado de Operaciones</h3><p class="timeline-company">Aerolíneas Ejecutivas</p><span class="timeline-focus" data-i18n="experience.job3Focus">Liderazgo · Continuidad · Clientes</span><p data-i18n="experience.job3Text">Coordiné operaciones de vuelo, atención a clientes, combustible, rampa, mantenimiento y planes de vuelo. Supervisé hasta 23 colaboradores, gestioné KPIs y tomé decisiones en escenarios de alta presión.</p></div></article>
           </div>
         </div>
       </section>
@@ -421,15 +422,15 @@
       <section class="section" id="skills">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="skills.eyebrow">STACK TÉCNICO</p>
+            <span class="eyebrow" data-i18n="skills.eyebrow">STACK TÉCNICO</span>
             <h2 data-i18n="skills.title">Tecnologías respaldadas por proyectos</h2>
             <p data-i18n="skills.intro">Las habilidades se presentan por área, con el proyecto donde están probadas, sin porcentajes arbitrarios.</p>
           </div>
           <div class="skills-grid">
-            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">DB</div><h3 data-i18n="skills.databases">Bases de datos</h3><div class="skill-chips"><span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>RLS y permisos por rol</span><span>MySQL</span><span>Modelado relacional</span><span>Transacciones</span><span>Índices</span></div></article>
-            <article class="skill-category reveal reveal-delay-1"><div class="skill-icon" aria-hidden="true">{ }</div><h3 data-i18n="skills.backend">Backend e integraciones</h3><div class="skill-chips"><span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>REST APIs</span><span>Node.js</span><span>.NET Framework</span><span>Python</span><span>Robots programados (cron)</span></div></article>
-            <article class="skill-category reveal reveal-delay-2"><div class="skill-icon" aria-hidden="true">&lt;/&gt;</div><h3>Frontend</h3><div class="skill-chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PWA / Service Worker</span><span>Diseño responsivo</span><span>Modo oscuro</span><span>Bootstrap</span><span>Vite</span></div></article>
-            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">Py</div><h3 data-i18n="skills.automation">Datos y automatización</h3><div class="skill-chips"><span>Python</span><span>Pandas</span><span>Excel</span><span>Generación de PDF</span><span>Consumo de APIs</span><span>Reportes automatizados</span></div></article>
+            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">DB</div><h3 data-i18n="skills.databases">Bases de datos</h3><div class="skill-chips"><span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>RLS y permisos por rol</span><span>pg_cron · pg_net</span><span>PostgREST</span><span>MySQL</span><span>SQL Server (lectura)</span><span>Modelado relacional</span></div></article>
+            <article class="skill-category reveal reveal-delay-1"><div class="skill-icon" aria-hidden="true">{ }</div><h3 data-i18n="skills.backend">Backend e integraciones</h3><div class="skill-chips"><span>C# · .NET Framework 4.8</span><span>SDK CONTPAQi</span><span>CFDI 4.0 · Carta Porte 3.1</span><span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>REST APIs</span><span>Node.js</span><span>Python</span><span>Colas de trabajo</span></div></article>
+            <article class="skill-category reveal reveal-delay-2"><div class="skill-icon" aria-hidden="true">&lt;/&gt;</div><h3>Frontend</h3><div class="skill-chips"><span>HTML5</span><span>CSS3</span><span>JavaScript ES2022</span><span>PWA / Service Worker</span><span>Accesibilidad</span><span>Diseño responsivo</span><span>i18n ES/EN</span><span>Bootstrap</span></div></article>
+            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">Py</div><h3 data-i18n="skills.automation">Datos y automatización</h3><div class="skill-chips"><span>Python</span><span>Pandas</span><span>Excel</span><span>Generación de PDF</span><span>Consumo de APIs</span><span>Robots programados (cron)</span><span>sharp</span></div></article>
             <article class="skill-category reveal reveal-delay-1"><div class="skill-icon" aria-hidden="true">⚙</div><h3 data-i18n="skills.tools">Calidad, entrega y metodología</h3><div class="skill-chips"><span>Playwright</span><span>Git</span><span>GitHub Actions</span><span>Cloudflare Pages</span><span>Vercel</span><span>Docker</span><span>Postman</span><span>Jira</span><span>Scrum</span></div></article>
           </div>
         </div>
@@ -439,7 +440,7 @@
       <section class="section section-surface" id="certifications">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="certifications.eyebrow">FORMACIÓN Y CERTIFICACIONES</p>
+            <span class="eyebrow" data-i18n="certifications.eyebrow">FORMACIÓN Y CERTIFICACIONES</span>
             <h2 data-i18n="certifications.title">Preparación técnica y conocimiento operativo</h2>
           </div>
           <div class="certifications-grid">
@@ -457,7 +458,7 @@
         <div class="container">
           <div class="contact-card reveal">
             <div class="contact-copy">
-              <p class="eyebrow" data-i18n="contact.eyebrow">¿TRABAJAMOS JUNTOS?</p>
+              <span class="eyebrow" data-i18n="contact.eyebrow">¿TRABAJAMOS JUNTOS?</span>
               <h2 data-i18n="contact.title">Llevemos un proceso real a un sistema que funcione</h2>
               <p data-i18n="contact.text">Si tienes un proceso que hoy vive en Excel, en correos o en papel, o buscas un desarrollador Full Stack que entienda la operación además del código, escríbeme. Contesto el mismo día.</p>
               <div class="availability-list">
@@ -496,7 +497,7 @@
       <section class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-describedby="resume-modal-description">
         <header class="cv-modal-header">
           <div>
-            <p class="eyebrow" data-i18n="modal.eyebrow">CURRÍCULUM</p>
+            <span class="eyebrow" data-i18n="modal.eyebrow">CURRÍCULUM</span>
             <h2 id="resume-modal-title" data-i18n="modal.title">Jonas Castillo — Full Stack Developer</h2>
             <p id="resume-modal-description" data-i18n="modal.description">Selecciona ver o descargar la versión correspondiente al idioma del sitio.</p>
           </div>
@@ -514,8 +515,8 @@
       </section>
     </div>
 
-    <script src="js/i18n.js?v=20261027b" defer></script>
-    <script src="js/script.js?v=20261027b" defer></script>
-    <script src="js/portafolio.js?v=20261027b" defer></script>
+    <script src="js/i18n.js?v=20261027c" defer></script>
+    <script src="js/script.js?v=20261027c" defer></script>
+    <script src="js/portafolio.js?v=20261027c" defer></script>
   </body>
 </html>

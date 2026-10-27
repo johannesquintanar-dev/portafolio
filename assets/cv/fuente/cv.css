@@ -1,0 +1,13 @@
+/* Formato del CV: el mismo del PDF anterior (una columna, Arial, títulos en mayúsculas con línea). */
+@page { size: Letter; margin: 9mm 10mm; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 7.6pt; line-height: 1.25; color: #000; }
+.cabeza { text-align: center; margin-bottom: 4pt; }
+.cabeza h1 { margin: 0; font-size: 15pt; }
+.cabeza .titulo { font-weight: bold; font-size: 9pt; }
+.cabeza p { margin: 1pt 0; }
+h2 { font-size: 9pt; margin: 5pt 0 2.5pt; padding-bottom: 1.5pt; border-bottom: 1px solid #000; }
+p { margin: 0 0 2pt; }
+.proy, .puesto { margin-top: 3pt; margin-bottom: 1pt; }
+ul { margin: 0 0 2pt; padding-left: 12pt; }
+li { margin: 0 0 1pt; }

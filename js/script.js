@@ -41,9 +41,9 @@
   /* Theme */
   const themeColorMeta = document.getElementById("theme-color-meta");
  const themeColors = {
-  light: "#f8f5ef",
-  dark: "#07141a",
-  colorful: "#161220"
+  light: "#f5f6f8",
+  dark: "#070c14",
+  colorful: "#120f1e"
 };
   const getInitialTheme = () => {
     const stored = window.portfolioI18n.storage.get("jonas-theme");

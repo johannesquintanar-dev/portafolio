@@ -24,7 +24,8 @@ Sitio personal hecho a mano, sin frameworks ni proceso de build: HTML, CSS y Jav
 
 ## Características
 
-- **Diseño oscuro** rehecho desde cero, inspirado en la versión anterior.
+- **Diseño minimalista** con tres temas (oscuro por omisión, claro y colorido); la preferencia se recuerda.
+- **Caso técnico del puente con CONTPAQi** (servicio de Windows en .NET que factura por SDK) y detalle técnico de Groundsight (Rockie, asistente, comparador, generador estático).
 - **Escaparate del proyecto destacado** con pestañas: cada una enseña una pantalla real del sistema y explica qué resuelve.
 - **Bilingüe (ES / EN)** con detección automática del idioma del navegador; también traduce las pestañas y leyendas del escaparate.
 - **Diseño mobile-first**, probado en escritorio (1440 px) y teléfono (390 px).
@@ -52,6 +53,7 @@ assets/images/thelsa/    Capturas del sistema de Thelsa (copia de prueba, sin da
 assets/images/proyectos/ Capturas de Groundsight, Syntax Logistics y Mundo Fifas
 assets/images/           Retrato e imagen para redes (og-jonas-castillo.png)
 assets/cv/               CV en español e inglés (PDF)
+assets/cv/fuente/        Fuente del CV (HTML + CSS) y el script que regenera los PDF
 assets/favicon/          Ícono del sitio
 vercel.json              URLs limpias y encabezados de seguridad y caché
 ```
@@ -68,7 +70,7 @@ También funciona con Live Server de VS Code.
 
 - Textos: en `js/i18n.js` (español e inglés). Lo que no lleva `data-i18n` se edita en `index.html`.
 - Capturas del sistema: solo pantallas sin datos de clientes y con la banda de prueba recortada; cada una lleva su pestaña en el escaparate y su leyenda en `js/i18n.js` (`thelsa.tab.*`, `thelsa.cap.*`).
-- Currículum: reemplazar los PDF de `assets/cv/` conservando el nombre.
+- Currículum: editar `assets/cv/fuente/cv-es.html` y `cv-en.html` y correr `node assets/cv/fuente/generar-cv.mjs` (usa el Chrome o Edge instalado; los PDF se regeneran con el mismo formato).
 - Después de cambiar CSS o JS, subir la fecha de `?v=AAAAMMDD` en `index.html` para que el navegador no use la copia vieja.
 - Regla de siempre: nada del sistema de Thelsa que sea real (datos de clientes, cifras internas o reglas de negocio) entra a este repositorio.
 

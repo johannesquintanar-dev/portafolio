@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jonas Castillo — Resume</title>
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+  <header class="cabeza">
+    <h1>Jonas Johannes Castillo Quintanar</h1>
+    <p class="titulo">Full Stack Developer | PostgreSQL, Supabase, JavaScript, Java and .NET | SDK integrations</p>
+    <p>Monterrey, Nuevo Leon, Mexico | Open to remote work and relocation</p>
+    <p>johannesq.dev@gmail.com | +52 81 1959 4304</p>
+    <p>GitHub: https://github.com/johannesquintanar-dev | LinkedIn: https://www.linkedin.com/in/jonascastillo/</p>
+    <p>Portfolio: https://portafolio-topaz-five.vercel.app/</p>
+  </header>
+
+  <h2>PROFESSIONAL PROFILE</h2>
+  <p>Full Stack Developer, currently Head of Systems at Thelsa Mobility Solutions (a moving company with 13 branches across Mexico), where I build and maintain the internal system the company uses to schedule services, quote, plan routes, manage staff and invoice. I design the business logic in PostgreSQL (PL/pgSQL) on Supabase with role-based security (RLS), framework-free JavaScript front ends and a .NET bridge that integrates the system with CONTPAQi Comercial through its SDK to issue CFDI 4.0 invoices and bills of lading. Previously I built Syntax Logistics (Java/Spring Boot) and a Python application for airport operations, and I built the Groundsight Geoservicios website with a guided recommendation assistant. I bring seven years of experience coordinating critical operations: I understand the process before coding it, and I test in the browser and in the database before calling anything done.</p>
+
+  <h2>TECHNICAL SKILLS</h2>
+  <p><b>Databases:</b> PostgreSQL, PL/pgSQL (functions, triggers, transactions, locks), Supabase (Auth, RLS, Storage, Realtime, pg_cron, pg_net, PostgREST), MySQL, SQL Server (read-only queries), relational modeling, one schema per module, search_path and security definer, indexes and transactions.</p>
+  <p><b>Backend and integrations:</b> .NET Framework 4.8 (C#, Windows service, CONTPAQi Comercial SDK, CFDI 4.0, Carta Porte 3.1 complement), Java 21, Spring Boot, Spring Web, Hibernate/JPA, REST APIs, Node.js (scripts and generators), Python, Pandas, job queues with retries, GPS and routing API integrations.</p>
+  <p><b>Frontend:</b> HTML5, CSS3, JavaScript (ES2022, no framework), PWA and service worker, responsive design, accessibility (focus, keyboard, ARIA), dark mode, Bootstrap, ES/EN internationalization, in-browser PDF generation.</p>
+  <p><b>Quality and delivery:</b> Playwright (browser tests), QA on Docker copies of production, Git and GitHub (branch per module, syntax checks in CI), GitHub Actions, Cloudflare Pages and Workers, Vercel, Postman, Jira, Scrum.</p>
+
+  <h2>SOFTWARE DEVELOPMENT EXPERIENCE AND PROJECTS</h2>
+  <p class="proy"><b>Internal operations system for Thelsa Mobility Solutions</b> | PostgreSQL, Supabase, JavaScript, .NET, Playwright | <i>System in production for 13 branches, 2026</i></p>
+  <ul>
+    <li>Designed and built most of the business modules (sales and CRM with a quoting engine, human resources, administration and invoicing, claims, systems and the user guide) on a single PostgreSQL database, with the logic in PL/pgSQL functions and one schema per module.</li>
+    <li>Implemented security from the database: RLS policies, security definer functions with a fixed search_path, role-based permissions and an API gate (PostgREST) that rejects calls outside the caller's role.</li>
+    <li>Developed the CONTPAQi Comercial bridge: a .NET Framework 4.8 (x86) Windows service that takes jobs from a queue in the database, runs them through the SDK (MGWServicios), creates customers by tax ID, creates documents, validates totals before stamping, issues CFDI 4.0 invoices and bills of lading with the 3.1 complement, and uploads the XML and PDF to private storage; with heartbeat, exponential-backoff retries and idempotency by reference.</li>
+    <li>Automated processes with scheduled jobs (pg_cron and pg_net): trip plan cut-offs, expirations, in-app notifications and GPS mileage ingestion.</li>
+    <li>Own quality and releases: every change is rehearsed on a Docker copy of the real database, with Playwright browser tests and versioned SQL packages with validation and rollback.</li>
+  </ul>
+  <p class="proy"><b>Groundsight Geoservicios</b> | HTML, CSS, JavaScript, Node.js, Cloudflare Pages | <i>Website for a geophysical survey company, 2026</i></p>
+  <ul>
+    <li>Built a 26-page static site generated from a data catalogue with a Node.js script (one page per survey, cards, sitemap and robots), with SEO, Open Graph and structured data.</li>
+    <li>Developed "Rockie", a guided conversational assistant without AI: it converses with buttons, normalizes and detects keywords, recommends the right survey with the same logic as the site's assistant, and hands anything it cannot answer to WhatsApp with the message pre-written.</li>
+    <li>Programmed the "Which survey do I need?" assistant and an interactive depth comparison tool on a logarithmic scale for 18 surveys in 5 categories.</li>
+    <li>Optimized images with a sharp pipeline (WebP in five widths with srcset) and solved the serverless quote form (FormSubmit via AJAX) with anti-spam protection.</li>
+  </ul>
+  <p class="proy"><b>Airport Services Calculator</b> | Python, SQL, Pandas, REST API, Excel | <i>Independently developed application in use in airport operations</i></p>
+  <ul>
+    <li>Automated airport service fee calculations that were recorded by hand: integrated the FlightRadar REST API to detect landings, designed the charging rules (operation type, aircraft weight, platform time, TUA) in a SQL database and generated the Operational Movement Report in Excel with Pandas.</li>
+    <li>Built in three months; still in use and operated by two people per shift.</li>
+  </ul>
+  <p class="proy"><b>Syntax Logistics</b> | Java 21, Spring Boot, MySQL, Bootstrap, JavaScript | <i>Team Full Stack platform sold to a logistics company</i></p>
+  <ul>
+    <li>Developed backend features with Spring Boot, Spring Web, Hibernate/JPA and MySQL (shipment quoting, management and tracking) and most of the responsive interface; performed functional testing and worked under Scrum with Git/GitHub, Jira and Figma.</li>
+  </ul>
+
+  <h2>PROFESSIONAL EXPERIENCE</h2>
+  <p class="puesto"><b>Head of Systems · Full Stack Developer | Thelsa Mobility Solutions</b> | <i>2026 - Present</i></p>
+  <ul>
+    <li>Build and maintain the company's internal system (operations, sales, logistics, human resources, administration and claims) and support its 13 branches.</li>
+    <li>Gather requirements with management and the business areas, translate business rules into database functions and document every decision in plain language.</li>
+    <li>Integrate the system with the accounting system (CONTPAQi) and external services, and keep the screens on continuous deployment.</li>
+  </ul>
+  <p class="puesto"><b>Airport Services Administrator | GAFSACOMM</b> | <i>January 2025 - April 2026</i></p>
+  <ul>
+    <li>Managed billing, invoicing and revenue control for airport services and turned the manual process into a software tool (Python and SQL).</li>
+    <li>Managed operational and administrative information for internal reports, KPI tracking and data validation.</li>
+  </ul>
+  <p class="puesto"><b>Operations Officer | GAFSACOMM</b> | <i>May 2024 - January 2025</i></p>
+  <ul>
+    <li>Monitored operations at Aeropuerto Internacional del Norte, prepared NOTAMs, Runway Condition Reports and platform reports, and coordinated authorities, suppliers and maintenance.</li>
+  </ul>
+  <p class="puesto"><b>Operations Supervisor | Aerolineas Ejecutivas</b> | <i>July 2018 - January 2024</i></p>
+  <ul>
+    <li>Coordinated around 20 flights per shift (peaks of 50), led 23 collaborators across three shifts and made operational decisions during contingencies, tracking KPIs and incidents.</li>
+  </ul>
+
+  <h2>EDUCATION</h2>
+  <ul>
+    <li>Technical Degree in Business Administration - William Blake | 2022.</li>
+    <li>Continuous self-directed training in PostgreSQL, JavaScript, .NET, Java, Python and development tools.</li>
+  </ul>
+
+  <h2>CERTIFICATIONS</h2>
+  <ul>
+    <li>Java Full Stack Developer - AIFYC Institute Texas | 480 hours | Virtual modality | 2026.</li>
+    <li>Java Full Stack Developer Bootcamp - Generation Mexico | 2026.</li>
+    <li>Introduction to Java Development - Accenture.</li>
+    <li>Operational KPI Analysis and Monitoring - Corporate Training | 2025.</li>
+    <li>Airport Operations Management - GAFSACOMM | 2025.</li>
+  </ul>
+
+  <h2>LANGUAGES</h2>
+  <p>Spanish: Native | English: B2 (Intermediate)</p>
+</body>
+</html>
