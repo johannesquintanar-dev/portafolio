@@ -55,7 +55,8 @@ assets/images/proyectos/ Capturas de Groundsight, Syntax Logistics y Mundo Fifas
 assets/images/           Retrato e imagen para redes (og-jonas-castillo.png)
 assets/cv/               CV en español e inglés (PDF)
 assets/cv/fuente/        Fuente del CV (HTML + CSS) y el script que regenera los PDF
-assets/favicon/          Ícono del sitio
+assets/favicon/          Ícono del sitio (monograma, SVG + PNG 32/180/512)
+assets/brand/            Marca: monograma (marca.svg) y logotipo Jonas.Dev para fondo oscuro y claro (SVG y PNG)
 vercel.json              URLs limpias y encabezados de seguridad y caché
 ```
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Monograma de Jonas Castillo: una J construida con dos trazos y el punto de "Jonas.Dev" -->
+  <rect width="64" height="64" rx="16" fill="#0c1320"/>
+  <path d="M26 17h18M38 17v22a10 10 0 0 1-20 0v-2" fill="none" stroke="#2dd4bf" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="47" cy="47" r="4" fill="#e9eef6"/>
+</svg>

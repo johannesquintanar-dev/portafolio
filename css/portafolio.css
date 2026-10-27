@@ -126,7 +126,7 @@ ul[class] { list-style: none; padding: 0; }
 .navbar { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.5rem 0.75rem 0.5rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-pill); background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); pointer-events: auto; transition: border-color 160ms, background-color 160ms; }
 .site-header.is-scrolled .navbar { border-color: var(--border-strong); background: color-mix(in srgb, var(--bg) 92%, transparent); }
 .brand { display: inline-flex; align-items: center; gap: 0.55rem; font-family: Sora, sans-serif; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; }
-.brand-mark { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font-size: 0.95rem; font-weight: 800; }
+.brand-mark { display: block; width: 32px; height: 32px; flex: 0 0 auto; }
 .brand-accent { color: var(--accent); }
 .desktop-navigation, .desktop-actions { display: none; }
 .language-control, .theme-control { display: inline-flex; padding: 0.18rem; border: 1px solid var(--border); border-radius: var(--radius-pill); }
