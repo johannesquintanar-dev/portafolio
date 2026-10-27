@@ -7,3 +7,7 @@ Thumbs.db
 
 # Vercel
 .vercel/
+
+# Herramientas de trabajo locales
+.taste-skill/
+node_modules/

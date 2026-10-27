@@ -48,7 +48,8 @@
   const getInitialTheme = () => {
     const stored = window.portfolioI18n.storage.get("jonas-theme");
     if (["light", "dark", "colorful"].includes(stored)) return stored;
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    // El sitio nace oscuro; el visitante puede cambiarlo y se recuerda su elección.
+    return "dark";
   };
 
   const applyTheme = (theme) => {

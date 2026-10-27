@@ -2,7 +2,7 @@
 
 # Jonas Castillo · Portafolio
 
-**Java Full Stack Developer** enfocado en soluciones reales de negocio
+**Full Stack Developer** que convierte procesos reales en sistemas
 
 [![Sitio](https://img.shields.io/badge/Ver_sitio-portafolio--topaz--five.vercel.app-0f766e?style=for-the-badge&logo=vercel&logoColor=white)](https://portafolio-topaz-five.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jonascastillo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jonascastillo/)
@@ -15,12 +15,20 @@
 
 Sitio personal hecho a mano, sin frameworks ni proceso de build: HTML, CSS y JavaScript puro, publicado en Vercel. Presenta cada proyecto explicando el problema, mi responsabilidad y el resultado, no solo la lista de tecnologías.
 
+## Qué cuenta (actualización de octubre de 2026)
+
+1. **Proyecto destacado: sistema interno de operaciones para una empresa de mudanzas** (Thelsa Mobility Solutions, 13 sucursales). Se describe en términos generales. Las capturas se tomaron en una copia de prueba del sistema y solo muestran pantallas sin datos de clientes ni cifras del negocio: menú de módulos, agenda del mes, capacidad operativa, mapa del Plan de Viajes, seguridad y guía del ejecutivo.
+2. **Groundsight Geoservicios**: el sitio de la empresa de estudios geofísicos de Brenda Pamela ([código](https://github.com/johannesquintanar-dev/groundsight)). Las capturas son reales.
+3. **Calculadora de Servicios Aeroportuarios**, **Syntax Logistics** y **Mundo Fifas**.
+4. Sobre mí, experiencia (incluye el puesto actual), stack, certificaciones y contacto.
+
 ## Características
 
-- **Bilingüe (ES / EN)** con detección automática del idioma del navegador.
-- **Tres temas visuales:** claro, oscuro y colorido; la preferencia se recuerda.
-- **Diseño mobile-first**, probado de 320 px a 1920 px, incluida la orientación horizontal.
-- **Accesible:** menú móvil con control de foco y cierre con Escape, modal del CV adaptable a pantallas bajas y textos alternativos en todas las imágenes.
+- **Diseño oscuro** rehecho desde cero, inspirado en la versión anterior.
+- **Escaparate del proyecto destacado** con pestañas: cada una enseña una pantalla real del sistema y explica qué resuelve.
+- **Bilingüe (ES / EN)** con detección automática del idioma del navegador; también traduce las pestañas y leyendas del escaparate.
+- **Diseño mobile-first**, probado en escritorio (1440 px) y teléfono (390 px).
+- **Accesible:** menú móvil con control de foco y cierre con Escape, pestañas navegables con el teclado, modal del CV adaptable y textos alternativos en todas las imágenes.
 - **SEO completo:** Open Graph, Twitter Card, datos estructurados JSON-LD, `sitemap.xml` y `robots.txt`.
 - **Rápido:** imágenes en WebP con dimensiones declaradas, carga diferida y caché inmutable de recursos.
 - **CV descargable** en español e inglés.
@@ -35,22 +43,34 @@ Sitio personal hecho a mano, sin frameworks ni proceso de build: HTML, CSS y Jav
 ## Estructura
 
 ```
-index.html            Página única con todas las secciones
-css/style.css         Sistema visual, temas y componentes
-css/responsive.css    Ajustes por tamaño de pantalla
-js/i18n.js            Textos en español e inglés
-js/script.js          Menú, temas, idioma, modal del CV y animaciones
-assets/               CV, imágenes WebP y favicons
-vercel.json           URLs limpias y encabezados de seguridad y caché
+index.html               Página única con todas las secciones (los textos con data-i18n salen de js/i18n.js)
+css/portafolio.css       Sistema visual oscuro, mobile-first
+js/i18n.js               Textos en español e inglés
+js/script.js             Menú, idioma, modal del CV y animaciones de aparición
+js/portafolio.js         Escaparate con pestañas del proyecto destacado y contadores
+assets/images/thelsa/    Capturas del sistema de Thelsa (copia de prueba, sin datos de clientes)
+assets/images/proyectos/ Capturas de Groundsight, Syntax Logistics y Mundo Fifas
+assets/images/           Retrato e imagen para redes (og-jonas-castillo.png)
+assets/cv/               CV en español e inglés (PDF)
+assets/favicon/          Ícono del sitio
+vercel.json              URLs limpias y encabezados de seguridad y caché
 ```
 
 ## Correr en local
 
 ```bash
-python -m http.server 5500
+npx serve .
 ```
 
-Después abre `http://localhost:5500`. También funciona con Live Server de VS Code.
+También funciona con Live Server de VS Code.
+
+## Para actualizar
+
+- Textos: en `js/i18n.js` (español e inglés). Lo que no lleva `data-i18n` se edita en `index.html`.
+- Capturas del sistema: solo pantallas sin datos de clientes y con la banda de prueba recortada; cada una lleva su pestaña en el escaparate y su leyenda en `js/i18n.js` (`thelsa.tab.*`, `thelsa.cap.*`).
+- Currículum: reemplazar los PDF de `assets/cv/` conservando el nombre.
+- Después de cambiar CSS o JS, subir la fecha de `?v=AAAAMMDD` en `index.html` para que el navegador no use la copia vieja.
+- Regla de siempre: nada del sistema de Thelsa que sea real (datos de clientes, cifras internas o reglas de negocio) entra a este repositorio.
 
 ## Contacto
 

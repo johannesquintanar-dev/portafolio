@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#07141a" id="theme-color-meta" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070c14" id="theme-color-meta" />
 
-    <title>Jonas Castillo | Java Full Stack Developer</title>
+    <title>Jonas Castillo | Full Stack Developer</title>
     <meta
       name="description"
-      content="Java Full Stack Developer en Monterrey con experiencia en Java 21, Spring Boot, APIs REST, SQL, JavaScript y Python. Proyectos aplicados a logística y operaciones aeroportuarias."
+      content="Full Stack Developer en Monterrey. Construyo sistemas internos que convierten procesos en Excel y papel en software que una empresa usa todos los días: PostgreSQL, JavaScript, Java y Python."
       id="meta-description"
     />
     <meta name="author" content="Jonas Johannes Castillo Quintanar" />
@@ -18,38 +18,26 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portafolio-topaz-five.vercel.app/" />
-    <meta property="og:title" content="Jonas Castillo | Java Full Stack Developer" id="og-title" />
-    <meta
-      property="og:description"
-      content="Java Full Stack Developer con experiencia en backend, APIs REST, bases de datos y automatización de procesos reales."
-      id="og-description"
-    />
-    <meta
-      property="og:image"
-      content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png"
-    />
+    <meta property="og:title" content="Jonas Castillo | Full Stack Developer" id="og-title" />
+    <meta property="og:description" content="Sistemas internos que una empresa usa todos los días: del Excel al sistema. PostgreSQL, JavaScript, Java y Python." id="og-description" />
+    <meta property="og:image" content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_MX" id="og-locale" />
-
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jonas Castillo | Java Full Stack Developer" id="twitter-title" />
-    <meta
-      name="twitter:description"
-      content="Java Full Stack Developer con experiencia en soluciones reales de negocio, backend, APIs, bases de datos y automatización."
-      id="twitter-description"
-    />
-    <meta
-      name="twitter:image"
-      content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png"
-    />
+    <meta name="twitter:title" content="Jonas Castillo | Full Stack Developer" id="twitter-title" />
+    <meta name="twitter:description" content="Sistemas internos que una empresa usa todos los días: del Excel al sistema." id="twitter-description" />
+    <meta name="twitter:image" content="https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png" />
 
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png" />
-    <link rel="preload" as="image" href="assets/images/jonas-castillo.webp" fetchpriority="high" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/images/retrato-800.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="css/portafolio.css?v=20261027b" />
 
     <script type="application/ld+json">
       {
@@ -59,30 +47,13 @@
         "alternateName": "Jonas Castillo",
         "url": "https://portafolio-topaz-five.vercel.app/",
         "image": "https://portafolio-topaz-five.vercel.app/assets/images/og-jonas-castillo.png",
-        "jobTitle": "Java Full Stack Developer",
+        "jobTitle": "Full Stack Developer",
+        "worksFor": { "@type": "Organization", "name": "Thelsa Mobility Solutions" },
         "email": "mailto:johannesq.dev@gmail.com",
         "telephone": "+52 8119594304",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Monterrey",
-          "addressRegion": "Nuevo León",
-          "addressCountry": "MX"
-        },
-        "sameAs": [
-          "https://github.com/johannesquintanar-dev",
-          "https://www.linkedin.com/in/jonascastillo/"
-        ],
-        "knowsAbout": [
-          "Java 21",
-          "Spring Boot",
-          "REST APIs",
-          "MySQL",
-          "PostgreSQL",
-          "JavaScript",
-          "Python",
-          "Pandas",
-          "Scrum"
-        ]
+        "address": { "@type": "PostalAddress", "addressLocality": "Monterrey", "addressRegion": "Nuevo León", "addressCountry": "MX" },
+        "sameAs": ["https://github.com/johannesquintanar-dev", "https://www.linkedin.com/in/jonascastillo/"],
+        "knowsAbout": ["PostgreSQL", "PL/pgSQL", "Supabase", "JavaScript", "Java 21", "Spring Boot", "REST APIs", "Python", "Playwright", "Scrum"]
       }
     </script>
   </head>
@@ -112,34 +83,13 @@
             <button class="language-button" type="button" data-lang="es" aria-pressed="true">ES</button>
             <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
           </div>
-
-          <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
-            <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light" title="Tema claro">
-              <span aria-hidden="true">☀</span>
-            </button>
-            <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark" title="Tema oscuro">
-              <span aria-hidden="true">◐</span>
-            </button>
-            <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful" title="Tema colorido">
-              <span aria-hidden="true">✦</span>
-            </button>
-          </div>
-
           <button class="button button-small button-outline cv-trigger" type="button">
             <span aria-hidden="true">↓</span>
             <span data-i18n="nav.cv">CV</span>
           </button>
         </div>
 
-        <button
-          class="menu-button"
-          id="menu-button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Abrir menú"
-          data-i18n-aria="a11y.openMenu"
-        >
+        <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" data-i18n-aria="a11y.openMenu">
           <span></span><span></span><span></span>
         </button>
       </nav>
@@ -153,7 +103,6 @@
           <a href="#skills" data-i18n="nav.skills">Tecnologías</a>
           <a href="#certifications" data-i18n="nav.certifications">Certificaciones</a>
           <a href="#contact" data-i18n="nav.contact">Contacto</a>
-
           <div class="mobile-controls">
             <div class="mobile-control-row">
               <span data-i18n="controls.language">Idioma</span>
@@ -162,16 +111,6 @@
                 <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
               </div>
             </div>
-
-            <div class="mobile-control-row">
-              <span data-i18n="controls.theme">Tema</span>
-              <div class="theme-control" role="group" aria-label="Tema visual" data-i18n-aria="a11y.theme">
-                <button class="theme-button" type="button" data-theme-value="light" aria-label="Tema claro" data-i18n-aria="theme.light"><span aria-hidden="true">☀</span></button>
-                <button class="theme-button" type="button" data-theme-value="dark" aria-label="Tema oscuro" data-i18n-aria="theme.dark"><span aria-hidden="true">◐</span></button>
-                <button class="theme-button" type="button" data-theme-value="colorful" aria-label="Tema colorido" data-i18n-aria="theme.colorful"><span aria-hidden="true">✦</span></button>
-              </div>
-            </div>
-
             <button class="button button-primary cv-trigger mobile-cv-button" type="button">
               <span aria-hidden="true">↓</span>
               <span data-i18n="mobile.cv">Ver currículum</span>
@@ -182,567 +121,358 @@
     </header>
 
     <main id="main-content">
+      <!-- ===== Portada ===== -->
       <section class="hero section" id="home">
         <div class="container hero-grid">
           <div class="hero-content reveal">
             <div class="availability-badge">
               <span class="availability-dot" aria-hidden="true"></span>
-              <span data-i18n="hero.available">Disponible para posiciones Java Backend / Full Stack Jr.</span>
+              <span data-i18n="hero.available">Responsable de Sistemas en Thelsa · Abierto a nuevos retos Full Stack</span>
             </div>
-
             <p class="hero-name">Jonas Castillo</p>
-            <h1 data-i18n="hero.headline">Java Full Stack Developer enfocado en soluciones reales de negocio</h1>
+            <h1><span data-i18n="hero.headline">Full Stack Developer que convierte procesos reales en sistemas</span></h1>
             <p class="hero-description" data-i18n="hero.description">
-              Desarrollo aplicaciones web y automatizaciones que convierten procesos manuales en soluciones digitales confiables. Trabajo con Java 21, Spring Boot, APIs REST, SQL, JavaScript y Python, combinando desarrollo técnico con más de siete años de experiencia en operaciones críticas.
+              Construyo el software interno con el que una empresa trabaja todos los días: lo que antes vivía en hojas de Excel, correos y papel. Trabajo con PostgreSQL, JavaScript, Java y Python, y traigo más de siete años de experiencia coordinando operaciones críticas.
             </p>
-
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects"><span data-i18n="hero.projectsButton">Ver proyectos</span><span aria-hidden="true">→</span></a>
+              <button class="button button-outline cv-trigger" type="button"><span aria-hidden="true">↓</span><span data-i18n="hero.cvButton">Descargar CV</span></button>
+              <a class="button button-ghost" href="#contact" data-i18n="hero.contactButton">Contactarme</a>
+            </div>
             <div class="hero-location">
               <span aria-hidden="true">⌖</span>
               <span data-i18n="hero.location">Monterrey, Nuevo León · Disponible para trabajo remoto y reubicación</span>
             </div>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projects">
-                <span data-i18n="hero.projectsButton">Ver proyectos</span>
-                <span aria-hidden="true">→</span>
-              </a>
-              <button class="button button-outline cv-trigger" type="button">
-                <span aria-hidden="true">↓</span>
-                <span data-i18n="hero.cvButton">Descargar CV</span>
-              </button>
-              <a class="button button-ghost" href="#contact" data-i18n="hero.contactButton">Contactarme</a>
+            <div class="hero-stack" aria-label="Tecnologías principales">
+              <span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">JavaScript</span><span class="chip">Java · Spring Boot</span><span class="chip">Python</span><span class="chip">Playwright</span>
             </div>
           </div>
 
-          <div class="hero-visual reveal">
+          <div class="hero-visual reveal reveal-delay-1">
             <div class="portrait-frame">
               <img
-                src="assets/images/jonas-castillo.webp"
+                src="assets/images/retrato-800.webp"
+                srcset="assets/images/retrato-800.webp 800w, assets/images/retrato-1200.webp 1200w"
+                sizes="(min-width: 1024px) 440px, 90vw"
                 alt="Jonas Castillo con traje negro"
                 data-i18n-alt="hero.photoAlt"
-                width="900"
-                height="1080"
-                fetchpriority="high"
-                decoding="async"
+                width="800" height="1000" fetchpriority="high" decoding="async"
               />
               <div class="portrait-label">
-                <span class="portrait-label-title">Java · Spring Boot · SQL</span>
+                <span class="portrait-label-title">PostgreSQL · JavaScript · Java</span>
                 <span data-i18n="hero.photoCaption">Desarrollo técnico con criterio operativo</span>
               </div>
             </div>
-
             <div class="metrics-grid" aria-label="Resultados profesionales" data-i18n-aria="hero.metricsLabel">
-              <article class="metric-card">
-                <strong>7+</strong>
-                <span data-i18n="metrics.operationsYears">años en operaciones críticas</span>
-              </article>
-              <article class="metric-card">
-                <strong>2</strong>
-                <span data-i18n="metrics.realSolutions">soluciones para usuarios reales</span>
-              </article>
-              <article class="metric-card">
-                <strong>23</strong>
-                <span data-i18n="metrics.peopleLed">colaboradores liderados</span>
-              </article>
-              <article class="metric-card">
-                <strong>50</strong>
-                <span data-i18n="metrics.dailyOperations">operaciones coordinadas en días de alta demanda</span>
-              </article>
+              <article class="metric-card"><strong>13</strong><span data-i18n="metrics.branches">sucursales operando sobre un sistema que construí</span></article>
+              <article class="metric-card"><strong>10+</strong><span data-i18n="metrics.modules">módulos de negocio sobre una sola base de datos</span></article>
+              <article class="metric-card"><strong>7+</strong><span data-i18n="metrics.operationsYears">años en operaciones críticas</span></article>
+              <article class="metric-card"><strong>23</strong><span data-i18n="metrics.peopleLed">colaboradores liderados</span></article>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ===== Proyectos ===== -->
       <section class="section section-surface" id="projects">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow" data-i18n="projects.eyebrow">SOLUCIONES Y PROYECTOS</p>
             <h2 data-i18n="projects.title">Software creado para resolver problemas reales</h2>
-            <p data-i18n="projects.intro">
-              No presento solamente tecnologías: explico el problema, mi responsabilidad y el resultado de cada solución.
-            </p>
+            <p data-i18n="projects.intro">No presento solamente tecnologías: explico el problema, mi responsabilidad y el resultado de cada solución.</p>
           </div>
 
-          <article class="case-study case-study-featured reveal" aria-labelledby="calculator-title">
-            <div class="case-study-content">
-              <div class="case-study-header">
-                <div>
-                  <span class="project-label" data-i18n="calculator.label">PROYECTO PRINCIPAL · USO INTERNO</span>
-                  <h3 id="calculator-title" data-i18n="calculator.title">Calculadora de Servicios Aeroportuarios</h3>
-                </div>
-                <span class="status-badge" data-i18n="calculator.status">Solución utilizada en operación</span>
+          <!-- Proyecto destacado: sistema interno de Thelsa. Capturas de una copia de prueba, sin datos de clientes. -->
+          <article class="showcase reveal" aria-labelledby="thelsa-title" data-escaparate>
+            <div class="showcase-header">
+              <div>
+                <span class="project-label" data-i18n="thelsa.label">PROYECTO DESTACADO · 2026 · USO INTERNO</span>
+                <h3 id="thelsa-title" data-i18n="thelsa.title">Sistema interno de operaciones para una empresa de mudanzas</h3>
+                <p class="project-role" data-i18n="thelsa.roleTitle">Responsable de Sistemas · Thelsa Mobility Solutions · 13 sucursales en México</p>
               </div>
-
-              <p class="case-study-summary" data-i18n="calculator.summary">
-                Aplicación desarrollada para reemplazar cálculos manuales en Excel, centralizar reglas de negocio y automatizar reportes utilizados en la administración de servicios aeroportuarios.
-              </p>
-
-              <div class="case-study-sections">
-                <div>
-                  <h4 data-i18n="case.problem">Problema</h4>
-                  <p data-i18n="calculator.problem">
-                    El cálculo de servicios requería consultas separadas y registros manuales, aumentando el tiempo de operación y el riesgo de errores.
-                  </p>
-                </div>
-                <div>
-                  <h4 data-i18n="case.solution">Solución</h4>
-                  <p data-i18n="calculator.solution">
-                    Diseñé una aplicación que procesa información de vuelos, consulta parámetros almacenados en SQL, aplica reglas de cobro y genera reportes estructurados en Excel.
-                  </p>
-                </div>
-                <div>
-                  <h4 data-i18n="case.role">Mi responsabilidad</h4>
-                  <p data-i18n="calculator.role">
-                    Analicé el proceso, diseñé la base de datos, programé la lógica, integré fuentes de información, validé resultados con usuarios y preparé la solución para su uso interno.
-                  </p>
-                </div>
-                <div>
-                  <h4 data-i18n="case.result">Resultado</h4>
-                  <p data-i18n="calculator.result">
-                    La solución fue desarrollada en aproximadamente tres meses, continúa utilizándose y apoya el trabajo de dos personas por turno con reportes para seguimiento de KPIs.
-                  </p>
-                </div>
-              </div>
-
-              <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
-                <span>Python</span><span>Pandas</span><span>MySQL</span><span>SQL</span><span>REST API</span><span>Excel</span>
-              </div>
-
-              <div class="project-note">
-                <span aria-hidden="true">ⓘ</span>
-                <p data-i18n="calculator.confidentiality">
-                  El código y los datos no son públicos por confidencialidad. La representación visual utiliza información ficticia.
-                </p>
-              </div>
+              <span class="status-badge" data-i18n="thelsa.status">En producción</span>
             </div>
 
-            <div class="calculator-demo" aria-label="Representación visual de la calculadora" data-i18n-aria="calculator.demoLabel">
-              <div class="demo-window">
-                <div class="demo-toolbar">
-                  <span></span><span></span><span></span>
-                  <strong data-i18n="calculator.demoTitle">Cálculo de operación</strong>
+            <p class="showcase-summary" data-i18n="thelsa.summary">
+              Sistema web que sustituye el sistema anterior, las hojas de Excel que viajaban por correo y los formatos en papel con los que operaba la empresa. Lo usan todos los días las áreas de operaciones, ventas, logística, personal, administración y atención de garantías.
+            </p>
+
+            <div class="showcase-tabs" role="tablist" aria-label="Pantallas del sistema">
+              <button class="showcase-tab" role="tab" aria-selected="true" data-captura="menu" data-url="sistema.thelsa / inicio" data-i18n="thelsa.tab.menu">Menú de módulos</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="agenda" data-url="sistema.thelsa / operaciones / agenda" data-i18n="thelsa.tab.agenda">Agenda del mes</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="capacidad" data-url="sistema.thelsa / comercial / capacidad" data-i18n="thelsa.tab.capacidad">Capacidad operativa</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="plan-viajes" data-url="sistema.thelsa / logística / plan de viajes" data-i18n="thelsa.tab.plan-viajes">Plan de Viajes</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="seguridad" data-url="sistema.thelsa / capital humano / seguridad" data-i18n="thelsa.tab.seguridad">Seguridad</button>
+              <button class="showcase-tab" role="tab" aria-selected="false" tabindex="-1" data-captura="guia" data-url="sistema.thelsa / guía" data-i18n="thelsa.tab.guia">Guía del ejecutivo</button>
+            </div>
+
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">sistema.thelsa / inicio</span></div>
+              <div class="browser-body">
+                <img class="is-active" data-captura="menu" src="assets/images/thelsa/menu-900.webp" srcset="assets/images/thelsa/menu-900.webp 900w, assets/images/thelsa/menu-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Menú de módulos del sistema interno de Thelsa" loading="lazy" decoding="async" />
+                <img data-captura="agenda" data-src="assets/images/thelsa/agenda-900.webp" data-srcset="assets/images/thelsa/agenda-900.webp 900w, assets/images/thelsa/agenda-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Agenda del mes de Operaciones con la capacidad por día" decoding="async" />
+                <img data-captura="capacidad" data-src="assets/images/thelsa/capacidad-900.webp" data-srcset="assets/images/thelsa/capacidad-900.webp 900w, assets/images/thelsa/capacidad-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="680" alt="Cuadrícula de capacidad operativa por sucursal y día" decoding="async" />
+                <img class="is-contain" data-captura="plan-viajes" data-src="assets/images/thelsa/plan-viajes-900.webp" width="783" height="630" alt="Mapa del Plan de Viajes con las rutas de la flota" decoding="async" />
+                <img data-captura="seguridad" data-src="assets/images/thelsa/seguridad-900.webp" data-srcset="assets/images/thelsa/seguridad-900.webp 900w, assets/images/thelsa/seguridad-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="876" alt="Formatos de seguridad por sucursal en Capital Humano" decoding="async" />
+                <img data-captura="guia" data-src="assets/images/thelsa/guia-900.webp" data-srcset="assets/images/thelsa/guia-900.webp 900w, assets/images/thelsa/guia-1440.webp 1440w" sizes="(min-width: 1024px) 1100px, 92vw" width="1440" height="836" alt="Guía del ejecutivo comercial con los procesos paso a paso" decoding="async" />
+              </div>
+            </div>
+            <p class="showcase-caption"><span data-i18n="thelsa.cap.menu">Un solo acceso para todos los módulos: cada persona entra únicamente a lo que le corresponde según su rol.</span></p>
+            <p class="showcase-note" data-i18n="thelsa.capturesNote">Capturas reales tomadas en una copia de prueba del sistema; no muestran datos de clientes ni cifras del negocio.</p>
+
+            <div class="showcase-grid">
+              <div class="case-cards">
+                <div class="case-card">
+                  <h4><i>01</i><span data-i18n="case.problem">Problema</span></h4>
+                  <p data-i18n="thelsa.problem">La información de cada área vivía en herramientas distintas que no se hablaban entre sí. Programar un servicio, cotizarlo o saber cuánta gente y cuántas unidades quedaban libres un día dependía de capturas manuales y de la memoria de cada plaza.</p>
                 </div>
-                <div class="demo-body">
-                  <div class="demo-flight-row">
-                    <div>
-                      <small data-i18n="calculator.demoFlight">Vuelo</small>
-                      <strong>XA-JQC</strong>
-                    </div>
-                    <div>
-                      <small data-i18n="calculator.demoArrival">Llegada</small>
-                      <strong>14:35</strong>
-                    </div>
-                    <div>
-                      <small data-i18n="calculator.demoType">Tipo</small>
-                      <strong>Ejecutivo</strong>
-                    </div>
-                  </div>
-                  <div class="demo-services">
-                    <div><span data-i18n="calculator.demoService1">Aterrizaje</span><strong>$2,450</strong></div>
-                    <div><span data-i18n="calculator.demoService2">Plataforma</span><strong>$1,820</strong></div>
-                    <div><span data-i18n="calculator.demoService3">Servicios adicionales</span><strong>$980</strong></div>
-                  </div>
-                  <div class="demo-total">
-                    <span data-i18n="calculator.demoTotal">Total estimado</span>
-                    <strong>$5,250 MXN</strong>
-                  </div>
+                <div class="case-card">
+                  <h4><i>02</i><span data-i18n="case.solution">Solución</span></h4>
+                  <p data-i18n="thelsa.solution">Un sistema por módulos sobre una sola base de datos: programación de servicios contra la capacidad real, cotizaciones y expediente del cliente, plan de viajes y rutas, plantilla de personal e incidencias, facturación conectada al sistema contable, garantías y una guía de uso para cada pantalla.</p>
+                </div>
+                <div class="case-card">
+                  <h4><i>03</i><span data-i18n="case.role">Mi responsabilidad</span></h4>
+                  <p data-i18n="thelsa.role">Construí la mayoría de los módulos de negocio y la integración con el sistema contable; participé en operaciones y logística; y llevo la calidad y la puesta en producción: cada cambio se ensaya en una copia de la base real, con pruebas automatizadas de navegador, antes de publicarse.</p>
+                </div>
+                <div class="case-card">
+                  <h4><i>04</i><span data-i18n="case.result">Resultado</span></h4>
+                  <p data-i18n="thelsa.result">Las 13 sucursales operan sobre el sistema. La lógica de negocio vive en la base de datos, cada módulo tiene su propio espacio y los permisos se aplican por rol desde la base, no desde la pantalla.</p>
                 </div>
               </div>
-
-              <div class="architecture-flow" aria-label="Flujo técnico de la solución" data-i18n-aria="calculator.architectureLabel">
-                <div><span aria-hidden="true">✈</span><strong data-i18n="architecture.flightData">Datos de vuelo</strong></div>
-                <span aria-hidden="true">→</span>
-                <div><span aria-hidden="true">Py</span><strong>Python + Pandas</strong></div>
-                <span aria-hidden="true">→</span>
-                <div><span aria-hidden="true">DB</span><strong>MySQL</strong></div>
-                <span aria-hidden="true">→</span>
-                <div><span aria-hidden="true">XLS</span><strong data-i18n="architecture.report">Reporte y KPIs</strong></div>
+              <div>
+                <div class="stats-strip">
+                  <div class="stat"><strong data-contar="13">13</strong><span data-i18n="stats.branches">sucursales en operación</span></div>
+                  <div class="stat"><strong data-contar="10" data-sufijo="+">10+</strong><span data-i18n="stats.modules">módulos de negocio</span></div>
+                  <div class="stat"><strong data-contar="1">1</strong><span data-i18n="stats.database">sola base de datos</span></div>
+                  <div class="stat"><strong>2026</strong><span data-i18n="stats.year">en producción desde</span></div>
+                </div>
+                <div class="tech-list" style="margin-top: 1rem" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
+                  <span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>JavaScript</span><span>HTML / CSS</span><span>PWA</span><span>.NET</span><span>Playwright</span><span>Cloudflare Pages</span><span>GitHub Actions</span>
+                </div>
+                <div class="project-note" style="margin-top: 1rem">
+                  <span aria-hidden="true">ⓘ</span>
+                  <p data-i18n="thelsa.confidentiality">El sistema es privado y de uso interno. La representación visual es conceptual y utiliza únicamente datos ficticios.</p>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="case-study reveal" aria-labelledby="syntax-title">
-            <div class="project-media">
-              <img
-                src="assets/images/syntax-logistics.webp"
-                alt="Vista responsiva de la plataforma Syntax Logistics"
-                data-i18n-alt="syntax.imageAlt"
-                width="1280"
-                height="853"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="case-study-content">
-              <div class="case-study-header">
-                <div>
-                  <span class="project-label" data-i18n="syntax.label">PROYECTO COLABORATIVO · 2026</span>
-                  <h3 id="syntax-title" data-i18n="syntax.title">Syntax Logistics</h3>
-                  <p class="project-role" data-i18n="syntax.roleTitle">Full Stack Developer · UI · Integración · Pruebas funcionales</p>
+          <!-- Groundsight: sitio para un cliente (público) -->
+          <article class="case-study reveal" aria-labelledby="groundsight-title">
+            <div class="case-media">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">groundsight.pages.dev</span></div>
+                <div class="browser-body">
+                  <img src="assets/images/proyectos/gs-inicio-900.webp" srcset="assets/images/proyectos/gs-inicio-900.webp 900w, assets/images/proyectos/gs-inicio-1440.webp 1440w" sizes="(min-width: 1024px) 560px, 92vw" alt="Página de inicio del sitio de Groundsight Geoservicios" data-i18n-alt="groundsight.imageAlt" width="1440" height="900" loading="lazy" decoding="async" />
                 </div>
               </div>
-
-              <p class="case-study-summary" data-i18n="syntax.summary">
-                Plataforma web para administrar cotizaciones, usuarios, envíos y seguimiento de paquetes. Participé en funcionalidades backend, operaciones CRUD, integración con MySQL, construcción de interfaz y validación de flujos funcionales.
-              </p>
-
-              <div class="case-study-sections compact">
+            </div>
+            <div class="case-content">
+              <span class="project-label" data-i18n="groundsight.label">SITIO PARA UN CLIENTE · 2026</span>
+              <h3 id="groundsight-title">Groundsight Geoservicios</h3>
+              <p class="project-role" data-i18n="groundsight.roleTitle">Diseño · Contenido técnico · Desarrollo · Publicación</p>
+              <p class="case-summary" data-i18n="groundsight.summary">Sitio para la empresa de estudios geofísicos de Brenda Pamela, una geofísica que empieza por su cuenta: sin oficina, sin equipo de ventas y con presupuesto cero para el sitio. El objetivo era que un cliente entienda cuál de los 18 estudios necesita y pida cotización sin que exista un servidor que mantener.</p>
+              <div class="case-sections">
                 <div>
                   <h4 data-i18n="case.contribution">Contribución</h4>
-                  <p data-i18n="syntax.contribution">
-                    Trabajé en formularios, diseño responsivo, integración frontend-backend, estructura de datos y pruebas de los flujos principales del proyecto.
-                  </p>
+                  <p data-i18n="groundsight.contribution">Hice el sitio completo: 26 páginas generadas desde un catálogo, el asistente "¿Qué estudio necesito?", un comparador interactivo de profundidades, un asistente guiado por botones, cotización por correo y WhatsApp, SEO e imágenes optimizadas.</p>
                 </div>
                 <div>
                   <h4 data-i18n="case.functions">Funcionalidades</h4>
-                  <p data-i18n="syntax.functions">
-                    Registro de usuarios, cotización, gestión de destinos y direcciones, seguimiento mediante guía y consumo de servicios REST.
-                  </p>
+                  <p data-i18n="groundsight.functions">Catálogo de 18 estudios en 5 categorías con ficha propia, preguntas frecuentes, reseñas, aviso de privacidad, formulario sin servidor y publicación gratuita. Todo lo que cambia se edita en dos archivos, sin programador.</p>
                 </div>
               </div>
-
               <div class="tech-list" aria-label="Tecnologías utilizadas" data-i18n-aria="case.technologies">
-                <span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span><span>Postman</span><span>Git</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>FormSubmit</span><span>Cloudflare Pages</span><span>SEO</span><span>WebP</span>
               </div>
-
               <div class="project-actions">
-                <a
-                  class="button button-primary"
-                  href="https://github.com/enriqueperezdevmx-coder/Equipo_Syntax_Error"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span data-i18n="projects.repository">Ver repositorio</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+                <a class="button button-primary" href="https://groundsight.pages.dev/" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.visit">Ver sitio en línea</span><span aria-hidden="true">↗</span></a>
+                <a class="button button-outline" href="https://github.com/johannesquintanar-dev/groundsight" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.repository">Ver repositorio</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
-          <div class="other-projects reveal">
-            <div class="section-subheading">
-              <h3 data-i18n="otherProjects.title">Otros proyectos</h3>
-              <p data-i18n="otherProjects.intro">Proyectos que complementan mi experiencia en frontend y trabajo colaborativo.</p>
-            </div>
+          <!-- Otros proyectos -->
+          <div class="projects-grid">
+            <article class="project-card reveal" aria-labelledby="calculator-title">
+              <div class="demo-window" aria-label="Representación visual de la calculadora" data-i18n-aria="calculator.demoLabel">
+                <div class="demo-toolbar"><i></i><i></i><i></i><strong data-i18n="calculator.demoTitle">Cálculo de operación</strong></div>
+                <div class="demo-body">
+                  <div class="demo-row">
+                    <div><small data-i18n="calculator.demoFlight">Vuelo</small><strong>XA-JQC</strong></div>
+                    <div><small data-i18n="calculator.demoArrival">Llegada</small><strong>14:35</strong></div>
+                    <div><small data-i18n="calculator.demoType">Tipo</small><strong>Ejecutivo</strong></div>
+                  </div>
+                  <div class="demo-row">
+                    <div><small data-i18n="calculator.demoService1">Aterrizaje</small><strong>$2,450</strong></div>
+                    <div><small data-i18n="calculator.demoService2">Plataforma</small><strong>$1,820</strong></div>
+                    <div><small data-i18n="calculator.demoService3">Servicios adicionales</small><strong>$980</strong></div>
+                  </div>
+                  <div class="demo-total"><span data-i18n="calculator.demoTotal">Total estimado</span><strong>$5,250 MXN</strong></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <span class="project-label" data-i18n="calculator.label">HERRAMIENTA INTERNA · 2025</span>
+                <h3 id="calculator-title" data-i18n="calculator.title">Calculadora de Servicios Aeroportuarios</h3>
+                <p data-i18n="calculator.summary">Aplicación desarrollada para reemplazar cálculos manuales en Excel, centralizar reglas de cobro y automatizar los reportes de la administración de servicios aeroportuarios.</p>
+                <p data-i18n="calculator.result">Construida en tres meses, continúa utilizándose sin mí y apoya el trabajo de dos personas por turno. El código y los datos no son públicos por confidencialidad.</p>
+                <div class="tech-list"><span>Python</span><span>Pandas</span><span>MySQL</span><span>Excel</span></div>
+              </div>
+            </article>
 
-            <article class="small-project-card">
-              <img
-                src="assets/images/mundo-fifas.webp"
-                alt="Modal de producto del proyecto Mundo Fifas"
-                data-i18n-alt="mundo.imageAlt"
-                width="1280"
-                height="618"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="small-project-content">
+            <article class="project-card reveal reveal-delay-1" aria-labelledby="syntax-title">
+              <div class="project-card-media">
+                <img src="assets/images/proyectos/syntax-logistics.webp" alt="Vista responsiva de la plataforma Syntax Logistics" data-i18n-alt="syntax.imageAlt" width="1280" height="853" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-card-body">
+                <span class="project-label" data-i18n="syntax.label">PROYECTO COLABORATIVO · 2026</span>
+                <h3 id="syntax-title" data-i18n="syntax.title">Syntax Logistics</h3>
+                <p data-i18n="syntax.summary">Plataforma web para administrar cotizaciones, usuarios, envíos y seguimiento de paquetes. Participé en funcionalidades backend, operaciones CRUD, integración con MySQL, construcción de interfaz y validación de flujos funcionales.</p>
+                <div class="tech-list"><span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>MySQL</span><span>Bootstrap</span></div>
+                <a class="text-link" href="https://github.com/enriqueperezdevmx-coder/Equipo_Syntax_Error" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.repository">Ver repositorio</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card reveal reveal-delay-2" aria-labelledby="mundo-title">
+              <div class="project-card-media">
+                <img src="assets/images/proyectos/mundo-fifas.webp" alt="Modal de producto del proyecto Mundo Fifas" data-i18n-alt="mundo.imageAlt" width="1280" height="618" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-card-body">
                 <span class="project-label" data-i18n="mundo.label">PROYECTO FRONTEND</span>
-                <h4>Mundo Fifas</h4>
-                <p data-i18n="mundo.summary">
-                  Sitio temático de fútbol con catálogo, artículos retro, modales interactivos y adaptación responsive desarrollada con HTML, CSS y JavaScript.
-                </p>
+                <h3 id="mundo-title">Mundo Fifas</h3>
+                <p data-i18n="mundo.summary">Sitio temático de fútbol con catálogo, artículos retro, modales interactivos y adaptación responsive desarrollada con HTML, CSS y JavaScript.</p>
                 <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-                <a
-                  class="text-link"
-                  href="https://github.com/Rock2612/Mundo-Fifas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span data-i18n="projects.repository">Ver repositorio</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+                <a class="text-link" href="https://github.com/Rock2612/Mundo-Fifas" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.repository">Ver repositorio</span><span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
-
-          <!--
-            PLANTILLA PREPARADA PARA EL FUTURO PROYECTO BACKEND PERSONAL.
-            Actívala únicamente cuando el proyecto exista y tenga repositorio o evidencia verificable.
-
-            <article class="small-project-card">
-              <div class="small-project-content">
-                <span class="project-label">PROYECTO BACKEND PERSONAL</span>
-                <h4>Sistema de Administración de Operaciones Aeroportuarias</h4>
-                <p>API REST con Java 21, Spring Boot, JPA, validaciones, Swagger, pruebas y Docker.</p>
-              </div>
-            </article>
-          -->
         </div>
       </section>
 
+      <!-- ===== Sobre mí ===== -->
       <section class="section" id="about">
         <div class="container about-grid">
           <div class="section-heading reveal">
             <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
             <h2 data-i18n="about.title">Desarrollo técnico con entendimiento del negocio</h2>
           </div>
-
-          <div class="about-content reveal">
-            <p class="about-lead" data-i18n="about.lead">
-              Soy desarrollador Java Full Stack con experiencia práctica construyendo backend, interfaces web, bases de datos y automatizaciones orientadas a resolver necesidades reales.
-            </p>
-            <p data-i18n="about.body">
-              Antes de dedicarme al desarrollo trabajé durante más de siete años en operaciones aeroportuarias, coordinando procesos críticos, equipos de trabajo, información financiera, KPIs y reglas de negocio. Esa experiencia me permite comprender no solamente cómo programar una solución, sino también cómo debe funcionar dentro de una operación real.
-            </p>
-
-            <div class="value-grid">
-              <article>
-                <span aria-hidden="true">01</span>
-                <h3 data-i18n="about.value1Title">Análisis de procesos</h3>
-                <p data-i18n="about.value1Text">Identifico cuellos de botella, reglas de negocio y oportunidades de automatización.</p>
-              </article>
-              <article>
-                <span aria-hidden="true">02</span>
-                <h3 data-i18n="about.value2Title">Ejecución bajo presión</h3>
-                <p data-i18n="about.value2Text">Estoy acostumbrado a priorizar, comunicar y resolver incidencias en operaciones críticas.</p>
-              </article>
-              <article>
-                <span aria-hidden="true">03</span>
-                <h3 data-i18n="about.value3Title">Visión de usuario</h3>
-                <p data-i18n="about.value3Text">Construyo pensando en la persona que utilizará la solución y en el proceso que debe mejorar.</p>
-              </article>
+          <div class="about-content reveal reveal-delay-1">
+            <p class="about-lead" data-i18n="about.lead">Soy desarrollador Full Stack. Hoy soy responsable de Sistemas en una empresa de mudanzas con 13 sucursales, donde construyo el sistema interno con el que operan, venden, planean rutas y administran a su gente.</p>
+            <p data-i18n="about.body">Llegué al software desde la operación: durante más de siete años coordiné procesos críticos, equipos de trabajo, información financiera y KPIs en operaciones aeroportuarias. Por eso construyo pensando en la persona que usará el sistema a las seis de la mañana, y no doy por hecho que algo funciona hasta verlo en el navegador o en la base de datos.</p>
+            <div class="value-list">
+              <article class="value-item"><i aria-hidden="true">01</i><div><h3 data-i18n="about.value1Title">Análisis de procesos</h3><p data-i18n="about.value1Text">Identifico cuellos de botella, reglas de negocio y oportunidades de automatización, y las escribo en lenguaje llano para que quien decide pueda leerlas.</p></div></article>
+              <article class="value-item"><i aria-hidden="true">02</i><div><h3 data-i18n="about.value2Title">Lógica en la base, no en la pantalla</h3><p data-i18n="about.value2Text">Las reglas viven en la base de datos y los permisos se aplican por rol desde ahí; cada cambio se ensaya en una copia de producción antes de publicarse.</p></div></article>
+              <article class="value-item"><i aria-hidden="true">03</i><div><h3 data-i18n="about.value3Title">Ejecución bajo presión</h3><p data-i18n="about.value3Text">Estoy acostumbrado a priorizar, comunicar y resolver incidencias en operaciones donde un dato a destiempo cuesta.</p></div></article>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ===== Experiencia ===== -->
       <section class="section section-surface" id="experience">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow" data-i18n="experience.eyebrow">EXPERIENCIA PROFESIONAL</p>
-            <h2 data-i18n="experience.title">Más de siete años resolviendo operaciones complejas</h2>
-            <p data-i18n="experience.intro">
-              Esta experiencia fortalece mis habilidades para entender requerimientos, priorizar riesgos y entregar soluciones útiles.
-            </p>
+            <h2 data-i18n="experience.title">De coordinar operaciones a construir los sistemas que las sostienen</h2>
+            <p data-i18n="experience.intro">Siete años en operaciones críticas y, desde 2026, el desarrollo de un sistema interno completo para una empresa con presencia nacional.</p>
           </div>
-
-          <div class="experience-timeline">
-            <article class="experience-item reveal">
-              <div class="experience-date" data-i18n="experience.job1Date">Ene 2025 — Abr 2026</div>
-              <div class="experience-card">
-                <div class="experience-title-row">
-                  <div>
-                    <h3 data-i18n="experience.job1Title">Administrador de Servicios Aeroportuarios</h3>
-                    <p>GAFSACOMM</p>
-                  </div>
-                  <span data-i18n="experience.job1Focus">Procesos · KPIs · Automatización</span>
-                </div>
-                <p data-i18n="experience.job1Text">
-                  Administré cobros, facturación, ingresos y reportes de servicios aeroportuarios. Analicé procesos administrativos y financieros y desarrollé una herramienta en Python y SQL para automatizar cálculos y reportes operativos.
-                </p>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-card">
+                <span class="timeline-date" data-i18n="experience.job0Date">2026 — Actualidad</span>
+                <h3 data-i18n="experience.job0Title">Responsable de Sistemas · Full Stack Developer</h3>
+                <p class="timeline-company">Thelsa Mobility Solutions</p>
+                <span class="timeline-focus" data-i18n="experience.job0Focus">PostgreSQL · JavaScript · Integraciones · QA</span>
+                <p data-i18n="experience.job0Text">Construyo y mantengo el sistema interno de la empresa: módulos de operaciones, comercial, logística, personal, administración y garantías sobre una sola base de datos. Integración con el sistema contable, pruebas automatizadas de navegador, publicación continua y soporte a las 13 sucursales.</p>
               </div>
             </article>
-
-            <article class="experience-item reveal">
-              <div class="experience-date" data-i18n="experience.job2Date">May 2024 — Ene 2025</div>
-              <div class="experience-card">
-                <div class="experience-title-row">
-                  <div>
-                    <h3 data-i18n="experience.job2Title">Oficial de Operaciones</h3>
-                    <p>GAFSACOMM</p>
-                  </div>
-                  <span data-i18n="experience.job2Focus">Monitoreo · Seguridad · Coordinación</span>
-                </div>
-                <p data-i18n="experience.job2Text">
-                  Monitoreé operaciones aeroportuarias, elaboré reportes operativos, coordiné áreas de plataforma, mantenimiento, fauna y proveedores, y participé en capacitaciones de seguridad operacional.
-                </p>
+            <article class="timeline-item reveal">
+              <div class="timeline-card">
+                <span class="timeline-date" data-i18n="experience.job1Date">Ene 2025 — Abr 2026</span>
+                <h3 data-i18n="experience.job1Title">Administrador de Servicios Aeroportuarios</h3>
+                <p class="timeline-company">GAFSACOMM</p>
+                <span class="timeline-focus" data-i18n="experience.job1Focus">Procesos · KPIs · Automatización</span>
+                <p data-i18n="experience.job1Text">Administré cobros, facturación, ingresos y reportes de servicios aeroportuarios. Analicé procesos administrativos y financieros y desarrollé una herramienta en Python y SQL para automatizar cálculos y reportes operativos.</p>
               </div>
             </article>
-
-            <article class="experience-item reveal">
-              <div class="experience-date" data-i18n="experience.job3Date">Jul 2018 — Ene 2024</div>
-              <div class="experience-card">
-                <div class="experience-title-row">
-                  <div>
-                    <h3 data-i18n="experience.job3Title">Encargado de Operaciones</h3>
-                    <p>Aerolíneas Ejecutivas</p>
-                  </div>
-                  <span data-i18n="experience.job3Focus">Liderazgo · Continuidad · Clientes</span>
-                </div>
-                <p data-i18n="experience.job3Text">
-                  Coordiné operaciones de vuelo, atención a clientes, combustible, rampa, mantenimiento y planes de vuelo. Supervisé hasta 23 colaboradores, gestioné KPIs y tomé decisiones en escenarios de alta presión.
-                </p>
+            <article class="timeline-item reveal">
+              <div class="timeline-card">
+                <span class="timeline-date" data-i18n="experience.job2Date">May 2024 — Ene 2025</span>
+                <h3 data-i18n="experience.job2Title">Oficial de Operaciones</h3>
+                <p class="timeline-company">GAFSACOMM</p>
+                <span class="timeline-focus" data-i18n="experience.job2Focus">Monitoreo · Seguridad · Coordinación</span>
+                <p data-i18n="experience.job2Text">Monitoreé operaciones aeroportuarias, elaboré reportes operativos, coordiné áreas de plataforma, mantenimiento, fauna y proveedores, y participé en capacitaciones de seguridad operacional.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-card">
+                <span class="timeline-date" data-i18n="experience.job3Date">Jul 2018 — Ene 2024</span>
+                <h3 data-i18n="experience.job3Title">Encargado de Operaciones</h3>
+                <p class="timeline-company">Aerolíneas Ejecutivas</p>
+                <span class="timeline-focus" data-i18n="experience.job3Focus">Liderazgo · Continuidad · Clientes</span>
+                <p data-i18n="experience.job3Text">Coordiné operaciones de vuelo, atención a clientes, combustible, rampa, mantenimiento y planes de vuelo. Supervisé hasta 23 colaboradores, gestioné KPIs y tomé decisiones en escenarios de alta presión.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- ===== Tecnologías ===== -->
       <section class="section" id="skills">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow" data-i18n="skills.eyebrow">STACK TÉCNICO</p>
             <h2 data-i18n="skills.title">Tecnologías respaldadas por proyectos</h2>
-            <p data-i18n="skills.intro">Las habilidades se presentan por área, sin porcentajes arbitrarios.</p>
+            <p data-i18n="skills.intro">Las habilidades se presentan por área, con el proyecto donde están probadas, sin porcentajes arbitrarios.</p>
           </div>
-
           <div class="skills-grid">
-            <article class="skill-category reveal">
-              <div class="skill-icon" aria-hidden="true">{ }</div>
-              <h3 data-i18n="skills.backend">Backend</h3>
-              <div class="skill-chips">
-                <span>Java 21</span><span>Spring Boot</span><span>Spring Web</span><span>JPA</span><span>Hibernate</span><span>JDBC</span><span>Maven</span><span>REST APIs</span><span>POO</span>
-              </div>
-            </article>
-
-            <article class="skill-category reveal">
-              <div class="skill-icon" aria-hidden="true">DB</div>
-              <h3 data-i18n="skills.databases">Bases de datos</h3>
-              <div class="skill-chips">
-                <span>MySQL</span><span>PostgreSQL</span><span>SQL</span><span>Modelado relacional</span><span>JOIN</span><span>GROUP BY</span><span>Índices</span><span>Transacciones</span>
-              </div>
-            </article>
-
-            <article class="skill-category reveal">
-              <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
-              <h3>Frontend</h3>
-              <div class="skill-chips">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>Responsive Design</span><span>Vite</span><span>Integración de APIs</span>
-              </div>
-            </article>
-
-            <article class="skill-category reveal">
-              <div class="skill-icon" aria-hidden="true">Py</div>
-              <h3 data-i18n="skills.automation">Datos y automatización</h3>
-              <div class="skill-chips">
-                <span>Python</span><span>Pandas</span><span>Excel</span><span>Consumo de APIs</span><span>Procesamiento de datos</span><span>Reportes automatizados</span>
-              </div>
-            </article>
-
-            <article class="skill-category reveal">
-              <div class="skill-icon" aria-hidden="true">⚙</div>
-              <h3 data-i18n="skills.tools">Herramientas y metodología</h3>
-              <div class="skill-chips">
-                <span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span><span>IntelliJ IDEA</span><span>VS Code</span><span>Ubuntu</span><span>Jira</span><span>Figma</span><span>Scrum</span><span>JUnit básico</span>
-              </div>
-            </article>
+            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">DB</div><h3 data-i18n="skills.databases">Bases de datos</h3><div class="skill-chips"><span>PostgreSQL</span><span>PL/pgSQL</span><span>Supabase</span><span>RLS y permisos por rol</span><span>MySQL</span><span>Modelado relacional</span><span>Transacciones</span><span>Índices</span></div></article>
+            <article class="skill-category reveal reveal-delay-1"><div class="skill-icon" aria-hidden="true">{ }</div><h3 data-i18n="skills.backend">Backend e integraciones</h3><div class="skill-chips"><span>Java 21</span><span>Spring Boot</span><span>JPA / Hibernate</span><span>REST APIs</span><span>Node.js</span><span>.NET Framework</span><span>Python</span><span>Robots programados (cron)</span></div></article>
+            <article class="skill-category reveal reveal-delay-2"><div class="skill-icon" aria-hidden="true">&lt;/&gt;</div><h3>Frontend</h3><div class="skill-chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PWA / Service Worker</span><span>Diseño responsivo</span><span>Modo oscuro</span><span>Bootstrap</span><span>Vite</span></div></article>
+            <article class="skill-category reveal"><div class="skill-icon" aria-hidden="true">Py</div><h3 data-i18n="skills.automation">Datos y automatización</h3><div class="skill-chips"><span>Python</span><span>Pandas</span><span>Excel</span><span>Generación de PDF</span><span>Consumo de APIs</span><span>Reportes automatizados</span></div></article>
+            <article class="skill-category reveal reveal-delay-1"><div class="skill-icon" aria-hidden="true">⚙</div><h3 data-i18n="skills.tools">Calidad, entrega y metodología</h3><div class="skill-chips"><span>Playwright</span><span>Git</span><span>GitHub Actions</span><span>Cloudflare Pages</span><span>Vercel</span><span>Docker</span><span>Postman</span><span>Jira</span><span>Scrum</span></div></article>
           </div>
         </div>
       </section>
 
+      <!-- ===== Certificaciones ===== -->
       <section class="section section-surface" id="certifications">
         <div class="container">
           <div class="section-heading reveal">
             <p class="eyebrow" data-i18n="certifications.eyebrow">FORMACIÓN Y CERTIFICACIONES</p>
             <h2 data-i18n="certifications.title">Preparación técnica y conocimiento operativo</h2>
           </div>
-
           <div class="certifications-grid">
-            <article class="certification-card reveal">
-              <div class="certification-mark" aria-hidden="true">Java</div>
-              <div>
-                <span class="certification-meta">480 h · 2026</span>
-                <h3>Java Full Stack Developer</h3>
-                <p>AIFYC Institute Texas</p>
-              </div>
-              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
-            </article>
-
-            <article class="certification-card reveal">
-              <div class="certification-mark" aria-hidden="true">G</div>
-              <div>
-                <span class="certification-meta">2026</span>
-                <h3 data-i18n="certifications.generationTitle">Bootcamp Desarrollador Java Full Stack Jr.</h3>
-                <p>Generation México</p>
-              </div>
-              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
-            </article>
-
-            <article class="certification-card reveal">
-              <div class="certification-mark" aria-hidden="true">KPI</div>
-              <div>
-                <span class="certification-meta">2025</span>
-                <h3 data-i18n="certifications.kpiTitle">Análisis y seguimiento de KPIs operativos</h3>
-                <p data-i18n="certifications.corporateTraining">Capacitación corporativa</p>
-              </div>
-              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
-            </article>
-
-            <article class="certification-card reveal">
-              <div class="certification-mark" aria-hidden="true">OPS</div>
-              <div>
-                <span class="certification-meta">2025</span>
-                <h3 data-i18n="certifications.operationsTitle">Gestión de Operaciones Aeroportuarias</h3>
-                <p>GAFSACOMM</p>
-              </div>
-              <span class="status-badge" data-i18n="certifications.completed">Completado</span>
-            </article>
-
-            <article class="certification-card language-card reveal">
-              <div class="certification-mark" aria-hidden="true">EN</div>
-              <div>
-                <span class="certification-meta" data-i18n="certifications.language">Idioma</span>
-                <h3 data-i18n="certifications.englishTitle">Inglés — B2 Intermedio</h3>
-                <p data-i18n="certifications.englishText">Comunicación profesional intermedia</p>
-              </div>
-              <span class="status-badge">B2</span>
-            </article>
+            <article class="certification-card reveal"><div class="certification-mark" aria-hidden="true">Java</div><div><span class="certification-meta">480 h · 2026</span><h3>Java Full Stack Developer</h3><p>AIFYC Institute Texas</p></div><span class="status-badge" data-i18n="certifications.completed">Completado</span></article>
+            <article class="certification-card reveal"><div class="certification-mark" aria-hidden="true">G</div><div><span class="certification-meta">2026</span><h3 data-i18n="certifications.generationTitle">Bootcamp Desarrollador Java Full Stack Jr.</h3><p>Generation México</p></div><span class="status-badge" data-i18n="certifications.completed">Completado</span></article>
+            <article class="certification-card reveal"><div class="certification-mark" aria-hidden="true">KPI</div><div><span class="certification-meta">2025</span><h3 data-i18n="certifications.kpiTitle">Análisis y seguimiento de KPIs operativos</h3><p data-i18n="certifications.corporateTraining">Capacitación corporativa</p></div><span class="status-badge" data-i18n="certifications.completed">Completado</span></article>
+            <article class="certification-card reveal"><div class="certification-mark" aria-hidden="true">OPS</div><div><span class="certification-meta">2025</span><h3 data-i18n="certifications.operationsTitle">Gestión de Operaciones Aeroportuarias</h3><p>GAFSACOMM</p></div><span class="status-badge" data-i18n="certifications.completed">Completado</span></article>
+            <article class="certification-card reveal"><div class="certification-mark" aria-hidden="true">EN</div><div><span class="certification-meta" data-i18n="certifications.language">Idioma</span><h3 data-i18n="certifications.englishTitle">Inglés — B2 Intermedio</h3><p data-i18n="certifications.englishText">Comunicación profesional intermedia</p></div><span class="status-badge">B2</span></article>
           </div>
-
-          <!-- Cuando confirmes la institución exacta del certificado de introducción a Java, agrega aquí una tarjeta adicional. -->
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="container contact-grid">
-          <div class="contact-copy reveal">
-            <p class="eyebrow" data-i18n="contact.eyebrow">ABIERTO A OPORTUNIDADES</p>
-            <h2 data-i18n="contact.title">Llevemos una necesidad real a una solución funcional</h2>
-            <p data-i18n="contact.text">
-              Busco mi primera posición dedicada completamente al desarrollo de software como Java Backend o Full Stack Developer. Aporto experiencia desarrollando soluciones aplicadas a procesos reales, conocimiento de negocio y más de siete años trabajando en operaciones críticas.
-            </p>
-            <div class="availability-list">
-              <span><i aria-hidden="true">✓</i><span data-i18n="contact.remote">Disponible para trabajo remoto en México</span></span>
-              <span><i aria-hidden="true">✓</i><span data-i18n="contact.relocation">Disponible para cambio de residencia</span></span>
-              <span><i aria-hidden="true">✓</i><span data-i18n="contact.roles">Java Backend · Full Stack Jr. · Automatización</span></span>
+      <!-- ===== Contacto ===== -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div class="contact-copy">
+              <p class="eyebrow" data-i18n="contact.eyebrow">¿TRABAJAMOS JUNTOS?</p>
+              <h2 data-i18n="contact.title">Llevemos un proceso real a un sistema que funcione</h2>
+              <p data-i18n="contact.text">Si tienes un proceso que hoy vive en Excel, en correos o en papel, o buscas un desarrollador Full Stack que entienda la operación además del código, escríbeme. Contesto el mismo día.</p>
+              <div class="availability-list">
+                <span><i aria-hidden="true">✓</i><span data-i18n="contact.remote">Disponible para trabajo remoto en México</span></span>
+                <span><i aria-hidden="true">✓</i><span data-i18n="contact.relocation">Disponible para cambio de residencia</span></span>
+                <span><i aria-hidden="true">✓</i><span data-i18n="contact.roles">Full Stack · Backend · Automatización de procesos</span></span>
+              </div>
             </div>
-          </div>
-
-          <div class="contact-panel reveal">
-            <a href="mailto:johannesq.dev@gmail.com" class="contact-link-card">
-              <span class="contact-icon" aria-hidden="true">@</span>
-              <span>
-                <small data-i18n="contact.email">Correo</small>
-                <strong>johannesq.dev@gmail.com</strong>
-              </span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-            <a href="tel:+528119594304" class="contact-link-card">
-              <span class="contact-icon" aria-hidden="true">☎</span>
-              <span>
-                <small data-i18n="contact.phone">Teléfono</small>
-                <strong>+52 811 959 4304</strong>
-              </span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/jonascastillo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link-card"
-            >
-              <span class="contact-icon" aria-hidden="true">in</span>
-              <span><small>LinkedIn</small><strong>jonascastillo</strong></span>
-              <span aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              href="https://github.com/johannesquintanar-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link-card"
-            >
-              <span class="contact-icon" aria-hidden="true">GH</span>
-              <span><small>GitHub</small><strong>johannesquintanar-dev</strong></span>
-              <span aria-hidden="true">↗</span>
-            </a>
-
-            <button class="button button-primary cv-trigger contact-cv-button" type="button">
-              <span aria-hidden="true">↓</span>
-              <span data-i18n="contact.cv">Ver CV completo</span>
-            </button>
+            <div class="contact-panel">
+              <a href="mailto:johannesq.dev@gmail.com" class="contact-link-card"><span class="contact-icon" aria-hidden="true">@</span><span><small data-i18n="contact.email">Correo</small><strong>johannesq.dev@gmail.com</strong></span><span aria-hidden="true">→</span></a>
+              <a href="https://wa.me/528119594304" target="_blank" rel="noopener noreferrer" class="contact-link-card"><span class="contact-icon" aria-hidden="true">☎</span><span><small data-i18n="contact.phone">Teléfono y WhatsApp</small><strong>+52 811 959 4304</strong></span><span aria-hidden="true">→</span></a>
+              <a href="https://www.linkedin.com/in/jonascastillo/" target="_blank" rel="noopener noreferrer" class="contact-link-card"><span class="contact-icon" aria-hidden="true">in</span><span><small>LinkedIn</small><strong>jonascastillo</strong></span><span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/johannesquintanar-dev" target="_blank" rel="noopener noreferrer" class="contact-link-card"><span class="contact-icon" aria-hidden="true">GH</span><span><small>GitHub</small><strong>johannesquintanar-dev</strong></span><span aria-hidden="true">↗</span></a>
+              <button class="button button-primary cv-trigger contact-cv-button" type="button"><span aria-hidden="true">↓</span><span data-i18n="contact.cv">Ver CV completo</span></button>
+            </div>
           </div>
         </div>
       </section>
@@ -750,10 +480,7 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <a class="brand" href="#home">
-          <span class="brand-mark" aria-hidden="true">J</span>
-          <span>Jonas<span class="brand-accent">.Dev</span></span>
-        </a>
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">J</span><span>Jonas<span class="brand-accent">.Dev</span></span></a>
         <p>© <span id="current-year">2026</span> Jonas Castillo. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
         <div class="footer-links">
           <a href="#projects" data-i18n="nav.projects">Proyectos</a>
@@ -763,67 +490,32 @@
       </div>
     </footer>
 
-    <button
-      class="back-to-top"
-      id="back-to-top"
-      type="button"
-      aria-label="Volver al inicio"
-      data-i18n-aria="a11y.backToTop"
-    >
-      ↑
-    </button>
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver al inicio" data-i18n-aria="a11y.backToTop">↑</button>
 
     <div class="modal-backdrop" id="cv-modal" aria-hidden="true">
-      <section
-        class="cv-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="resume-modal-title"
-        aria-describedby="resume-modal-description"
-      >
+      <section class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-describedby="resume-modal-description">
         <header class="cv-modal-header">
           <div>
             <p class="eyebrow" data-i18n="modal.eyebrow">CURRÍCULUM</p>
-            <h2 id="resume-modal-title" data-i18n="modal.title">Jonas Castillo — Java Full Stack Developer</h2>
+            <h2 id="resume-modal-title" data-i18n="modal.title">Jonas Castillo — Full Stack Developer</h2>
             <p id="resume-modal-description" data-i18n="modal.description">Selecciona ver o descargar la versión correspondiente al idioma del sitio.</p>
           </div>
-          <button
-            class="modal-close"
-            id="modal-close"
-            type="button"
-            aria-label="Cerrar currículum"
-            data-i18n-aria="a11y.closeModal"
-          >
-            ×
-          </button>
+          <button class="modal-close" id="modal-close" type="button" aria-label="Cerrar currículum" data-i18n-aria="a11y.closeModal">×</button>
         </header>
-
         <div class="cv-modal-body">
-          <div class="cv-loading" id="cv-loading" role="status">
-            <span class="loading-spinner" aria-hidden="true"></span>
-            <span data-i18n="modal.loading">Cargando currículum…</span>
-          </div>
+          <div class="cv-loading" id="cv-loading" role="status"><span class="loading-spinner" aria-hidden="true"></span><span data-i18n="modal.loading">Cargando currículum…</span></div>
           <iframe id="cv-iframe" title="Currículum de Jonas Castillo" data-i18n-title="modal.iframeTitle"></iframe>
-          <div class="cv-mobile-fallback">
-            <span aria-hidden="true">PDF</span>
-            <p data-i18n="modal.mobileText">En pantallas pequeñas es más cómodo abrir el PDF en una pestaña nueva.</p>
-          </div>
+          <div class="cv-mobile-fallback"><span aria-hidden="true">PDF</span><p data-i18n="modal.mobileText">En pantallas pequeñas es más cómodo abrir el PDF en una pestaña nueva.</p></div>
         </div>
-
         <footer class="cv-modal-footer">
-          <a class="button button-primary" id="cv-open-link" href="#" target="_blank" rel="noopener noreferrer">
-            <span data-i18n="modal.open">Abrir PDF</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a class="button button-outline" id="cv-download-link" href="#" download>
-            <span aria-hidden="true">↓</span>
-            <span data-i18n="modal.download">Descargar PDF</span>
-          </a>
+          <a class="button button-primary" id="cv-open-link" href="#" target="_blank" rel="noopener noreferrer"><span data-i18n="modal.open">Abrir PDF</span><span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" id="cv-download-link" href="#" download><span aria-hidden="true">↓</span><span data-i18n="modal.download">Descargar PDF</span></a>
         </footer>
       </section>
     </div>
 
-    <script src="js/i18n.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/i18n.js?v=20261027b" defer></script>
+    <script src="js/script.js?v=20261027b" defer></script>
+    <script src="js/portafolio.js?v=20261027b" defer></script>
   </body>
 </html>
